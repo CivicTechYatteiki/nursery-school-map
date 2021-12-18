@@ -18,6 +18,7 @@ export const enum AdmissionDifficulty {
   Easy = 1,
   Moderate = 2,
   Hard = 3,
+  Unknown = 4,
 }
 
 export const getAdmissionDifficulty = (
@@ -25,7 +26,7 @@ export const getAdmissionDifficulty = (
   inSet: LocalNurserySchoolListSet,
   age: number | null
 ): AdmissionDifficulty => {
-  // 入所最低指数をみて、
+    // 入所最低指数をみて、
   // (最大値-3)〜最大値: 入りづらい
   // (最大値-10)〜(最大値-4): やや入りやすい
   // 0 〜 (最大値-11): 入りやすい
@@ -35,7 +36,13 @@ export const getAdmissionDifficulty = (
     // 各年齢で入りやすさを求めて、最頻値を年齢指定がない場合の入りやすさとする
     return AdmissionDifficulty.Hard
   } else if (age === 0) {
-    return AdmissionDifficulty.Hard
+    const age0MinimuIndices: number[] = inSet.nurseryShoolList
+      .map(it => { return it.classList?.age0?.minimumIndex ?? null })
+      .map(it => { return convertMinimumIndexToNumber(it) })
+      .filter(it => { return it !== null }) as number[]
+
+    const target = nurserySchool.classList?.age0?.minimumIndex ?? null
+    return estimateAdmissionDifficulty(target, age0MinimuIndices)
   } else if (age === 1) {
     return AdmissionDifficulty.Hard
   } else if (age === 2) {
@@ -49,6 +56,34 @@ export const getAdmissionDifficulty = (
   } else {
     throw Error('Invalid age')
   }
+}
+
+const convertMinimumIndexToNumber = (minimumIndex: MinimumIndex | null): number | null => {
+  if (minimumIndex === null) { return null }
+  if (minimumIndex === '非公開') { return null }
+  if (typeof(minimumIndex) === "number") { return minimumIndex }
+  if (typeof((minimumIndex as Range).lessThanOrEqual) === "number") { return minimumIndex.lessThanOrEqual }
+  return null
+}
+
+const estimateAdmissionDifficulty = (target: MinimumIndex | null, minimumIndices: number[]): AdmissionDifficulty => {
+  const value = (minimuIndexNumber: number, max: number): AdmissionDifficulty => {
+    if (minimuIndexNumber <= max - 10) { return AdmissionDifficulty.Easy }
+    if (minimuIndexNumber <= max - 3) { return AdmissionDifficulty.Moderate }
+    return AdmissionDifficulty.Hard
+  }
+
+  const max = Math.max(...minimumIndices)
+
+  if (target === null || target === '非公開') { return AdmissionDifficulty.Unknown } // 判定不能
+  if (typeof(target) === 'number') {
+    return value(target, max)
+  }
+  if ((typeof(target as Range).lessThanOrEqual) === 'number') {
+    const number: number = (target as Range).lessThanOrEqual
+    return value(number, max)
+  }
+  return AdmissionDifficulty.Unknown
 }
 
 export interface GeoLocation {
