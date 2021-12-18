@@ -1,4 +1,4 @@
-import { getLocalNurserySchoolList } from './nursery-school-list'
+import { LocalNurserySchoolListSet } from './nursery-school-list'
 
 export interface NurserySchool {
   name: string
@@ -14,10 +14,17 @@ export interface NurserySchool {
   sources: [Source] // 情報元
 }
 
-type EasyToEnter = '入りやすい' | 'やや入りやすい' | '入りづらい'
+export const enum AdmissionDifficulty {
+  Easy = 1,
+  Moderate = 2,
+  Hard = 3,
+}
 
-export const getEasyToEnter = (nurserySchool: NurserySchool, age: number | null): EasyToEnter => {
-  const list = getLocalNurserySchoolList(nurserySchool.localName)
+export const getAdmissionDifficulty = (
+  nurserySchool: NurserySchool,
+  inSet: LocalNurserySchoolListSet,
+  age: number | null
+): AdmissionDifficulty => {
   // 入所最低指数をみて、
   // (最大値-3)〜最大値: 入りづらい
   // (最大値-10)〜(最大値-4): やや入りやすい
@@ -26,21 +33,21 @@ export const getEasyToEnter = (nurserySchool: NurserySchool, age: number | null)
   // TODO: 実装
   if (age === null) {
     // 各年齢で入りやすさを求めて、最頻値を年齢指定がない場合の入りやすさとする
-    return '入りづらい'
+    return AdmissionDifficulty.Hard
   } else if (age === 0) {
-    return '入りづらい'
+    return AdmissionDifficulty.Hard
   } else if (age === 1) {
-    return '入りづらい'
+    return AdmissionDifficulty.Hard
   } else if (age === 2) {
-    return '入りづらい'
+    return AdmissionDifficulty.Hard
   } else if (age === 3) {
-    return '入りづらい'
+    return AdmissionDifficulty.Hard
   } else if (age === 4) {
-    return '入りづらい'
+    return AdmissionDifficulty.Hard
   } else if (age === 5) {
-    return '入りづらい'
+    return AdmissionDifficulty.Hard
   } else {
-    throw Error("Invalid age")
+    throw Error('Invalid age')
   }
 }
 
@@ -84,11 +91,11 @@ export const createClass = (minimumIndex: string): Class | null => {
     // 定員がない（＝クラスがない）
     return null
   }
-  if (minimumIndex == "―") {
+  if (minimumIndex == '―') {
     // クラスはあるが、空きがない・希望者がいないため最低指数がない
     return { minimumIndex: null }
   }
-  if (minimumIndex == "非公開") {
+  if (minimumIndex == '非公開') {
     // 内定者が1人の場合など、個人情報となるため非公開
     return { minimumIndex: minimumIndex }
   }
@@ -97,8 +104,8 @@ export const createClass = (minimumIndex: string): Class | null => {
     return {
       minimumIndex: {
         lessThanOrEqual: parseInt(result![1]),
-        text: minimumIndex
-      }
+        text: minimumIndex,
+      },
     }
   }
   return { minimumIndex: parseInt(minimumIndex) }
