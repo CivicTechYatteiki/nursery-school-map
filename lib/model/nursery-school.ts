@@ -1,3 +1,5 @@
+import { getLocalNurserySchoolList } from './nursery-school-list'
+
 export interface NurserySchool {
   name: string
   address: string
@@ -10,6 +12,36 @@ export interface NurserySchool {
   classList: ClassList | null
   localName: string // 自治体名
   sources: [Source] // 情報元
+}
+
+type EasyToEnter = '入りやすい' | 'やや入りやすい' | '入りづらい'
+
+export const getEasyToEnter = (nurserySchool: NurserySchool, age: number | null): EasyToEnter => {
+  const list = getLocalNurserySchoolList(nurserySchool.localName)
+  // 入所最低指数をみて、
+  // (最大値-3)〜最大値: 入りづらい
+  // (最大値-10)〜(最大値-4): やや入りやすい
+  // 0 〜 (最大値-11): 入りやすい
+  // とする。実際に使ってみてまた調整する
+  // TODO: 実装
+  if (age === null) {
+    // 各年齢で入りやすさを求めて、最頻値を年齢指定がない場合の入りやすさとする
+    return '入りづらい'
+  } else if (age === 0) {
+    return '入りづらい'
+  } else if (age === 1) {
+    return '入りづらい'
+  } else if (age === 2) {
+    return '入りづらい'
+  } else if (age === 3) {
+    return '入りづらい'
+  } else if (age === 4) {
+    return '入りづらい'
+  } else if (age === 5) {
+    return '入りづらい'
+  } else {
+    throw Error("Invalid age")
+  }
 }
 
 export interface GeoLocation {
