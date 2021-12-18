@@ -10,6 +10,6 @@ export interface Mapping {
 }
 
 export interface MergedData {
+  localName: string
   dataList: Data[]
-  tsModelKeyForMerge: string // どのキーをもとにマージするか
 }

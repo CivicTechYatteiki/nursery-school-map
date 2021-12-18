@@ -24,6 +24,7 @@ export const csv2json = (mergedData: MergedData) => {
   const nurserySchoolsMain: NurserySchool[] = main.records.map((record: any): NurserySchool | null => {
     var nurserySchool: any = {}
     var hasError: boolean = false
+    nurserySchool.localName = mergedData.localName
     main.data.mapping.forEach(rule => {
       try {
         nurserySchool[rule.tsModelKey] = rule.valueTranslator(record)
