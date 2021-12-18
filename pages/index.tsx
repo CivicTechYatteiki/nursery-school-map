@@ -4,28 +4,50 @@ import { AppBar, Button, CircularProgress, Divider, Paper, Stack, Toolbar, Typog
 import { Box } from '@mui/system'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
+import { useEffect, useRef, useState } from 'react'
 import { getAllNurserySchoolListSets, LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
-import { createMarkers } from '../components/marker'
+import { createMarkers, MarkerClickHandler } from '../components/marker'
+import { BottomSheet, BottomSheetRef } from 'react-spring-bottom-sheet'
+import { AdmissionDifficulty, NurserySchool } from '../lib/model/nursery-school'
+import { NurseryDetail } from '../components/NurseryDetail'
+import { useIsomorphicLayoutEffect } from '../utils/useIsomorhpicLayoutEffect'
 
 interface Props {
   nurserySets: LocalNurserySchoolListSet[]
 }
 
 export default function Home({ nurserySets }: Props) {
+  const [detail, setDetail] = useState<{
+    nursery: NurserySchool
+    difficulty: AdmissionDifficulty
+    open: boolean
+  } | null>(null)
+
   const render = (status: Status) => {
     switch (status) {
       case Status.LOADING:
         return <CircularProgress />
       case Status.FAILURE:
         return (
-          <Stack direction="column" spacing={4}>
+          <Stack direction="column" spacing={4} alignItems="center">
             <ErrorIcon />
             <Typography color="text.secondary">エラーが発生しました</Typography>
           </Stack>
         )
       case Status.SUCCESS:
-        return <MyMapComponent center={{ lat: 35.654291, lng: 139.750533 }} zoom={15} nurserySets={nurserySets} />
+        return (
+          <MyMapComponent
+            center={{ lat: 35.654291, lng: 139.750533 }}
+            zoom={15}
+            nurserySets={nurserySets}
+            onClickMarker={({ nursery, difficulty }) => setDetail({ nursery, difficulty, open: true })}
+          />
+        )
     }
+  }
+
+  const handleDetailClose = () => {
+    setDetail(detail ? { ...detail, open: false } : null)
   }
 
   return (
@@ -45,6 +67,12 @@ export default function Home({ nurserySets }: Props) {
       <Box sx={{ width: '100%', height: '100vh' }}>
         <Wrapper apiKey="AIzaSyAQtZaDCQybQWgd-uOQD-jN7vJnontAXtY" render={render} />
       </Box>
+
+      {detail && (
+        <BottomSheet open={detail.open} onDismiss={handleDetailClose}>
+          <NurseryDetail nursery={detail.nursery} difficulty={detail.difficulty} />
+        </BottomSheet>
+      )}
     </>
   )
 }
@@ -76,16 +104,19 @@ function MyMapComponent({
   center,
   zoom,
   nurserySets,
+  onClickMarker,
 }: {
   center: google.maps.LatLngLiteral
   zoom: number
   nurserySets: LocalNurserySchoolListSet[]
+  onClickMarker: MarkerClickHandler
 }) {
   const ref = useRef<HTMLDivElement>(null)
   const mapRef = useRef<google.maps.Map>()
   const markersRef = useRef<google.maps.Marker[]>([])
+  const clickHandlerRef = useRef(onClickMarker)
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (!ref.current) return
     if (mapRef.current) return
 
@@ -95,13 +126,17 @@ function MyMapComponent({
     })
   }, [center.lat, center.lng, zoom])
 
-  useEffect(() => {
-    markersRef.current = createMarkers(mapRef.current!, nurserySets)
+  useIsomorphicLayoutEffect(() => {
+    markersRef.current = createMarkers(mapRef.current!, nurserySets, params => clickHandlerRef.current(params))
 
     return () => {
       markersRef.current.forEach(m => m.setMap(null))
     }
   }, [nurserySets])
+
+  useIsomorphicLayoutEffect(() => {
+    clickHandlerRef.current = onClickMarker
+  }, [onClickMarker])
 
   return <Box ref={ref} id="map" sx={{ width: '100%', height: '100%' }} />
 }
