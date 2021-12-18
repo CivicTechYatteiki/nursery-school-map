@@ -41,7 +41,7 @@ export function NurseryDetail({ nursery, difficulty }: { nursery: NurserySchool;
             </Typography>
             <EmphasizeChip
               label={difficultyStyle.label}
-              sx={{ border: `1px solid ${blue[90]}`, backgroundColor: difficultyStyle.color }}
+              sx={{ border: `1px solid ${blue[90]}`, color: blue[90], backgroundColor: difficultyStyle.color }}
             />
           </Stack>
           <Typography variant="caption" color="text.secondary" component="div">
