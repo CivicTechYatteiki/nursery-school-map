@@ -1,12 +1,17 @@
-import { Box } from '@mui/system'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import { Wrapper, Status } from '@googlemaps/react-wrapper'
-import { CircularProgress, Stack, Typography } from '@mui/material'
+import { Status, Wrapper } from '@googlemaps/react-wrapper'
 import ErrorIcon from '@mui/icons-material/Error'
-import { useRef, useEffect } from 'react'
+import { CircularProgress, Stack, Typography } from '@mui/material'
+import { Box } from '@mui/system'
+import { GetStaticProps } from 'next'
+import Head from 'next/head'
+import { useEffect, useRef } from 'react'
+import { getAllNurserySchoolListSets, LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
 
-export default function Home() {
+interface Props {
+  nurserySets: LocalNurserySchoolListSet[]
+}
+
+export default function Home({ nurserySets }: Props) {
   const render = (status: Status) => {
     switch (status) {
       case Status.LOADING:
@@ -19,7 +24,7 @@ export default function Home() {
           </Stack>
         )
       case Status.SUCCESS:
-        return <MyMapComponent center={{ lat: 35.654291, lng: 139.750533 }} zoom={15} />
+        return <MyMapComponent center={{ lat: 35.654291, lng: 139.750533 }} zoom={15} nurserySets={nurserySets} />
     }
   }
 
@@ -38,20 +43,55 @@ export default function Home() {
   )
 }
 
-function MyMapComponent({ center, zoom }: { center: google.maps.LatLngLiteral; zoom: number }) {
+function MyMapComponent({
+  center,
+  zoom,
+  nurserySets,
+}: {
+  center: google.maps.LatLngLiteral
+  zoom: number
+  nurserySets: LocalNurserySchoolListSet[]
+}) {
   const ref = useRef<HTMLDivElement>(null)
-  const initRef = useRef(false)
+  const mapRef = useRef<google.maps.Map>()
+  const markersRef = useRef<google.maps.Marker[]>([])
 
   useEffect(() => {
     if (!ref.current) return
-    if (initRef.current) return
+    if (mapRef.current) return
 
-    new google.maps.Map(ref.current, {
+    mapRef.current = new google.maps.Map(ref.current, {
       center: { lat: center.lat, lng: center.lng },
       zoom,
     })
-    initRef.current = true
   }, [center.lat, center.lng, zoom])
 
+  useEffect(() => {
+    markersRef.current = createMarkers(mapRef.current!, nurserySets)
+  }, [nurserySets])
+
   return <Box ref={ref} id="map" sx={{ width: '100%', height: '100%' }} />
+}
+
+function createMarkers(map: google.maps.Map, nurserySets: LocalNurserySchoolListSet[]) {
+  const markers: google.maps.Marker[] = []
+  for (const nurserySet of nurserySets) {
+    for (const nursery of nurserySet.nurseryShoolList) {
+      const marker = new google.maps.Marker({
+        map,
+        title: nursery.name,
+        position: { lat: nursery.location.latitude, lng: nursery.location.longitude },
+      })
+      markers.push(marker)
+    }
+  }
+  return markers
+}
+
+export const getStaticProps: GetStaticProps<Props> = () => {
+  return {
+    props: {
+      nurserySets: getAllNurserySchoolListSets(),
+    },
+  }
 }
