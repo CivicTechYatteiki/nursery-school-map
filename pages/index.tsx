@@ -1,6 +1,6 @@
 import { Status, Wrapper } from '@googlemaps/react-wrapper'
 import ErrorIcon from '@mui/icons-material/Error'
-import { CircularProgress, Stack, Typography } from '@mui/material'
+import { AppBar, Button, CircularProgress, Divider, Paper, Stack, Toolbar, Typography, useTheme } from '@mui/material'
 import { Box } from '@mui/system'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
@@ -36,10 +36,39 @@ export default function Home({ nurserySets }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <AppBar color="transparent" elevation={0}>
+        <Toolbar>
+          <Filters />
+        </Toolbar>
+      </AppBar>
+
       <Box sx={{ width: '100%', height: '100vh' }}>
         <Wrapper apiKey="AIzaSyAQtZaDCQybQWgd-uOQD-jN7vJnontAXtY" render={render} />
       </Box>
     </>
+  )
+}
+
+function Filters() {
+  const theme = useTheme()
+
+  return (
+    <Paper elevation={1} sx={{ borderRadius: 1000, paddingX: 1 }}>
+      <Stack
+        direction="row"
+        spacing={1}
+        divider={
+          <Divider
+            orientation="vertical"
+            flexItem
+            style={{ marginTop: theme.spacing(1), marginBottom: theme.spacing(1) }}
+          />
+        }
+      >
+        <Button color="primary">2022年4月入園</Button>
+        <Button color="primary">子どもの年齢指定なし</Button>
+      </Stack>
+    </Paper>
   )
 }
 
