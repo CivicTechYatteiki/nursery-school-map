@@ -9,7 +9,7 @@ export const blue = {
 }
 
 // Create a theme instance.
-const theme = createTheme({
+export const appTheme = createTheme({
   palette: {
     primary: {
       main: blue[50],
@@ -25,5 +25,3 @@ const theme = createTheme({
     borderRadius: 12,
   },
 })
-
-export default theme
