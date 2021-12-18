@@ -16,8 +16,36 @@ export interface NurserySchool {
 
 type EasyToEnter = '入りやすい' | 'やや入りやすい' | '入りづらい'
 
-export const getEasyToEnter = (nurserySchool: NurserySchool, age: number | null): EasyToEnter => {
-  const list = getLocalNurserySchoolList(nurserySchool.localName)
+const convertMinimumIndexToNumber = (minimumIndex: MinimumIndex | null): number | null => {
+  if (minimumIndex === null) { return null }
+  if (minimumIndex === '非公開') { return null }
+  if (typeof(minimumIndex) === "number") { return minimumIndex }
+  if (typeof((minimumIndex as Range).lessThanOrEqual) === "number") { return minimumIndex.lessThanOrEqual }
+  return null
+}
+
+const easyToEnter = (target: MinimumIndex | null, minimumIndices: number[]): EasyToEnter | null=> {
+  const value = (minimuIndexNumber: number, max: number): EasyToEnter => {
+    if (minimuIndexNumber <= max - 10) { return '入りやすい' }
+    if (minimuIndexNumber <= max - 3) { return 'やや入りやすい' }
+    return '入りづらい'
+  }
+
+  const max = Math.max(...minimumIndices)
+
+  if (target === null || target === '非公開') { return null } // 判定不能
+  if (typeof(target) === 'number') {
+    return value(target, max)
+  }
+  if ((typeof(target as Range).lessThanOrEqual) === 'number') {
+    const number: number = (target as Range).lessThanOrEqual
+    return value(number, max)
+  }
+  return null
+}
+
+export const getEasyToEnter = (nurserySchool: NurserySchool, age: number | null): EasyToEnter | null => {
+  const list = getLocalNurserySchoolList(nurserySchool.localName).nurseryShoolList
   // 入所最低指数をみて、
   // (最大値-3)〜最大値: 入りづらい
   // (最大値-10)〜(最大値-4): やや入りやすい
@@ -28,7 +56,14 @@ export const getEasyToEnter = (nurserySchool: NurserySchool, age: number | null)
     // 各年齢で入りやすさを求めて、最頻値を年齢指定がない場合の入りやすさとする
     return '入りづらい'
   } else if (age === 0) {
-    return '入りづらい'
+    const age0MinimuIndices: number[] = list
+      .map(it => { return it.classList?.age0?.minimumIndex ?? null })
+      .map(it => { return convertMinimumIndexToNumber(it) })
+      .filter(it => { return it !== null }) as number[]
+
+    const target = nurserySchool.classList?.age0?.minimumIndex ?? null
+    return easyToEnter(target, age0MinimuIndices)
+
   } else if (age === 1) {
     return '入りづらい'
   } else if (age === 2) {
