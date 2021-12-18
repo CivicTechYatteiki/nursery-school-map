@@ -18,24 +18,19 @@ export const enum AdmissionDifficulty {
   Easy = 1,
   Moderate = 2,
   Hard = 3,
-  Unknown = 4,
 }
 
 export const getAdmissionDifficulty = (
   nurserySchool: NurserySchool,
   inSet: LocalNurserySchoolListSet,
   age: number | null
-): AdmissionDifficulty => {
+): AdmissionDifficulty | null => {
     // 入所最低指数をみて、
   // (最大値-3)〜最大値: 入りづらい
   // (最大値-10)〜(最大値-4): やや入りやすい
   // 0 〜 (最大値-11): 入りやすい
   // とする。実際に使ってみてまた調整する
-  // TODO: 実装
-  if (age === null) {
-    // 各年齢で入りやすさを求めて、最頻値を年齢指定がない場合の入りやすさとする
-    return AdmissionDifficulty.Hard
-  } else if (age === 0) {
+  const age0Difficulty = (() => {
     const age0MinimuIndices: number[] = inSet.nurseryShoolList
       .map(it => { return it.classList?.age0?.minimumIndex ?? null })
       .map(it => { return convertMinimumIndexToNumber(it) })
@@ -43,18 +38,99 @@ export const getAdmissionDifficulty = (
 
     const target = nurserySchool.classList?.age0?.minimumIndex ?? null
     return estimateAdmissionDifficulty(target, age0MinimuIndices)
-  } else if (age === 1) {
-    return AdmissionDifficulty.Hard
-  } else if (age === 2) {
-    return AdmissionDifficulty.Hard
-  } else if (age === 3) {
-    return AdmissionDifficulty.Hard
-  } else if (age === 4) {
-    return AdmissionDifficulty.Hard
-  } else if (age === 5) {
-    return AdmissionDifficulty.Hard
-  } else {
-    throw Error('Invalid age')
+  })()
+
+  const age1Difficulty = (() => {
+    const age1MinimuIndices: number[] = inSet.nurseryShoolList
+      .map(it => { return it.classList?.age1?.minimumIndex ?? null })
+      .map(it => { return convertMinimumIndexToNumber(it) })
+      .filter(it => { return it !== null }) as number[]
+
+    const target = nurserySchool.classList?.age1?.minimumIndex ?? null
+    return estimateAdmissionDifficulty(target, age1MinimuIndices)
+  })()
+
+  const age2Difficulty = (() => {
+    const age2MinimuIndices: number[] = inSet.nurseryShoolList
+      .map(it => { return it.classList?.age2?.minimumIndex ?? null })
+      .map(it => { return convertMinimumIndexToNumber(it) })
+      .filter(it => { return it !== null }) as number[]
+
+    const target = nurserySchool.classList?.age2?.minimumIndex ?? null
+    return estimateAdmissionDifficulty(target, age2MinimuIndices)
+  })()
+
+  const age3Difficulty = (() => {
+    const age3MinimuIndices: number[] = inSet.nurseryShoolList
+      .map(it => { return it.classList?.age3?.minimumIndex ?? null })
+      .map(it => { return convertMinimumIndexToNumber(it) })
+      .filter(it => { return it !== null }) as number[]
+
+    const target = nurserySchool.classList?.age3?.minimumIndex ?? null
+    return estimateAdmissionDifficulty(target, age3MinimuIndices)
+  })()
+
+  const age4Difficulty = (() => {
+    const age4MinimuIndices: number[] = inSet.nurseryShoolList
+      .map(it => { return it.classList?.age4?.minimumIndex ?? null })
+      .map(it => { return convertMinimumIndexToNumber(it) })
+      .filter(it => { return it !== null }) as number[]
+
+    const target = nurserySchool.classList?.age4?.minimumIndex ?? null
+    return estimateAdmissionDifficulty(target, age4MinimuIndices)
+  })()
+
+  const age5Difficulty = (() => {
+    const age5MinimuIndices: number[] = inSet.nurseryShoolList
+      .map(it => { return it.classList?.age5?.minimumIndex ?? null })
+      .map(it => { return convertMinimumIndexToNumber(it) })
+      .filter(it => { return it !== null }) as number[]
+
+    const target = nurserySchool.classList?.age5?.minimumIndex ?? null
+    return estimateAdmissionDifficulty(target, age5MinimuIndices)
+  })()
+
+  switch (age) {
+    case 0:
+      return age0Difficulty
+    case 1:
+      return age1Difficulty
+    case 2:
+      return age2Difficulty
+    case 3:
+      return age3Difficulty
+    case 4:
+      return age4Difficulty
+    case 5:
+      return age5Difficulty
+    case null:
+      // 各年齢で入りやすさを求めて、最頻値を年齢指定がない場合の入りやすさとする
+      var count = {
+        [AdmissionDifficulty.Easy]: 0,
+        [AdmissionDifficulty.Moderate]: 0,
+        [AdmissionDifficulty.Hard]: 0,
+      }
+      const difficulties: AdmissionDifficulty[] = [age0Difficulty, age1Difficulty, age2Difficulty, age3Difficulty, age4Difficulty, age5Difficulty]
+        .filter((it) => { return it !== null }) as AdmissionDifficulty[]
+
+      if (difficulties.length === 0) {
+        return null
+      }
+
+      difficulties.forEach((it) => { count[it] += 1 })
+
+      console.log(nurserySchool.name, difficulties, count)
+
+      if (count[AdmissionDifficulty.Easy] > count[AdmissionDifficulty.Moderate] && count[AdmissionDifficulty.Easy] > count[AdmissionDifficulty.Hard]) {
+        return AdmissionDifficulty.Easy
+      } else if (count[AdmissionDifficulty.Moderate] >= count[AdmissionDifficulty.Easy] && count[AdmissionDifficulty.Moderate] > count[AdmissionDifficulty.Hard]) {
+        return AdmissionDifficulty.Moderate
+      } else if (count[AdmissionDifficulty.Hard] >= count[AdmissionDifficulty.Easy] && count[AdmissionDifficulty.Hard] >= count[AdmissionDifficulty.Moderate]) {
+        return AdmissionDifficulty.Hard
+      }
+      throw Error('Unexpected error')
+    default:
+      throw Error('Invalid age')
   }
 }
 
@@ -66,7 +142,7 @@ const convertMinimumIndexToNumber = (minimumIndex: MinimumIndex | null): number 
   return null
 }
 
-const estimateAdmissionDifficulty = (target: MinimumIndex | null, minimumIndices: number[]): AdmissionDifficulty => {
+const estimateAdmissionDifficulty = (target: MinimumIndex | null, minimumIndices: number[]): AdmissionDifficulty | null => {
   const value = (minimuIndexNumber: number, max: number): AdmissionDifficulty => {
     if (minimuIndexNumber <= max - 10) { return AdmissionDifficulty.Easy }
     if (minimuIndexNumber <= max - 3) { return AdmissionDifficulty.Moderate }
@@ -75,7 +151,7 @@ const estimateAdmissionDifficulty = (target: MinimumIndex | null, minimumIndices
 
   const max = Math.max(...minimumIndices)
 
-  if (target === null || target === '非公開') { return AdmissionDifficulty.Unknown } // 判定不能
+  if (target === null || target === '非公開') { return null } // 判定不能
   if (typeof(target) === 'number') {
     return value(target, max)
   }
@@ -83,7 +159,7 @@ const estimateAdmissionDifficulty = (target: MinimumIndex | null, minimumIndices
     const number: number = (target as Range).lessThanOrEqual
     return value(number, max)
   }
-  return AdmissionDifficulty.Unknown
+  return null
 }
 
 export interface GeoLocation {
