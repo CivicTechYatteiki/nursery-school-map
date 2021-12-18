@@ -1,4 +1,3 @@
-import fs from 'fs'
 import { csv2json, minatoKuJsonFile } from '../../csv2json'
 import {
   validateClass,
@@ -31,6 +30,7 @@ const minatoKuHoikuenSaiteiShisu: Source = {
 }
 
 const minatoKu: MergedData = {
+  localName: "港区",
   dataList: [
     {
       filePath: minatoKuHoikuen.filePath,
@@ -121,13 +121,7 @@ const minatoKu: MergedData = {
         },
       ]
     },
-  ],
-  tsModelKeyForMerge: "name"
+  ]
 }
 
 csv2json(minatoKu)
-
-// データ使うとき
-// const json = fs.readFileSync(minatoKuJsonFile, 'utf-8')
-// const models: [NurserySchool] = JSON.parse(json)
-// console.log(models[0].name)

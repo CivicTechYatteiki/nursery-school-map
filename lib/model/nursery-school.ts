@@ -8,6 +8,7 @@ export interface NurserySchool {
   location: GeoLocation
   admissionAgeInMonth: string | null // 入園可能月齢。3ヶ月、57日など。データがない場合はnull
   classList: ClassList | null
+  localName: string // 自治体名
   sources: [Source] // 情報元
 }
 
