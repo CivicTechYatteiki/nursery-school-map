@@ -1,29 +1,29 @@
-import { assert } from 'console';
-import fs from 'fs'
-import { minatoKuJsonFile } from "../csv2json";
-import { NurserySchool } from "./nursery-school";
+import { NurserySchool } from './nursery-school'
+import minatoKuJson from '../data/minato-ku/translated.json'
 
-export interface LocalNurserySchoolList {
+export interface LocalNurserySchoolListSet {
   localName: string // 自治体名
   nurseryShoolList: NurserySchool[]
 }
 
-const minatoKuNurserySchoolList: LocalNurserySchoolList = {
-  localName: "港区",
-  nurseryShoolList: (() => {
-    const json = fs.readFileSync(minatoKuJsonFile, 'utf-8')
-    const models: [NurserySchool] = JSON.parse(json)
-    return models
-  })()
+export const getAllNurserySchoolListSets = (): LocalNurserySchoolListSet[] => {
+  const minatoKuNurserySchoolList: LocalNurserySchoolListSet = {
+    localName: '港区',
+    nurseryShoolList: minatoKuJson as NurserySchool[],
+  }
+  return [minatoKuNurserySchoolList]
 }
 
-export const allNurserySchoolList: LocalNurserySchoolList[] = [minatoKuNurserySchoolList]
-
-export const getLocalNurserySchoolList = (localName: string): LocalNurserySchoolList => {
-  const list = allNurserySchoolList.filter(it => {
+export const filterLocalNurserySchoolList = (
+  nurserySchoolSets: LocalNurserySchoolListSet[],
+  localName: string
+): NurserySchool[] => {
+  const list = nurserySchoolSets.filter(it => {
     return it.localName == localName
   })
 
-  assert(list.length === 1)
-  return list[0]
+  if (list.length === 1) {
+    throw new Error('Multiple locals found')
+  }
+  return list[0].nurseryShoolList
 }

@@ -1,4 +1,4 @@
-import { Class, Source, Range } from "./model/nursery-school"
+import { Class, Source, Range } from "../model/nursery-school"
 
 
 export const validateString = (value: string): string => {

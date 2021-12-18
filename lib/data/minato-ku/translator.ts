@@ -1,11 +1,11 @@
-import { csv2json, minatoKuJsonFile } from '../../csv2json'
+import { csv2json } from '../csv2json'
 import {
   validateClass,
   validateNumber,
   validateString,
   validateOptionalString,
   validateSource
-} from '../../validator'
+} from '../validator'
 import {
   ClassList,
   createClass,

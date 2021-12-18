@@ -1,14 +1,14 @@
 import fs from 'fs'
 import { parse } from 'csv-parse/sync'
-import { Data, MergedData } from './model/data'
-import { NurserySchool } from './model/nursery-school'
+import { Data, MergedData } from '../model/data'
+import type { NurserySchool } from '../model/nursery-school'
 
 interface TmpData {
   data: Data
   records: any
 }
 
-export const minatoKuJsonFile = `${__dirname}/data/minato-ku/translated.json`
+const minatoKuJsonFile = `${__dirname}/data/minato-ku/translated.json`
 
 export const csv2json = (mergedData: MergedData) => {
   const tmpDataList: TmpData[] = mergedData.dataList.map(data => {
