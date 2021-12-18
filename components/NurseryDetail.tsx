@@ -5,7 +5,7 @@ import { blue } from '../styles/theme'
 import { difficultyToStyle } from './marker'
 
 export function NurseryDetail({ nursery, difficulty }: { nursery: NurserySchool; difficulty: AdmissionDifficulty }) {
-  const difficultyStyle = difficultyToStyle[difficulty]
+  const difficultyStyle = difficultyToStyle(difficulty)
 
   const shortAddress = nursery.address.replace(/^.{1,3}?[都道府県]/, '')
 
@@ -39,10 +39,12 @@ export function NurseryDetail({ nursery, difficulty }: { nursery: NurserySchool;
             <Typography variant="subtitle1" component="div">
               34 - 37
             </Typography>
-            <EmphasizeChip
-              label={difficultyStyle.label}
-              sx={{ border: `1px solid ${blue[90]}`, color: blue[90], backgroundColor: difficultyStyle.color }}
-            />
+            {difficultyStyle.label && (
+              <EmphasizeChip
+                label={difficultyStyle.label}
+                sx={{ border: `1px solid ${blue[90]}`, color: blue[90], backgroundColor: difficultyStyle.color }}
+              />
+            )}
           </Stack>
           <Typography variant="caption" color="text.secondary" component="div">
             <div>{nursery.localName}の保育園全体</div>
