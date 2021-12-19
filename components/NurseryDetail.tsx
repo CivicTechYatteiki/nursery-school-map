@@ -94,7 +94,7 @@ function DifficultyCell({
         position: 'relative',
       }}
     >
-      <Stack direction="column" spacing={1} sx={{ paddingX: 1.5, paddingY: 1 }}>
+      <Stack direction="column" spacing={1} sx={{ paddingX: 1.5, paddingTop: 1 }}>
         <Typography variant="body2" color="text.disabled" component="div">
           {age}歳
         </Typography>
