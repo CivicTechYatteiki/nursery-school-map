@@ -44,46 +44,6 @@ export const getMinimumIndexRange = (age: number, inNurserySchool: NurserySchool
   if (index == null) { return "-" }
   if (isRange(index)) { return index.text }
   return index.toString()
-  // const age0 = nurserySchool.classList?.age0?.minimumIndex ?? null
-  // const age1 = nurserySchool.classList?.age1?.minimumIndex ?? null
-  // const age2 = nurserySchool.classList?.age2?.minimumIndex ?? null
-  // const age3 = nurserySchool.classList?.age3?.minimumIndex ?? null
-  // const age4 = nurserySchool.classList?.age4?.minimumIndex ?? null
-  // const age5 = nurserySchool.classList?.age5?.minimumIndex ?? null
-
-  // const numbers: number[] = [
-  //   convertMinimumIndexToNumber(age0),
-  //   convertMinimumIndexToNumber(age1),
-  //   convertMinimumIndexToNumber(age2),
-  //   convertMinimumIndexToNumber(age3),
-  //   convertMinimumIndexToNumber(age4),
-  //   convertMinimumIndexToNumber(age5),
-  // ].filter(it => { return it !== null }) as number[]
-  // const max = Math.max(...numbers)
-  // const min = Math.min(...numbers)
-
-  // const toString = (number: number): string => {
-  //   if (isRange(age0) && age0.lessThanOrEqual == number) {
-  //     return age0.text
-  //   }
-  //   if (isRange(age1) && age1.lessThanOrEqual == number) {
-  //     return age1.text
-  //   }
-  //   if (isRange(age2) && age2.lessThanOrEqual == number) {
-  //     return age2.text
-  //   }
-  //   if (isRange(age3) && age3.lessThanOrEqual == number) {
-  //     return age3.text
-  //   }
-  //   if (isRange(age4) && age4.lessThanOrEqual == number) {
-  //     return age4.text
-  //   }
-  //   if (isRange(age5) && age5.lessThanOrEqual == number) {
-  //     return age5.text
-  //   }
-  //   return `${number}`
-  // }
-  // return `${toString(min)} - ${toString(max)}`
 }
 
 export const enum AdmissionDifficulty {
