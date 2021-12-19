@@ -14,6 +14,78 @@ export interface NurserySchool {
   sources: [Source] // 情報元
 }
 
+const isRange = (value: any): value is Range => {
+  return value !== null
+    && typeof(value) === "object"
+    && typeof(value.lessThanOrEqual) === "number"
+    && typeof(value.text) === "string"
+}
+
+export const getMinimumIndexRange = (age: number, inNurserySchool: NurserySchool): string => {
+  const index: MinimumIndex | null = (() => {
+    switch (age) {
+      case 0:
+        return inNurserySchool.classList?.age0?.minimumIndex ?? null
+      case 1:
+        return inNurserySchool.classList?.age1?.minimumIndex ?? null
+      case 2:
+        return inNurserySchool.classList?.age2?.minimumIndex ?? null
+      case 3:
+        return inNurserySchool.classList?.age3?.minimumIndex ?? null
+      case 4:
+        return inNurserySchool.classList?.age4?.minimumIndex ?? null
+      case 5:
+        return inNurserySchool.classList?.age5?.minimumIndex ?? null
+      default:
+        throw Error("Invalid age")
+    }
+  })()
+
+  if (index == null) { return "-" }
+  if (isRange(index)) { return index.text }
+  return index.toString()
+  // const age0 = nurserySchool.classList?.age0?.minimumIndex ?? null
+  // const age1 = nurserySchool.classList?.age1?.minimumIndex ?? null
+  // const age2 = nurserySchool.classList?.age2?.minimumIndex ?? null
+  // const age3 = nurserySchool.classList?.age3?.minimumIndex ?? null
+  // const age4 = nurserySchool.classList?.age4?.minimumIndex ?? null
+  // const age5 = nurserySchool.classList?.age5?.minimumIndex ?? null
+
+  // const numbers: number[] = [
+  //   convertMinimumIndexToNumber(age0),
+  //   convertMinimumIndexToNumber(age1),
+  //   convertMinimumIndexToNumber(age2),
+  //   convertMinimumIndexToNumber(age3),
+  //   convertMinimumIndexToNumber(age4),
+  //   convertMinimumIndexToNumber(age5),
+  // ].filter(it => { return it !== null }) as number[]
+  // const max = Math.max(...numbers)
+  // const min = Math.min(...numbers)
+
+  // const toString = (number: number): string => {
+  //   if (isRange(age0) && age0.lessThanOrEqual == number) {
+  //     return age0.text
+  //   }
+  //   if (isRange(age1) && age1.lessThanOrEqual == number) {
+  //     return age1.text
+  //   }
+  //   if (isRange(age2) && age2.lessThanOrEqual == number) {
+  //     return age2.text
+  //   }
+  //   if (isRange(age3) && age3.lessThanOrEqual == number) {
+  //     return age3.text
+  //   }
+  //   if (isRange(age4) && age4.lessThanOrEqual == number) {
+  //     return age4.text
+  //   }
+  //   if (isRange(age5) && age5.lessThanOrEqual == number) {
+  //     return age5.text
+  //   }
+  //   return `${number}`
+  // }
+  // return `${toString(min)} - ${toString(max)}`
+}
+
 export const enum AdmissionDifficulty {
   Easy = 1,
   Moderate = 2,

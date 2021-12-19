@@ -1,6 +1,6 @@
 import { alpha, Chip, Paper, Stack, styled, Typography } from '@mui/material'
 import { grey } from '@mui/material/colors'
-import { AdmissionDifficulty, NurserySchool } from '../lib/model/nursery-school'
+import { AdmissionDifficulty, getMinimumIndexRange, NurserySchool } from '../lib/model/nursery-school'
 import { blue } from '../styles/theme'
 import { difficultyToStyle } from './marker'
 
@@ -19,39 +19,68 @@ export function NurseryDetail({ nursery, difficulty }: { nursery: NurserySchool;
           <Typography variant="caption" color="text.secondary">
             {shortAddress}
           </Typography>
-          <Typography variant="caption" color="text.secondary">
+          {/* <Typography variant="caption" color="text.secondary">
             現在地から800m
-          </Typography>
+          </Typography> */}
         </Stack>
       </div>
 
-      <Paper variant="outlined" sx={{ paddingX: 1.5, paddingY: 2, width: 176, background: grey[50] }}>
-        <Stack direction="column" spacing={2}>
-          <Stack direction="column" spacing={1}>
-            <Typography variant="subtitle1" component="div">
-              最低指数
-            </Typography>
-            <Typography variant="caption" color="text.secondary">
-              R3年4月入所1次利用調整
-            </Typography>
-          </Stack>
-          <Stack direction="column" spacing={1} alignItems="flex-start">
-            <Typography variant="subtitle1" component="div">
-              34 - 37
-            </Typography>
-            {difficultyStyle.label && (
-              <EmphasizeChip
-                label={difficultyStyle.label}
-                sx={{ border: `1px solid ${blue[90]}`, color: blue[90], backgroundColor: difficultyStyle.color }}
-              />
-            )}
-          </Stack>
-          <Typography variant="caption" color="text.secondary" component="div">
-            <div>{nursery.localName}の保育園全体</div>
-            <div>22以下 - 40</div>
-          </Typography>
+      <div>
+        <Typography variant="subtitle1" component="div">
+          最低指数
+        </Typography>
+        <Typography variant="caption" color="text.secondary">
+          R3年4月入所1次利用調整
+        </Typography>
+
+        <Stack direction="row" spacing={2}>
+          <Paper variant="outlined" sx={{ width: 110, background: grey[50] }}>
+            <Stack direction="column" spacing={2}>
+              <Stack direction="column" spacing={1}>
+                <Typography variant="subtitle1" component="div">
+                  0歳
+                </Typography>
+              </Stack>
+              <Stack direction="column" spacing={1} alignItems="flex-start">
+                <Typography variant="subtitle1" component="div">
+                  {getMinimumIndexRange(0, nursery)}
+                </Typography>
+                {difficultyStyle.label && (
+                  <EmphasizeChip
+                    label={difficultyStyle.label}
+                    sx={{ border: `1px solid ${blue[90]}`, color: blue[90], backgroundColor: difficultyStyle.color }}
+                  />
+                )}
+              </Stack>
+            </Stack>
+          </Paper>
+
+          <Paper variant="outlined" sx={{ width: 110, background: grey[50] }}>
+            <Stack direction="column" spacing={2}>
+              <Stack direction="column" spacing={1}>
+                <Typography variant="subtitle1" component="div">
+                  1歳
+                </Typography>
+              </Stack>
+              <Stack direction="column" spacing={1} alignItems="flex-start">
+                <Typography variant="subtitle1" component="div">
+                  {getMinimumIndexRange(1, nursery)}
+                </Typography>
+                {difficultyStyle.label && (
+                  <EmphasizeChip
+                    label={difficultyStyle.label}
+                    sx={{ border: `1px solid ${blue[90]}`, color: blue[90], backgroundColor: difficultyStyle.color }}
+                  />
+                )}
+              </Stack>
+            </Stack>
+          </Paper>
         </Stack>
-      </Paper>
+      </div>
+
+      <Typography variant="caption" color="text.secondary" component="div">
+        <div>{nursery.localName}の保育園全体では、最大で41・最小で22以下の指数の人が保育園に入ることができています。</div>
+      </Typography>
     </Stack>
   )
 }
