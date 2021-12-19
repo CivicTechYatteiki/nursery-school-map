@@ -69,6 +69,8 @@ export default function Home({ nurserySets }: Props) {
   }
 
   const resetMarker = () => {
+    if (!detail) return
+
     const marker = detail.marker
     // TODO: hack
     const markerIcon = marker.getIcon() as google.maps.Symbol
