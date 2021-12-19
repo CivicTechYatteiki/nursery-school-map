@@ -142,6 +142,7 @@ function DifficultyCell({
 
             '.MuiChip-label': {
               paddingX: 0,
+              marginBottom: '2px',
             },
           }}
         />
