@@ -12,12 +12,14 @@ export default class MyDocument extends Document {
       <Html lang="ja">
         <Head>
           {/* PWA primary color */}
-          <meta name="theme-color" content={appTheme.palette.primary.main} />
+          {/* NOTE: Disabled because we have white toolbar */}
+          {/* <meta name="theme-color" content={appTheme.palette.primary.main} /> */}
           <link
             href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700|Roboto:400,500,700&display=swap&subset=japanese"
             rel="stylesheet"
           />
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+          <link rel="icon" href="/favicon.svg" type="image/svg+xml"></link>
         </Head>
         <body>
           <Main />

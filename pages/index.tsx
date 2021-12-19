@@ -75,7 +75,6 @@ export default function Home({ nurserySets }: Props) {
       <Head>
         <title>入りやすい保育園マップ</title>
         <meta name="description" content="入所最低指数をもとに、保育園の入りやすさを色分けして地図に表示します。" />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
       <Stack sx={{ width: '100%', height: '100vh' }}>
