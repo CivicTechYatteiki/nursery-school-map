@@ -4,12 +4,12 @@ import { AppBar, Button, CircularProgress, Divider, Paper, Stack, Toolbar, Typog
 import { Box } from '@mui/system'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { useEffect, useRef, useState } from 'react'
-import { getAllNurserySchoolListSets, LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
+import { useRef, useState } from 'react'
+import { BottomSheet } from 'react-spring-bottom-sheet'
 import { createMarkers, MarkerClickHandler } from '../components/marker'
-import { BottomSheet, BottomSheetRef } from 'react-spring-bottom-sheet'
-import { AdmissionDifficulty, NurserySchool } from '../lib/model/nursery-school'
 import { NurseryDetail } from '../components/NurseryDetail'
+import { NurserySchool } from '../lib/model/nursery-school'
+import { getAllNurserySchoolListSets, LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
 import { useIsomorphicLayoutEffect } from '../utils/useIsomorhpicLayoutEffect'
 
 interface Props {
@@ -19,7 +19,7 @@ interface Props {
 export default function Home({ nurserySets }: Props) {
   const [detail, setDetail] = useState<{
     nursery: NurserySchool
-    difficulty: AdmissionDifficulty
+    inNurserySet: LocalNurserySchoolListSet
     open: boolean
   } | null>(null)
 
@@ -40,7 +40,7 @@ export default function Home({ nurserySets }: Props) {
             center={{ lat: 35.654291, lng: 139.750533 }}
             zoom={15}
             nurserySets={nurserySets}
-            onClickMarker={({ nursery, difficulty }) => setDetail({ nursery, difficulty, open: true })}
+            onClickMarker={({ nursery, inNurserySet }) => setDetail({ nursery, inNurserySet, open: true })}
           />
         )
     }
@@ -60,8 +60,12 @@ export default function Home({ nurserySets }: Props) {
 
       <AppBar color="inherit" elevation={0}>
         <Toolbar>
-          <Typography component="h1" variant="h6">入りやすい保育園マップ</Typography>
-          <Typography variant="body2" color="gray">港区限定で公開中</Typography>
+          <Typography component="h1" variant="h6">
+            入りやすい保育園マップ
+          </Typography>
+          <Typography variant="body2" color="gray">
+            港区限定で公開中
+          </Typography>
           {/* <Filters /> */}
         </Toolbar>
       </AppBar>
@@ -72,7 +76,7 @@ export default function Home({ nurserySets }: Props) {
 
       {detail && (
         <BottomSheet open={detail.open} onDismiss={handleDetailClose}>
-          <NurseryDetail nursery={detail.nursery} difficulty={detail.difficulty} />
+          <NurseryDetail nursery={detail.nursery} inNurserySet={detail.inNurserySet} />
         </BottomSheet>
       )}
     </>

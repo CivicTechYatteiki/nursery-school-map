@@ -15,13 +15,25 @@ export interface NurserySchool {
 }
 
 const isRange = (value: any): value is Range => {
-  return value !== null
-    && typeof(value) === "object"
-    && typeof(value.lessThanOrEqual) === "number"
-    && typeof(value.text) === "string"
+  return (
+    value !== null &&
+    typeof value === 'object' &&
+    typeof value.lessThanOrEqual === 'number' &&
+    typeof value.text === 'string'
+  )
 }
 
-export const getMinimumIndexRange = (age: number, inNurserySchool: NurserySchool): string => {
+interface IndexRange {
+  type:
+    | 'eq' // 即値
+    | 'le' // 以下
+    | 'na' // 空きか希望者がなく選考なし
+    | 'other' // 希望者が少なく個人情報保護のため非公開、など
+  value: number
+  other?: string
+}
+
+export const getMinimumIndexRange = (age: number, inNurserySchool: NurserySchool): IndexRange => {
   const index: MinimumIndex | null = (() => {
     switch (age) {
       case 0:
@@ -37,13 +49,17 @@ export const getMinimumIndexRange = (age: number, inNurserySchool: NurserySchool
       case 5:
         return inNurserySchool.classList?.age5?.minimumIndex ?? null
       default:
-        throw Error("Invalid age")
+        throw Error('Invalid age')
     }
   })()
 
-  if (index == null) { return "-" }
-  if (isRange(index)) { return index.text }
-  return index.toString()
+  if (index == null) {
+    return { type: 'na', value: 0 }
+  }
+  if (isRange(index)) {
+    return { type: 'le', value: index.lessThanOrEqual }
+  }
+  return typeof index === 'number' ? { type: 'eq', value: index } : { type: 'other', value: 0, other: index }
 }
 
 export const enum AdmissionDifficulty {
@@ -57,16 +73,22 @@ export const getAdmissionDifficulty = (
   inSet: LocalNurserySchoolListSet,
   age: number | null
 ): AdmissionDifficulty | null => {
-    // 入所最低指数をみて、
+  // 入所最低指数をみて、
   // (最大値-3)〜最大値: 入りづらい
   // (最大値-10)〜(最大値-4): やや入りやすい
   // 0 〜 (最大値-11): 入りやすい
   // とする。実際に使ってみてまた調整する
   const age0Difficulty = (() => {
     const age0MinimuIndices: number[] = inSet.nurseryShoolList
-      .map(it => { return it.classList?.age0?.minimumIndex ?? null })
-      .map(it => { return convertMinimumIndexToNumber(it) })
-      .filter(it => { return it !== null }) as number[]
+      .map(it => {
+        return it.classList?.age0?.minimumIndex ?? null
+      })
+      .map(it => {
+        return convertMinimumIndexToNumber(it)
+      })
+      .filter(it => {
+        return it !== null
+      }) as number[]
 
     const target = nurserySchool.classList?.age0?.minimumIndex ?? null
     return estimateAdmissionDifficulty(target, age0MinimuIndices)
@@ -74,9 +96,15 @@ export const getAdmissionDifficulty = (
 
   const age1Difficulty = (() => {
     const age1MinimuIndices: number[] = inSet.nurseryShoolList
-      .map(it => { return it.classList?.age1?.minimumIndex ?? null })
-      .map(it => { return convertMinimumIndexToNumber(it) })
-      .filter(it => { return it !== null }) as number[]
+      .map(it => {
+        return it.classList?.age1?.minimumIndex ?? null
+      })
+      .map(it => {
+        return convertMinimumIndexToNumber(it)
+      })
+      .filter(it => {
+        return it !== null
+      }) as number[]
 
     const target = nurserySchool.classList?.age1?.minimumIndex ?? null
     return estimateAdmissionDifficulty(target, age1MinimuIndices)
@@ -84,9 +112,15 @@ export const getAdmissionDifficulty = (
 
   const age2Difficulty = (() => {
     const age2MinimuIndices: number[] = inSet.nurseryShoolList
-      .map(it => { return it.classList?.age2?.minimumIndex ?? null })
-      .map(it => { return convertMinimumIndexToNumber(it) })
-      .filter(it => { return it !== null }) as number[]
+      .map(it => {
+        return it.classList?.age2?.minimumIndex ?? null
+      })
+      .map(it => {
+        return convertMinimumIndexToNumber(it)
+      })
+      .filter(it => {
+        return it !== null
+      }) as number[]
 
     const target = nurserySchool.classList?.age2?.minimumIndex ?? null
     return estimateAdmissionDifficulty(target, age2MinimuIndices)
@@ -94,9 +128,15 @@ export const getAdmissionDifficulty = (
 
   const age3Difficulty = (() => {
     const age3MinimuIndices: number[] = inSet.nurseryShoolList
-      .map(it => { return it.classList?.age3?.minimumIndex ?? null })
-      .map(it => { return convertMinimumIndexToNumber(it) })
-      .filter(it => { return it !== null }) as number[]
+      .map(it => {
+        return it.classList?.age3?.minimumIndex ?? null
+      })
+      .map(it => {
+        return convertMinimumIndexToNumber(it)
+      })
+      .filter(it => {
+        return it !== null
+      }) as number[]
 
     const target = nurserySchool.classList?.age3?.minimumIndex ?? null
     return estimateAdmissionDifficulty(target, age3MinimuIndices)
@@ -104,9 +144,15 @@ export const getAdmissionDifficulty = (
 
   const age4Difficulty = (() => {
     const age4MinimuIndices: number[] = inSet.nurseryShoolList
-      .map(it => { return it.classList?.age4?.minimumIndex ?? null })
-      .map(it => { return convertMinimumIndexToNumber(it) })
-      .filter(it => { return it !== null }) as number[]
+      .map(it => {
+        return it.classList?.age4?.minimumIndex ?? null
+      })
+      .map(it => {
+        return convertMinimumIndexToNumber(it)
+      })
+      .filter(it => {
+        return it !== null
+      }) as number[]
 
     const target = nurserySchool.classList?.age4?.minimumIndex ?? null
     return estimateAdmissionDifficulty(target, age4MinimuIndices)
@@ -114,9 +160,15 @@ export const getAdmissionDifficulty = (
 
   const age5Difficulty = (() => {
     const age5MinimuIndices: number[] = inSet.nurseryShoolList
-      .map(it => { return it.classList?.age5?.minimumIndex ?? null })
-      .map(it => { return convertMinimumIndexToNumber(it) })
-      .filter(it => { return it !== null }) as number[]
+      .map(it => {
+        return it.classList?.age5?.minimumIndex ?? null
+      })
+      .map(it => {
+        return convertMinimumIndexToNumber(it)
+      })
+      .filter(it => {
+        return it !== null
+      }) as number[]
 
     const target = nurserySchool.classList?.age5?.minimumIndex ?? null
     return estimateAdmissionDifficulty(target, age5MinimuIndices)
@@ -142,22 +194,41 @@ export const getAdmissionDifficulty = (
         [AdmissionDifficulty.Moderate]: 0,
         [AdmissionDifficulty.Hard]: 0,
       }
-      const difficulties: AdmissionDifficulty[] = [age0Difficulty, age1Difficulty, age2Difficulty, age3Difficulty, age4Difficulty, age5Difficulty]
-        .filter((it) => { return it !== null }) as AdmissionDifficulty[]
+      const difficulties: AdmissionDifficulty[] = [
+        age0Difficulty,
+        age1Difficulty,
+        age2Difficulty,
+        age3Difficulty,
+        age4Difficulty,
+        age5Difficulty,
+      ].filter(it => {
+        return it !== null
+      }) as AdmissionDifficulty[]
 
       if (difficulties.length === 0) {
         return null
       }
 
-      difficulties.forEach((it) => { count[it] += 1 })
+      difficulties.forEach(it => {
+        count[it] += 1
+      })
 
       console.log(nurserySchool.name, difficulties, count)
 
-      if (count[AdmissionDifficulty.Easy] > count[AdmissionDifficulty.Moderate] && count[AdmissionDifficulty.Easy] > count[AdmissionDifficulty.Hard]) {
+      if (
+        count[AdmissionDifficulty.Easy] > count[AdmissionDifficulty.Moderate] &&
+        count[AdmissionDifficulty.Easy] > count[AdmissionDifficulty.Hard]
+      ) {
         return AdmissionDifficulty.Easy
-      } else if (count[AdmissionDifficulty.Moderate] >= count[AdmissionDifficulty.Easy] && count[AdmissionDifficulty.Moderate] > count[AdmissionDifficulty.Hard]) {
+      } else if (
+        count[AdmissionDifficulty.Moderate] >= count[AdmissionDifficulty.Easy] &&
+        count[AdmissionDifficulty.Moderate] > count[AdmissionDifficulty.Hard]
+      ) {
         return AdmissionDifficulty.Moderate
-      } else if (count[AdmissionDifficulty.Hard] >= count[AdmissionDifficulty.Easy] && count[AdmissionDifficulty.Hard] >= count[AdmissionDifficulty.Moderate]) {
+      } else if (
+        count[AdmissionDifficulty.Hard] >= count[AdmissionDifficulty.Easy] &&
+        count[AdmissionDifficulty.Hard] >= count[AdmissionDifficulty.Moderate]
+      ) {
         return AdmissionDifficulty.Hard
       }
       throw Error('Unexpected error')
@@ -167,27 +238,44 @@ export const getAdmissionDifficulty = (
 }
 
 const convertMinimumIndexToNumber = (minimumIndex: MinimumIndex | null): number | null => {
-  if (minimumIndex === null) { return null }
-  if (minimumIndex === '非公開') { return null }
-  if (typeof(minimumIndex) === "number") { return minimumIndex }
-  if (typeof((minimumIndex as Range).lessThanOrEqual) === "number") { return minimumIndex.lessThanOrEqual }
+  if (minimumIndex === null) {
+    return null
+  }
+  if (minimumIndex === '非公開') {
+    return null
+  }
+  if (typeof minimumIndex === 'number') {
+    return minimumIndex
+  }
+  if (typeof (minimumIndex as Range).lessThanOrEqual === 'number') {
+    return minimumIndex.lessThanOrEqual
+  }
   return null
 }
 
-const estimateAdmissionDifficulty = (target: MinimumIndex | null, minimumIndices: number[]): AdmissionDifficulty | null => {
+const estimateAdmissionDifficulty = (
+  target: MinimumIndex | null,
+  minimumIndices: number[]
+): AdmissionDifficulty | null => {
   const value = (minimuIndexNumber: number, max: number): AdmissionDifficulty => {
-    if (minimuIndexNumber <= max - 10) { return AdmissionDifficulty.Easy }
-    if (minimuIndexNumber <= max - 3) { return AdmissionDifficulty.Moderate }
+    if (minimuIndexNumber <= max - 10) {
+      return AdmissionDifficulty.Easy
+    }
+    if (minimuIndexNumber <= max - 3) {
+      return AdmissionDifficulty.Moderate
+    }
     return AdmissionDifficulty.Hard
   }
 
   const max = Math.max(...minimumIndices)
 
-  if (target === null || target === '非公開') { return null } // 判定不能
-  if (typeof(target) === 'number') {
+  if (target === null || target === '非公開') {
+    return null
+  } // 判定不能
+  if (typeof target === 'number') {
     return value(target, max)
   }
-  if ((typeof(target as Range).lessThanOrEqual) === 'number') {
+  if (typeof (target as Range).lessThanOrEqual === 'number') {
     const number: number = (target as Range).lessThanOrEqual
     return value(number, max)
   }
