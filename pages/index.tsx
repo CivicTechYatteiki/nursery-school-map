@@ -59,7 +59,7 @@ export default function Home({ nurserySets }: Props) {
       </Head>
 
       <AppBar color="inherit" elevation={0}>
-        <Toolbar>
+        <Toolbar variant="dense">
           <Stack direction="row" alignItems="center" justifyContent="space-between" flexGrow={1}>
             <Typography variant="subtitle1" component="h1">
               入りやすい保育園マップ
@@ -70,6 +70,7 @@ export default function Home({ nurserySets }: Props) {
             {/* <Filters /> */}
           </Stack>
         </Toolbar>
+        <Divider />
       </AppBar>
 
       <Box sx={{ width: '100%', height: '100vh' }}>
