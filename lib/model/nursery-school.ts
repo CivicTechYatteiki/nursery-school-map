@@ -14,6 +14,38 @@ export interface NurserySchool {
   sources: [Source] // 情報元
 }
 
+const isRange = (value: any): value is Range => {
+  return value !== null
+    && typeof(value) === "object"
+    && typeof(value.lessThanOrEqual) === "number"
+    && typeof(value.text) === "string"
+}
+
+export const getMinimumIndexRange = (age: number, inNurserySchool: NurserySchool): string => {
+  const index: MinimumIndex | null = (() => {
+    switch (age) {
+      case 0:
+        return inNurserySchool.classList?.age0?.minimumIndex ?? null
+      case 1:
+        return inNurserySchool.classList?.age1?.minimumIndex ?? null
+      case 2:
+        return inNurserySchool.classList?.age2?.minimumIndex ?? null
+      case 3:
+        return inNurserySchool.classList?.age3?.minimumIndex ?? null
+      case 4:
+        return inNurserySchool.classList?.age4?.minimumIndex ?? null
+      case 5:
+        return inNurserySchool.classList?.age5?.minimumIndex ?? null
+      default:
+        throw Error("Invalid age")
+    }
+  })()
+
+  if (index == null) { return "-" }
+  if (isRange(index)) { return index.text }
+  return index.toString()
+}
+
 export const enum AdmissionDifficulty {
   Easy = 1,
   Moderate = 2,
