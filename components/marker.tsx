@@ -11,7 +11,7 @@ export type MarkerClickHandler = (params: {
 
 const markerPath =
   'M20.8737 31.495C27.2804 29.7873 32 23.9448 32 17C32 8.71573 25.2843 2 17 2C8.71573 2 2 8.71573 2 17C2 23.9448 6.71957 29.7873 13.1263 31.495L17 41L20.8737 31.495Z'
-const markerAnchor = [14.5, 39] as const
+const markerAnchor = [17, 41] as const
 const markerLabelOrigin = [17, 17] as const
 
 export function createMarkers(
