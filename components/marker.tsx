@@ -1,7 +1,6 @@
 import { AdmissionDifficulty, getAdmissionDifficulty, NurserySchool } from '../lib/model/nursery-school'
 import { LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
 import { blue } from '../styles/theme'
-import { Status, Wrapper } from '@googlemaps/react-wrapper'
 
 export type MarkerClickHandler = (params: {
   nursery: NurserySchool

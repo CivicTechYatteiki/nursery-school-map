@@ -43,6 +43,8 @@ export default function Home({ nurserySets }: Props) {
             zoom={15}
             nurserySets={nurserySets}
             onClickMarker={({ nursery, inNurserySet, marker }) => {
+              resetMarker()
+
               setDetail({ nursery, inNurserySet, marker, open: true })
               // TODO: hack
               const markerIcon = marker.getIcon() as google.maps.Symbol
@@ -60,9 +62,13 @@ export default function Home({ nurserySets }: Props) {
   }
 
   const handleDetailClose = () => {
-    if (!detail) return
+    if (!detail || !detail.open) return
 
     setDetail({ ...detail, open: false })
+    resetMarker()
+  }
+
+  const resetMarker = () => {
     const marker = detail.marker
     // TODO: hack
     const markerIcon = marker.getIcon() as google.maps.Symbol
@@ -97,7 +103,17 @@ export default function Home({ nurserySets }: Props) {
       </Stack>
 
       {detail && (
-        <BottomSheet open={detail.open} onDismiss={handleDetailClose}>
+        <BottomSheet
+          open={detail.open}
+          onDismiss={handleDetailClose}
+          blocking={false}
+          style={
+            {
+              '--rsbs-backdrop-bg': 'rgba(0, 0, 0, 0.2)',
+              '--rsbs-overlay-rounded': 0,
+            } as any
+          }
+        >
           <NurseryDetail nursery={detail.nursery} inNurserySet={detail.inNurserySet} />
         </BottomSheet>
       )}
