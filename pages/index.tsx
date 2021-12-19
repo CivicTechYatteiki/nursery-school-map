@@ -1,7 +1,7 @@
 import { Status, Wrapper } from '@googlemaps/react-wrapper'
 import ErrorIcon from '@mui/icons-material/Error'
 import { AppBar, Button, CircularProgress, Divider, Paper, Stack, Toolbar, Typography, useTheme } from '@mui/material'
-import { Box } from '@mui/system'
+import { Box, getContrastRatio } from '@mui/system'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { useRef, useState } from 'react'
@@ -20,8 +20,10 @@ export default function Home({ nurserySets }: Props) {
   const [detail, setDetail] = useState<{
     nursery: NurserySchool
     inNurserySet: LocalNurserySchoolListSet
+    marker: google.maps.Marker
     open: boolean
   } | null>(null)
+  const theme = useTheme()
 
   const render = (status: Status) => {
     switch (status) {
@@ -40,14 +42,32 @@ export default function Home({ nurserySets }: Props) {
             center={{ lat: 35.654291, lng: 139.750533 }}
             zoom={15}
             nurserySets={nurserySets}
-            onClickMarker={({ nursery, inNurserySet }) => setDetail({ nursery, inNurserySet, open: true })}
+            onClickMarker={({ nursery, inNurserySet, marker }) => {
+              setDetail({ nursery, inNurserySet, marker, open: true })
+              // TODO: hack
+              const markerIcon = marker.getIcon() as google.maps.Symbol
+              marker.setIcon({ ...markerIcon, scale: 2 })
+              const chipBgColor = markerIcon.fillColor!
+              let chipTextColor = markerIcon.strokeColor!
+              if (getContrastRatio(chipTextColor, chipBgColor) < theme.palette.contrastThreshold) {
+                chipTextColor = '#fff'
+              }
+              marker.setLabel({ text: nursery.name[0], color: chipTextColor, fontSize: '32px' })
+            }}
           />
         )
     }
   }
 
   const handleDetailClose = () => {
-    setDetail(detail ? { ...detail, open: false } : null)
+    if (!detail) return
+
+    setDetail({ ...detail, open: false })
+    const marker = detail.marker
+    // TODO: hack
+    const markerIcon = marker.getIcon() as google.maps.Symbol
+    marker.setIcon({ ...markerIcon, scale: 1 })
+    detail.marker.setLabel(null)
   }
 
   return (
