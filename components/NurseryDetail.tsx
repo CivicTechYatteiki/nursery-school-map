@@ -118,13 +118,13 @@ function DifficultyCell({
         )}
         {indexRange.type === 'na' ? (
           <Typography variant="caption" color="text.disabled" sx={{ lineHeight: 1.25 }}>
-            内定者が
-            <br />
-            少ないため
+            空き or 枠 or 希望者なし
           </Typography>
         ) : indexRange.type === 'other' ? (
           <Typography variant="caption" color="text.disabled" sx={{ lineHeight: 1.25 }}>
-            空き or 枠 or 希望者なし
+            内定者が
+            <br />
+            少ないなど
           </Typography>
         ) : null}
       </Stack>
