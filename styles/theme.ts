@@ -10,6 +10,19 @@ export const blue = {
 
 // Create a theme instance.
 export const appTheme = createTheme({
+  typography: {
+    fontFamily: ['Roboto', 'Noto Sans JP', 'sans-serif'].join(','),
+    h1: { fontWeight: 400 },
+    h2: { fontWeight: 400 },
+    h3: { fontWeight: 500 },
+    h4: { fontWeight: 500 },
+    h5: { fontWeight: 500 },
+    h6: { fontWeight: 500 },
+    subtitle1: { fontWeight: 500 },
+    subtitle2: { fontWeight: 500 },
+    button: { fontWeight: 500 },
+    overline: { fontWeight: 500 },
+  },
   palette: {
     primary: {
       main: blue[50],

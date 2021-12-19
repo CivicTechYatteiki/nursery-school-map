@@ -9,11 +9,14 @@ import createEmotionCache from '../utils/createEmotionCache'
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html lang="ja">
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={appTheme.palette.primary.main} />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+          <link
+            href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700|Roboto:400,500,700&display=swap&subset=japanese"
+            rel="stylesheet"
+          />
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         </Head>
         <body>
