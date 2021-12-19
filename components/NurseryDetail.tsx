@@ -1,25 +1,33 @@
-import { Chip, getContrastRatio, Paper, Stack, styled, Typography, useTheme } from '@mui/material'
+import { Chip, getContrastRatio, IconButton, Paper, Stack, styled, Typography, useTheme } from '@mui/material'
 import { grey } from '@mui/material/colors'
 import { getAdmissionDifficulty, getMinimumIndexRange, NurserySchool } from '../lib/model/nursery-school'
 import { LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
 import { blue } from '../styles/theme'
 import { difficultyToStyle } from './marker'
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded'
 
 export function NurseryDetail({
   nursery,
   inNurserySet,
+  onClose,
 }: {
   nursery: NurserySchool
   inNurserySet: LocalNurserySchoolListSet
+  onClose: () => void
 }) {
   const shortAddress = nursery.address.replace(/^.{1,3}?[都道府県]/, '')
 
   return (
     <Stack direction="column" spacing={3} sx={{ padding: 2, paddingTop: 0 }}>
       <div>
-        <Typography variant="h6" sx={{ marginLeft: '-1px' /* Optical Adjustment */ }}>
-          {nursery.name}
-        </Typography>
+        <Stack direction="row" spacing={2} justifyContent="space-between" alignItems="center">
+          <Typography variant="h6" sx={{ marginLeft: '-1px' /* Optical Adjustment */ }}>
+            {nursery.name}
+          </Typography>
+          <IconButton onClick={() => onClose()}>
+            <CloseRoundedIcon />
+          </IconButton>
+        </Stack>
         <Stack direction="row" spacing={2}>
           <Typography variant="caption" color="text.secondary">
             {shortAddress}

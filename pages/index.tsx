@@ -116,7 +116,7 @@ export default function Home({ nurserySets }: Props) {
             } as any
           }
         >
-          <NurseryDetail nursery={detail.nursery} inNurserySet={detail.inNurserySet} />
+          <NurseryDetail nursery={detail.nursery} inNurserySet={detail.inNurserySet} onClose={handleDetailClose} />
         </BottomSheet>
       )}
     </>
