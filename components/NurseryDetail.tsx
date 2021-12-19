@@ -1,11 +1,6 @@
-import { alpha, Box, Chip, getContrastRatio, Paper, Stack, styled, Typography, useTheme } from '@mui/material'
+import { Chip, getContrastRatio, Paper, Stack, styled, Typography, useTheme } from '@mui/material'
 import { grey } from '@mui/material/colors'
-import {
-  AdmissionDifficulty,
-  getAdmissionDifficulty,
-  getMinimumIndexRange,
-  NurserySchool,
-} from '../lib/model/nursery-school'
+import { getAdmissionDifficulty, getMinimumIndexRange, NurserySchool } from '../lib/model/nursery-school'
 import { LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
 import { blue } from '../styles/theme'
 import { difficultyToStyle } from './marker'
@@ -35,26 +30,28 @@ export function NurseryDetail({
         </Stack>
       </div>
 
-      <div>
-        <Typography variant="subtitle1" component="div">
-          最低指数
-        </Typography>
-        <Typography variant="caption" color="text.secondary">
-          R3年4月入所1次利用調整
-        </Typography>
+      <Stack spacing={2}>
+        <div>
+          <Typography variant="subtitle1" component="div" sx={{ lineHeight: 1.1 }}>
+            最低指数
+          </Typography>
+          <Typography variant="caption" color="text.secondary">
+            R3年4月入所1次利用調整
+          </Typography>
+        </div>
 
         <Stack direction="row" spacing={2} sx={{ overflowX: 'auto' }}>
           {new Array(6).fill(null).map((_, i) => (
             <DifficultyCell key={i} nursery={nursery} inNurserySet={inNurserySet} age={i} />
           ))}
         </Stack>
-      </div>
 
-      <Typography variant="caption" color="text.secondary" component="div">
-        <div>
-          {nursery.localName}の保育園全体では、最大で41・最小で22以下の指数の人が保育園に入ることができています。
-        </div>
-      </Typography>
+        <Typography variant="caption" color="text.secondary" component="div">
+          <div>
+            {nursery.localName}の保育園全体では、最大で41・最小で22以下の指数の人が保育園に入ることができています。
+          </div>
+        </Typography>
+      </Stack>
     </Stack>
   )
 }
