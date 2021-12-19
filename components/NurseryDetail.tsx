@@ -24,9 +24,11 @@ export function NurseryDetail({
           <Typography variant="h6" sx={{ marginLeft: '-1px' /* Optical Adjustment */ }}>
             {nursery.name}
           </Typography>
-          <IconButton onClick={() => onClose()}>
-            <CloseRoundedIcon />
-          </IconButton>
+          <div>
+            <IconButton edge="end" onClick={() => onClose()}>
+              <CloseRoundedIcon />
+            </IconButton>
+          </div>
         </Stack>
         <Stack direction="row" spacing={2}>
           <Typography variant="caption" color="text.secondary">
