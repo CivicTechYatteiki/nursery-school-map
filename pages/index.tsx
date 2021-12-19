@@ -58,24 +58,24 @@ export default function Home({ nurserySets }: Props) {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
-      <AppBar color="inherit" elevation={0}>
-        <Toolbar variant="dense">
-          <Stack direction="row" alignItems="center" justifyContent="space-between" flexGrow={1}>
-            <Typography variant="subtitle1" component="h1">
-              入りやすい保育園マップ
-            </Typography>
-            <Typography variant="body2" color="gray">
-              港区限定で公開中
-            </Typography>
-            {/* <Filters /> */}
-          </Stack>
-        </Toolbar>
-        <Divider />
-      </AppBar>
+      <Stack sx={{ width: '100%', height: '100vh' }}>
+        <AppBar color="inherit" elevation={0} position="static">
+          <Toolbar variant="dense">
+            <Stack direction="row" alignItems="center" justifyContent="space-between" flexGrow={1}>
+              <Typography variant="subtitle1" component="h1">
+                入りやすい保育園マップ
+              </Typography>
+              <Typography variant="body2" color="gray">
+                港区限定で公開中
+              </Typography>
+              {/* <Filters /> */}
+            </Stack>
+          </Toolbar>
+          <Divider />
+        </AppBar>
 
-      <Box sx={{ width: '100%', height: '100vh' }}>
         <Wrapper apiKey="AIzaSyAQtZaDCQybQWgd-uOQD-jN7vJnontAXtY" render={render} />
-      </Box>
+      </Stack>
 
       {detail && (
         <BottomSheet open={detail.open} onDismiss={handleDetailClose}>
@@ -132,6 +132,9 @@ function MyMapComponent({
     mapRef.current = new google.maps.Map(ref.current, {
       center: { lat: center.lat, lng: center.lng },
       zoom,
+      gestureHandling: 'greedy',
+      disableDefaultUI: true,
+      zoomControl: true,
     })
   }, [center.lat, center.lng, zoom])
 
