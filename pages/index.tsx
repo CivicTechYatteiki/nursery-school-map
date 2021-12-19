@@ -60,13 +60,15 @@ export default function Home({ nurserySets }: Props) {
 
       <AppBar color="inherit" elevation={0}>
         <Toolbar>
-          <Typography component="h1" variant="h6">
-            入りやすい保育園マップ
-          </Typography>
-          <Typography variant="body2" color="gray">
-            港区限定で公開中
-          </Typography>
-          {/* <Filters /> */}
+          <Stack direction="row" alignItems="center" justifyContent="space-between" flexGrow={1}>
+            <Typography variant="subtitle1" component="h1">
+              入りやすい保育園マップ
+            </Typography>
+            <Typography variant="body2" color="gray">
+              港区限定で公開中
+            </Typography>
+            {/* <Filters /> */}
+          </Stack>
         </Toolbar>
       </AppBar>
 
