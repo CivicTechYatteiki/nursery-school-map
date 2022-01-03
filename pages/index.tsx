@@ -11,10 +11,23 @@ import { NurseryDetail } from '../components/NurseryDetail'
 import { NurserySchool } from '../lib/model/nursery-school'
 import { getAllNurserySchoolListSets, LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
 import { useIsomorphicLayoutEffect } from '../utils/useIsomorhpicLayoutEffect'
+import { FilterDetail } from '../components/FilterDetail'
 
 interface Props {
   nurserySets: LocalNurserySchoolListSet[]
 }
+
+export interface FilterProps {
+  ageList: number[] | null // 指定なしの場合はnull
+  open: boolean
+}
+
+const useForceUpdate = (): [() => void, number] => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => setCount((prev) => prev + 1);
+  return [increment, count];
+};
 
 export default function Home({ nurserySets }: Props) {
   const [detail, setDetail] = useState<{
@@ -23,6 +36,10 @@ export default function Home({ nurserySets }: Props) {
     marker: google.maps.Marker
     open: boolean
   } | null>(null)
+
+  const [filter, setFilter] = useState<FilterProps>({ ageList: null, open: false })
+  const [forceUpdate] = useForceUpdate()
+
   const theme = useTheme()
 
   const render = (status: Status) => {
@@ -42,6 +59,7 @@ export default function Home({ nurserySets }: Props) {
             center={{ lat: 35.654291, lng: 139.750533 }}
             zoom={15}
             nurserySets={nurserySets}
+            filter={filter}
             onClickMarker={({ nursery, inNurserySet, marker }) => {
               resetMarker()
 
@@ -59,6 +77,11 @@ export default function Home({ nurserySets }: Props) {
           />
         )
     }
+  }
+
+  const handleFilterClose = () => {
+    setFilter({ ...filter, open: false })
+    forceUpdate()
   }
 
   const handleDetailClose = () => {
@@ -95,14 +118,34 @@ export default function Home({ nurserySets }: Props) {
               <Typography variant="body2" color="gray">
                 港区限定で公開中
               </Typography>
-              {/* <Filters /> */}
             </Stack>
           </Toolbar>
           <Divider />
         </AppBar>
 
+        <FilterButton filter={filter} onClickFilter={ () => {
+          setFilter({ ageList: filter.ageList, open: true })
+        } } />
+
+        {/* FIXME: filterの更新が反映されない */}
         <Wrapper apiKey="AIzaSyAQtZaDCQybQWgd-uOQD-jN7vJnontAXtY" render={render} />
       </Stack>
+
+      {filter.open && (
+        <BottomSheet
+          open={filter.open}
+          onDismiss={handleFilterClose}
+          blocking={true}
+          style={
+            {
+              '--rsbs-backdrop-bg': 'rgba(0, 0, 0, 0.2)',
+              '--rsbs-overlay-rounded': 0,
+            } as any
+          }
+        >
+          <FilterDetail filter={filter} setFilter={setFilter} onClose={handleFilterClose} />
+        </BottomSheet>
+      )}
 
       {detail && (
         <BottomSheet
@@ -123,11 +166,30 @@ export default function Home({ nurserySets }: Props) {
   )
 }
 
-function Filters() {
+function FilterButton({
+  filter,
+  onClickFilter
+}: {
+  filter: FilterProps
+  onClickFilter: () => void
+}) {
   const theme = useTheme()
 
+  const buttonText = (filter: FilterProps): string => {
+    if (filter.ageList === null) {
+      return '子どもの年齢 指定なし'
+    }
+    if (filter.ageList.length === 6) {
+      return '子どもの年齢 すべて'
+    }
+    return '子どもの年齢 ' + filter.ageList
+      .sort((a, b) => a - b)
+      .map((age) => `${age}歳`)
+      .join(', ')
+  }
+
   return (
-    <Paper elevation={1} sx={{ borderRadius: 1000, paddingX: 1 }}>
+    <Paper elevation={1} sx={{ borderRadius: 1000, paddingX: 1, position: 'absolute', top: '60px', left: '10px', zIndex: 1}}>
       <Stack
         direction="row"
         spacing={1}
@@ -139,8 +201,8 @@ function Filters() {
           />
         }
       >
-        <Button color="primary">2022年4月入園</Button>
-        <Button color="primary">子どもの年齢指定なし</Button>
+        {/* <Button color="primary">2022年4月入園</Button> */}
+        <Button color="primary" onClick={onClickFilter}>{buttonText(filter)}</Button>
       </Stack>
     </Paper>
   )
@@ -150,11 +212,13 @@ function MyMapComponent({
   center,
   zoom,
   nurserySets,
+  filter,
   onClickMarker,
 }: {
   center: google.maps.LatLngLiteral
   zoom: number
   nurserySets: LocalNurserySchoolListSet[]
+  filter: FilterProps
   onClickMarker: MarkerClickHandler
 }) {
   const ref = useRef<HTMLDivElement>(null)
@@ -176,7 +240,9 @@ function MyMapComponent({
   }, [center.lat, center.lng, zoom])
 
   useIsomorphicLayoutEffect(() => {
-    markersRef.current = createMarkers(mapRef.current!, nurserySets, params => clickHandlerRef.current(params))
+    console.log("hoge")
+
+    markersRef.current = createMarkers(mapRef.current!, nurserySets, filter, params => clickHandlerRef.current(params))
 
     return () => {
       markersRef.current.forEach(m => m.setMap(null))

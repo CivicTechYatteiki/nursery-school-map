@@ -1,5 +1,6 @@
-import { AdmissionDifficulty, getAdmissionDifficulty, NurserySchool } from '../lib/model/nursery-school'
+import { AdmissionDifficulty, getModeAdmissionDifficulty, NurserySchool } from '../lib/model/nursery-school'
 import { LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
+import { FilterProps } from '../pages'
 import { blue } from '../styles/theme'
 
 export type MarkerClickHandler = (params: {
@@ -16,12 +17,13 @@ const markerLabelOrigin = [17, 17] as const
 export function createMarkers(
   map: google.maps.Map,
   nurserySets: LocalNurserySchoolListSet[],
+  filter: FilterProps,
   onClick: MarkerClickHandler
 ) {
   const markers: google.maps.Marker[] = []
   for (const nurserySet of nurserySets) {
     for (const nursery of nurserySet.nurseryShoolList) {
-      const difficulty = getAdmissionDifficulty(nursery, nurserySet, null)
+      const difficulty = getModeAdmissionDifficulty(nursery, nurserySet, filter.ageList || [0, 1, 2, 3, 4, 5])
       const markerStyle = difficultyToStyle(difficulty)
       const marker = new google.maps.Marker({
         map,
