@@ -240,8 +240,6 @@ function MyMapComponent({
   }, [center.lat, center.lng, zoom])
 
   useIsomorphicLayoutEffect(() => {
-    console.log("hoge")
-
     markersRef.current = createMarkers(mapRef.current!, nurserySets, filter, params => clickHandlerRef.current(params))
 
     return () => {
@@ -252,6 +250,15 @@ function MyMapComponent({
   useIsomorphicLayoutEffect(() => {
     clickHandlerRef.current = onClickMarker
   }, [onClickMarker])
+
+  useIsomorphicLayoutEffect(() => {
+    markersRef.current.forEach((marker) => {
+      marker.setMap(null)
+    })
+    markersRef.current = []
+    markersRef.current = createMarkers(mapRef.current!, nurserySets, filter, params => clickHandlerRef.current(params))
+
+  }, [filter.ageList])
 
   return <Box ref={ref} id="map" sx={{ width: '100%', height: '100%' }} />
 }
