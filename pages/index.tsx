@@ -151,7 +151,7 @@ export default function Home({ nurserySets }: Props) {
         <BottomSheet
           open={detail.open}
           onDismiss={handleDetailClose}
-          blocking={false}
+          blocking={true}
           style={
             {
               '--rsbs-backdrop-bg': 'rgba(0, 0, 0, 0.2)',

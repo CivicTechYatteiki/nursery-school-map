@@ -105,11 +105,12 @@ function DifficultyCell({
         height: 112,
         position: 'relative',
         borderColor: selectedByFilter ? blue[90] : grey[400],
-        borderWidth: selectedByFilter ? 3 : 0.5
+        borderWidth: selectedByFilter ? 3 : 0.5,
+        opacity: selectedByFilter ? 1 : 0.5
       }}
     >
       <Stack direction="column" spacing={1} sx={{ paddingX: 1.5, paddingTop: 1 }}>
-        <Typography variant="body2" color="text.disabled" component="div">
+        <Typography variant="body2" color="text.secondary" component="div">
           {age}歳
         </Typography>
         {indexRange.type === 'na' ? (
