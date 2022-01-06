@@ -5,14 +5,17 @@ import { LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
 import { blue } from '../styles/theme'
 import { difficultyToStyle } from './marker'
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded'
+import { FilterProps } from '../pages'
 
 export function NurseryDetail({
   nursery,
   inNurserySet,
+  filter,
   onClose,
 }: {
   nursery: NurserySchool
   inNurserySet: LocalNurserySchoolListSet
+  filter: FilterProps
   onClose: () => void
 }) {
   const shortAddress = nursery.address.replace(/^.{1,3}?[都道府県]/, '')
@@ -52,7 +55,7 @@ export function NurseryDetail({
 
         <Stack direction="row" spacing={2} sx={{ overflowX: 'auto' }}>
           {new Array(6).fill(null).map((_, i) => (
-            <DifficultyCell key={i} nursery={nursery} inNurserySet={inNurserySet} age={i} />
+            <DifficultyCell key={i} nursery={nursery} inNurserySet={inNurserySet} age={i} selectedByFilter={filter.ageList?.includes(i) || false} />
           ))}
         </Stack>
 
@@ -75,10 +78,12 @@ function DifficultyCell({
   nursery,
   inNurserySet,
   age,
+  selectedByFilter
 }: {
   nursery: NurserySchool
   inNurserySet: LocalNurserySchoolListSet
   age: number
+  selectedByFilter: boolean
 }) {
   const difficulty = getAdmissionDifficulty(nursery, inNurserySet, age)
   const difficultyStyle = difficultyToStyle(difficulty)
@@ -99,6 +104,8 @@ function DifficultyCell({
         background: grey[50],
         height: 112,
         position: 'relative',
+        borderColor: selectedByFilter ? blue[90] : grey[400],
+        borderWidth: selectedByFilter ? 3 : 0.5
       }}
     >
       <Stack direction="column" spacing={1} sx={{ paddingX: 1.5, paddingTop: 1 }}>

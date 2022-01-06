@@ -159,7 +159,7 @@ export default function Home({ nurserySets }: Props) {
             } as any
           }
         >
-          <NurseryDetail nursery={detail.nursery} inNurserySet={detail.inNurserySet} onClose={handleDetailClose} />
+          <NurseryDetail nursery={detail.nursery} inNurserySet={detail.inNurserySet} filter={filter} onClose={handleDetailClose} />
         </BottomSheet>
       )}
     </>
