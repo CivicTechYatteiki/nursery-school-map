@@ -6,7 +6,7 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { useRef, useState } from 'react'
 import { BottomSheet } from 'react-spring-bottom-sheet'
-import { createMarkers, MarkerClickHandler } from '../components/marker'
+import { createMarkers, MarkerClickHandler, updateMarkerIcons } from '../components/marker'
 import { NurseryDetail } from '../components/NurseryDetail'
 import { NurserySchool } from '../lib/model/nursery-school'
 import { getAllNurserySchoolListSets, LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
@@ -23,11 +23,11 @@ export interface FilterProps {
 }
 
 const useForceUpdate = (): [() => void, number] => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
-  const increment = () => setCount((prev) => prev + 1);
-  return [increment, count];
-};
+  const increment = () => setCount(prev => prev + 1)
+  return [increment, count]
+}
 
 export default function Home({ nurserySets }: Props) {
   const [detail, setDetail] = useState<{
@@ -123,9 +123,12 @@ export default function Home({ nurserySets }: Props) {
           <Divider />
         </AppBar>
 
-        <FilterButton filter={filter} onClickFilter={ () => {
-          setFilter({ ageList: filter.ageList, open: true })
-        } } />
+        <FilterButton
+          filter={filter}
+          onClickFilter={() => {
+            setFilter({ ageList: filter.ageList, open: true })
+          }}
+        />
 
         {/* FIXME: filterの更新が反映されない */}
         <Wrapper apiKey="AIzaSyAQtZaDCQybQWgd-uOQD-jN7vJnontAXtY" render={render} />
@@ -159,20 +162,19 @@ export default function Home({ nurserySets }: Props) {
             } as any
           }
         >
-          <NurseryDetail nursery={detail.nursery} inNurserySet={detail.inNurserySet} filter={filter} onClose={handleDetailClose} />
+          <NurseryDetail
+            nursery={detail.nursery}
+            inNurserySet={detail.inNurserySet}
+            filter={filter}
+            onClose={handleDetailClose}
+          />
         </BottomSheet>
       )}
     </>
   )
 }
 
-function FilterButton({
-  filter,
-  onClickFilter
-}: {
-  filter: FilterProps
-  onClickFilter: () => void
-}) {
+function FilterButton({ filter, onClickFilter }: { filter: FilterProps; onClickFilter: () => void }) {
   const theme = useTheme()
 
   const buttonText = (filter: FilterProps): string => {
@@ -182,14 +184,20 @@ function FilterButton({
     if (filter.ageList.length === 6) {
       return '子どもの年齢 すべて'
     }
-    return '子どもの年齢 ' + filter.ageList
-      .sort((a, b) => a - b)
-      .map((age) => `${age}歳`)
-      .join(', ')
+    return (
+      '子どもの年齢 ' +
+      filter.ageList
+        .sort((a, b) => a - b)
+        .map(age => `${age}歳`)
+        .join(', ')
+    )
   }
 
   return (
-    <Paper elevation={1} sx={{ borderRadius: 1000, paddingX: 1, position: 'absolute', top: '60px', left: '10px', zIndex: 1}}>
+    <Paper
+      elevation={1}
+      sx={{ borderRadius: 1000, paddingX: 1, position: 'absolute', top: '60px', left: '10px', zIndex: 1 }}
+    >
       <Stack
         direction="row"
         spacing={1}
@@ -202,7 +210,9 @@ function FilterButton({
         }
       >
         {/* <Button color="primary">2022年4月入園</Button> */}
-        <Button color="primary" onClick={onClickFilter}>{buttonText(filter)}</Button>
+        <Button color="primary" onClick={onClickFilter}>
+          {buttonText(filter)}
+        </Button>
       </Stack>
     </Paper>
   )
@@ -240,7 +250,7 @@ function MyMapComponent({
   }, [center.lat, center.lng, zoom])
 
   useIsomorphicLayoutEffect(() => {
-    markersRef.current = createMarkers(mapRef.current!, nurserySets, filter, params => clickHandlerRef.current(params))
+    markersRef.current = createMarkers(mapRef.current!, nurserySets, params => clickHandlerRef.current(params))
 
     return () => {
       markersRef.current.forEach(m => m.setMap(null))
@@ -252,13 +262,8 @@ function MyMapComponent({
   }, [onClickMarker])
 
   useIsomorphicLayoutEffect(() => {
-    markersRef.current.forEach((marker) => {
-      marker.setMap(null)
-    })
-    markersRef.current = []
-    markersRef.current = createMarkers(mapRef.current!, nurserySets, filter, params => clickHandlerRef.current(params))
-
-  }, [filter.ageList])
+    updateMarkerIcons(markersRef.current, nurserySets, filter)
+  }, [nurserySets, filter.ageList])
 
   return <Box ref={ref} id="map" sx={{ width: '100%', height: '100%' }} />
 }
