@@ -1,5 +1,7 @@
 import { LocalNurserySchoolListSet } from './nursery-school-list'
 
+export const SUPPORTED_AGES = Object.freeze([0, 1, 2, 3, 4, 5]) as number[]
+
 export interface NurserySchool {
   name: string
   address: string

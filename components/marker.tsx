@@ -1,4 +1,9 @@
-import { AdmissionDifficulty, getModeAdmissionDifficulty, NurserySchool } from '../lib/model/nursery-school'
+import {
+  AdmissionDifficulty,
+  getModeAdmissionDifficulty,
+  NurserySchool,
+  SUPPORTED_AGES,
+} from '../lib/model/nursery-school'
 import { LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
 import { FilterProps } from '../pages'
 import { blue } from '../styles/theme'
@@ -13,8 +18,6 @@ const markerPath =
   'M20.8737 31.495C27.2804 29.7873 32 23.9448 32 17C32 8.71573 25.2843 2 17 2C8.71573 2 2 8.71573 2 17C2 23.9448 6.71957 29.7873 13.1263 31.495L17 41L20.8737 31.495Z'
 const markerAnchor = [17, 41] as const
 const markerLabelOrigin = [17, 17] as const
-
-const DEFAULT_AGE_LIST = [0, 1, 2, 3, 4, 5]
 
 export function createMarkers(
   map: google.maps.Map,
@@ -47,7 +50,7 @@ export function updateMarkerIcons(
 
   for (const nurserySet of nurserySets) {
     for (const nursery of nurserySet.nurserySchoolList) {
-      const difficulty = getModeAdmissionDifficulty(nursery, nurserySet, filter.ageList ?? DEFAULT_AGE_LIST)
+      const difficulty = getModeAdmissionDifficulty(nursery, nurserySet, filter.ageList ?? SUPPORTED_AGES)
       const markerStyle = difficultyToStyle(difficulty)
 
       markers[i].setIcon({
