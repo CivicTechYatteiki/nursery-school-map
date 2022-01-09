@@ -22,7 +22,7 @@ export function createMarkers(
 ) {
   const markers: google.maps.Marker[] = []
   for (const nurserySet of nurserySets) {
-    for (const nursery of nurserySet.nurseryShoolList) {
+    for (const nursery of nurserySet.nurserySchoolList) {
       const difficulty = getModeAdmissionDifficulty(nursery, nurserySet, filter.ageList || [0, 1, 2, 3, 4, 5])
       const markerStyle = difficultyToStyle(difficulty)
       const marker = new google.maps.Marker({
