@@ -55,8 +55,8 @@ export default function Home({ nurserySets }: Props) {
         return <CircularProgress />
       case Status.FAILURE:
         return (
-          <Stack direction="column" spacing={4} alignItems="center">
-            <ErrorIcon />
+          <Stack direction="column" spacing={2} alignItems="center">
+            <ErrorIcon color="disabled" fontSize="large" />
             <Typography color="text.secondary">エラーが発生しました</Typography>
           </Stack>
         )
@@ -140,7 +140,18 @@ export default function Home({ nurserySets }: Props) {
         />
 
         {/* FIXME: filterの更新が反映されない */}
-        <Wrapper apiKey="AIzaSyAQtZaDCQybQWgd-uOQD-jN7vJnontAXtY" render={render} />
+        <div
+          className="no-outline"
+          style={{
+            flexGrow: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Wrapper apiKey="AIzaSyAQtZaDCQybQWgd-uOQD-jN7vJnontAXtY" render={render} />
+        </div>
       </Stack>
 
       <BottomSheet
