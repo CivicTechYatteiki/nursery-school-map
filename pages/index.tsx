@@ -6,12 +6,13 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { useRef, useState } from 'react'
 import { BottomSheet } from 'react-spring-bottom-sheet'
+import { SpringEvent } from 'react-spring-bottom-sheet/dist/types'
+import { FilterDetail } from '../components/FilterDetail'
 import { createMarkers, MarkerClickHandler, updateMarkerIcons } from '../components/marker'
 import { NurseryDetail } from '../components/NurseryDetail'
 import { NurserySchool } from '../lib/model/nursery-school'
 import { getAllNurserySchoolListSets, LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
 import { useIsomorphicLayoutEffect } from '../utils/useIsomorhpicLayoutEffect'
-import { FilterDetail } from '../components/FilterDetail'
 
 interface Props {
   nurserySets: LocalNurserySchoolListSet[]
@@ -19,26 +20,37 @@ interface Props {
 
 export interface FilterProps {
   ageList: number[] | null // 指定なしの場合はnull
-  open: boolean
 }
 
-const useForceUpdate = (): [() => void, number] => {
-  const [count, setCount] = useState(0)
-
-  const increment = () => setCount(prev => prev + 1)
-  return [increment, count]
-}
+type BottomSheetKind = 'filter' | 'detail'
 
 export default function Home({ nurserySets }: Props) {
   const [detail, setDetail] = useState<{
     nursery: NurserySchool
     inNurserySet: LocalNurserySchoolListSet
     marker: google.maps.Marker
-    open: boolean
   } | null>(null)
+  const [filter, setFilter] = useState<FilterProps>({ ageList: null })
 
-  const [filter, setFilter] = useState<FilterProps>({ ageList: null, open: false })
-  const [forceUpdate] = useForceUpdate()
+  const [bottomSheetState, setBottomSheetState] = useState<{
+    current?: BottomSheetKind
+    next?: BottomSheetKind
+    closing?: boolean
+  }>({})
+  const openBottomSheet = (kind: BottomSheetKind) => {
+    setBottomSheetState(s =>
+      s.current && s.current !== kind ? { current: s.current, next: kind, closing: true } : { current: kind }
+    )
+  }
+  const closeBottomSheet = () => {
+    setBottomSheetState(s => ({ ...s, closing: true }))
+  }
+  const handleSpringComplete = (event: SpringEvent) => {
+    if (event.type === 'CLOSE') {
+      console.log('open next')
+      setBottomSheetState(s => ({ current: s.next }))
+    }
+  }
 
   const theme = useTheme()
 
@@ -63,7 +75,9 @@ export default function Home({ nurserySets }: Props) {
             onClickMarker={({ nursery, inNurserySet, marker }) => {
               resetMarker()
 
-              setDetail({ nursery, inNurserySet, marker, open: true })
+              setDetail({ nursery, inNurserySet, marker })
+              openBottomSheet('detail')
+
               // TODO: hack
               const markerIcon = marker.getIcon() as google.maps.Symbol
               marker.setIcon({ ...markerIcon, scale: 2 })
@@ -80,15 +94,16 @@ export default function Home({ nurserySets }: Props) {
   }
 
   const handleFilterClose = () => {
-    setFilter({ ...filter, open: false })
-    forceUpdate()
+    setFilter({ ...filter })
+    closeBottomSheet()
   }
 
   const handleDetailClose = () => {
-    if (!detail || !detail.open) return
+    if (!detail) return
 
-    setDetail({ ...detail, open: false })
+    setDetail({ ...detail })
     resetMarker()
+    closeBottomSheet()
   }
 
   const resetMarker = () => {
@@ -112,7 +127,7 @@ export default function Home({ nurserySets }: Props) {
         <AppBar color="inherit" elevation={0} position="static">
           <Toolbar variant="dense">
             <Stack direction="row" alignItems="center" justifyContent="space-between" flexGrow={1}>
-              <img src='/logo.svg' alt='入りやすい保育園マップ' />
+              <img src="/logo.svg" alt="入りやすい保育園マップ" />
               <Typography variant="body2" color="gray">
                 港区限定で公開中
               </Typography>
@@ -124,7 +139,8 @@ export default function Home({ nurserySets }: Props) {
         <FilterButton
           filter={filter}
           onClickFilter={() => {
-            setFilter({ ageList: filter.ageList, open: true })
+            setFilter({ ageList: filter.ageList })
+            openBottomSheet('filter')
           }}
         />
 
@@ -132,42 +148,31 @@ export default function Home({ nurserySets }: Props) {
         <Wrapper apiKey="AIzaSyAQtZaDCQybQWgd-uOQD-jN7vJnontAXtY" render={render} />
       </Stack>
 
-      {filter.open && (
-        <BottomSheet
-          open={filter.open}
-          onDismiss={handleFilterClose}
-          blocking={true}
-          style={
-            {
-              '--rsbs-backdrop-bg': 'rgba(0, 0, 0, 0.2)',
-              '--rsbs-overlay-rounded': 0,
-            } as any
-          }
-        >
+      <BottomSheet
+        open={bottomSheetState.current != null && !bottomSheetState.closing}
+        onDismiss={handleDetailClose}
+        onSpringEnd={handleSpringComplete}
+        // onSpringCancel={handleSpringComplete}
+        style={
+          {
+            '--rsbs-backdrop-bg': 'transparent',
+          } as any
+        }
+        scrollLocking={false}
+      >
+        {bottomSheetState.current === 'filter' && filter && (
           <FilterDetail filter={filter} setFilter={setFilter} onClose={handleFilterClose} />
-        </BottomSheet>
-      )}
+        )}
 
-      {detail && (
-        <BottomSheet
-          open={detail.open}
-          onDismiss={handleDetailClose}
-          blocking={true}
-          style={
-            {
-              '--rsbs-backdrop-bg': 'rgba(0, 0, 0, 0.2)',
-              '--rsbs-overlay-rounded': 0,
-            } as any
-          }
-        >
+        {bottomSheetState.current === 'detail' && detail && (
           <NurseryDetail
             nursery={detail.nursery}
             inNurserySet={detail.inNurserySet}
             filter={filter}
             onClose={handleDetailClose}
           />
-        </BottomSheet>
-      )}
+        )}
+      </BottomSheet>
     </>
   )
 }

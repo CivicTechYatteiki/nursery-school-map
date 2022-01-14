@@ -9,7 +9,9 @@ import createEmotionCache from '../utils/createEmotionCache'
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="ja">
+      // overflow: hidden to stop bounce scroll in iOS Safari
+      // https://stackoverflow.com/q/8150191/1474113
+      <Html lang="ja" style={{ overflow: 'hidden' }}>
         <Head>
           {/* PWA primary color */}
           {/* NOTE: Disabled because we have white toolbar */}
