@@ -123,7 +123,11 @@ function DifficultyCell({
         <Typography variant="body2" color="text.secondary" component="div">
           {age}歳
         </Typography>
-        {indexRange.type === 'na' ? (
+        {indexRange.type === 'noClass' ? (
+          <Typography variant="subtitle1" component="div" sx={{ lineHeight: '32px' }}>
+            ×
+          </Typography>
+        ) : indexRange.type === 'na' ? (
           <Typography variant="subtitle1" component="div" sx={{ lineHeight: '32px' }}>
             {/* 全角ハイフン */}−
           </Typography>
@@ -146,9 +150,13 @@ function DifficultyCell({
             )}
           </Typography>
         )}
-        {indexRange.type === 'na' ? (
+        {indexRange.type === 'noClass' ? (
           <Typography variant="caption" color="text.disabled" sx={{ lineHeight: 1.25 }}>
-            空き or 枠 or 希望者なし
+            枠なし
+          </Typography>
+        ) : indexRange.type === 'na' ? (
+          <Typography variant="caption" color="text.disabled" sx={{ lineHeight: 1.25 }}>
+            空き or 希望者なし
           </Typography>
         ) : indexRange.type === 'other' ? (
           <Typography variant="caption" color="text.disabled" sx={{ lineHeight: 1.25 }}>

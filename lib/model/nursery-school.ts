@@ -29,6 +29,7 @@ interface IndexRange {
   type:
     | 'eq' // 即値
     | 'le' // 以下
+    | 'noClass' // 枠なし
     | 'na' // 空きか希望者がなく選考なし
     | 'other' // 希望者が少なく個人情報保護のため非公開、など
   value: number
@@ -36,25 +37,29 @@ interface IndexRange {
 }
 
 export const getMinimumIndexRange = (age: number, inNurserySchool: NurserySchool): IndexRange => {
-  const index: MinimumIndex | null = (() => {
+  const nClass: Class | null = (() => {
     switch (age) {
       case 0:
-        return inNurserySchool.classList?.age0?.minimumIndex ?? null
+        return inNurserySchool.classList?.age0 ?? null
       case 1:
-        return inNurserySchool.classList?.age1?.minimumIndex ?? null
+        return inNurserySchool.classList?.age1 ?? null
       case 2:
-        return inNurserySchool.classList?.age2?.minimumIndex ?? null
+        return inNurserySchool.classList?.age2 ?? null
       case 3:
-        return inNurserySchool.classList?.age3?.minimumIndex ?? null
+        return inNurserySchool.classList?.age3 ?? null
       case 4:
-        return inNurserySchool.classList?.age4?.minimumIndex ?? null
+        return inNurserySchool.classList?.age4 ?? null
       case 5:
-        return inNurserySchool.classList?.age5?.minimumIndex ?? null
+        return inNurserySchool.classList?.age5 ?? null
       default:
         throw Error('Invalid age')
     }
   })()
+  if (!nClass) {
+    return { type: 'noClass', value: 0 }
+  }
 
+  const index = nClass.minimumIndex
   if (index == null) {
     return { type: 'na', value: 0 }
   }
