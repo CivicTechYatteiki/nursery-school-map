@@ -1,5 +1,6 @@
 import {
   AdmissionDifficulty,
+  getHigherAdmissionDifficulty,
   getModeAdmissionDifficulty,
   NurserySchool,
   SUPPORTED_AGES,
@@ -50,7 +51,12 @@ export function updateMarkerIcons(
 
   for (const nurserySet of nurserySets) {
     for (const nursery of nurserySet.nurserySchoolList) {
-      const difficulty = getModeAdmissionDifficulty(nursery, nurserySet, filter.ageList ?? SUPPORTED_AGES)
+      const difficulty = (() => {
+        if (filter.ageList !== null && filter.ageList.length > 0) {
+          return getHigherAdmissionDifficulty(nursery, nurserySet, filter.ageList)
+        }
+        return getModeAdmissionDifficulty(nursery, nurserySet, filter.ageList ?? SUPPORTED_AGES)
+      })()
       const markerStyle = difficultyToStyle(difficulty)
 
       markers[i].setIcon({
@@ -75,7 +81,9 @@ export const difficultyToStyle = (difficulty: AdmissionDifficulty | null): { col
       return { color: blue[20], label: 'やや入りやすい' }
     case AdmissionDifficulty.Hard:
       return { color: blue[10], label: '入りにくい' }
-    case null:
+    case AdmissionDifficulty.Unknown:
+      return { color: blue[10], label: null }
+    case null: // unknown足したのでnull消せるかもだが十分確認できてない
       return { color: blue[10], label: null }
   }
 }
