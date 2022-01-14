@@ -35,8 +35,8 @@ export default function Home({ nurserySets }: Props) {
 
   const [bottomSheetState, setBottomSheetState] = useState<{
     current?: BottomSheetKind
-    open?: boolean
-  }>({})
+    open: boolean
+  }>({ open: false })
   // Clicking other element will also triggers BottomSheet dismiss. So no explicit close is required here.
   const openBottomSheet = (kind: BottomSheetKind) => {
     setBottomSheetState(() => ({ current: kind, open: true }))

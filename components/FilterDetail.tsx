@@ -14,7 +14,7 @@ const updateFilter = (age: number, value: boolean, filter: FilterProps, setFilte
   if (newAgeList.length === 0) {
     newAgeList = null
   }
-  setFilter({ ageList: newAgeList, open: true })
+  setFilter({ ageList: newAgeList })
 }
 
 export function FilterDetail({
