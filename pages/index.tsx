@@ -35,22 +35,14 @@ export default function Home({ nurserySets }: Props) {
 
   const [bottomSheetState, setBottomSheetState] = useState<{
     current?: BottomSheetKind
-    next?: BottomSheetKind
-    closing?: boolean
+    open?: boolean
   }>({})
+  // Clicking other element will also triggers BottomSheet dismiss. So no explicit close is required here.
   const openBottomSheet = (kind: BottomSheetKind) => {
-    setBottomSheetState(s =>
-      s.current && s.current !== kind ? { current: s.current, next: kind, closing: true } : { current: kind }
-    )
+    setBottomSheetState(() => ({ current: kind, open: true }))
   }
   const closeBottomSheet = () => {
-    setBottomSheetState(s => ({ ...s, closing: true }))
-  }
-  const handleSpringComplete = (event: SpringEvent) => {
-    if (event.type === 'CLOSE') {
-      console.log('open next')
-      setBottomSheetState(s => ({ current: s.next }))
-    }
+    setBottomSheetState(s => ({ ...s, open: false }))
   }
 
   const theme = useTheme()
@@ -152,10 +144,8 @@ export default function Home({ nurserySets }: Props) {
       </Stack>
 
       <BottomSheet
-        open={bottomSheetState.current != null && !bottomSheetState.closing}
+        open={bottomSheetState.open}
         onDismiss={handleDetailClose}
-        onSpringEnd={handleSpringComplete}
-        // onSpringCancel={handleSpringComplete}
         style={
           {
             '--rsbs-backdrop-bg': 'transparent',
