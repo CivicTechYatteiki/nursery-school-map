@@ -1,4 +1,9 @@
-import { AdmissionDifficulty, getModeAdmissionDifficulty, NurserySchool } from '../lib/model/nursery-school'
+import {
+  AdmissionDifficulty,
+  getModeAdmissionDifficulty,
+  NurserySchool,
+  SUPPORTED_AGES,
+} from '../lib/model/nursery-school'
 import { LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
 import { FilterProps } from '../pages'
 import { blue } from '../styles/theme'
@@ -17,27 +22,15 @@ const markerLabelOrigin = [17, 17] as const
 export function createMarkers(
   map: google.maps.Map,
   nurserySets: LocalNurserySchoolListSet[],
-  filter: FilterProps,
   onClick: MarkerClickHandler
 ) {
   const markers: google.maps.Marker[] = []
   for (const nurserySet of nurserySets) {
-    for (const nursery of nurserySet.nurseryShoolList) {
-      const difficulty = getModeAdmissionDifficulty(nursery, nurserySet, filter.ageList || [0, 1, 2, 3, 4, 5])
-      const markerStyle = difficultyToStyle(difficulty)
+    for (const nursery of nurserySet.nurserySchoolList) {
       const marker = new google.maps.Marker({
         map,
         title: nursery.name,
         position: { lat: nursery.location.latitude, lng: nursery.location.longitude },
-        icon: {
-          fillColor: markerStyle.color,
-          fillOpacity: 1,
-          strokeColor: blue[90],
-          strokeWeight: 1.5,
-          path: markerPath,
-          anchor: new google.maps.Point(...markerAnchor),
-          labelOrigin: new google.maps.Point(...markerLabelOrigin),
-        },
       })
       markers.push(marker)
       marker.addListener('click', () => {
@@ -46,6 +39,32 @@ export function createMarkers(
     }
   }
   return markers
+}
+
+export function updateMarkerIcons(
+  markers: google.maps.Marker[],
+  nurserySets: LocalNurserySchoolListSet[],
+  filter: FilterProps
+) {
+  let i = 0
+
+  for (const nurserySet of nurserySets) {
+    for (const nursery of nurserySet.nurserySchoolList) {
+      const difficulty = getModeAdmissionDifficulty(nursery, nurserySet, filter.ageList ?? SUPPORTED_AGES)
+      const markerStyle = difficultyToStyle(difficulty)
+
+      markers[i].setIcon({
+        fillColor: markerStyle.color,
+        fillOpacity: 1,
+        strokeColor: blue[90],
+        strokeWeight: 1.5,
+        path: markerPath,
+        anchor: new google.maps.Point(...markerAnchor),
+        labelOrigin: new google.maps.Point(...markerLabelOrigin),
+      })
+      i++
+    }
+  }
 }
 
 export const difficultyToStyle = (difficulty: AdmissionDifficulty | null): { color: string; label: string | null } => {

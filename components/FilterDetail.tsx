@@ -5,11 +5,14 @@ import { FilterProps } from "../pages";
 import { fontSize } from "@mui/system";
 
 const updateFilter = (age: number, value: boolean, filter: FilterProps, setFilter: Dispatch<SetStateAction<FilterProps>>) => {
-  var newAgeList = []
+  var newAgeList: number[] | null = []
   if (value) {
-    newAgeList = filter.ageList.concat([age])
+    newAgeList = (filter.ageList || []).concat([age])
   } else {
-    newAgeList = filter.ageList.filter(it => it !== age)
+    newAgeList = (filter.ageList || []).filter(it => it !== age)
+  }
+  if (newAgeList.length === 0) {
+    newAgeList = null
   }
   setFilter({ ageList: newAgeList, open: true })
 }
@@ -42,7 +45,7 @@ export function FilterDetail({
         <FormControlLabel
           control={
             <Checkbox
-              checked={filter.ageList.includes(0)}
+              checked={filter.ageList?.includes(0) || false}
               onChange={(event)=>{
                 updateFilter(0, event.target.checked, filter, setFilter)
               }}
@@ -53,7 +56,7 @@ export function FilterDetail({
         <FormControlLabel
           control={
             <Checkbox
-              checked={filter.ageList.includes(1)}
+              checked={filter.ageList?.includes(1) || false}
               onChange={(event)=>{
                 updateFilter(1, event.target.checked, filter, setFilter)
               }}
@@ -64,7 +67,7 @@ export function FilterDetail({
         <FormControlLabel
           control={
             <Checkbox
-              checked={filter.ageList.includes(2)}
+              checked={filter.ageList?.includes(2) || false}
               onChange={(event)=>{
                 updateFilter(2, event.target.checked, filter, setFilter)
               }}
@@ -75,7 +78,7 @@ export function FilterDetail({
         <FormControlLabel
           control={
             <Checkbox
-              checked={filter.ageList.includes(3)}
+              checked={filter.ageList?.includes(3) || false}
               onChange={(event)=>{
                 updateFilter(3, event.target.checked, filter, setFilter)
               }}
@@ -86,7 +89,7 @@ export function FilterDetail({
         <FormControlLabel
           control={
             <Checkbox
-              checked={filter.ageList.includes(4)}
+              checked={filter.ageList?.includes(4) || false}
               onChange={(event)=>{
                 updateFilter(4, event.target.checked, filter, setFilter)
               }}
@@ -97,7 +100,7 @@ export function FilterDetail({
         <FormControlLabel
           control={
             <Checkbox
-              checked={filter.ageList.includes(5)}
+              checked={filter.ageList?.includes(5) || false}
               onChange={(event)=>{
                 updateFilter(5, event.target.checked, filter, setFilter)
               }}

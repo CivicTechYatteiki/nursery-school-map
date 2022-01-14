@@ -1,5 +1,7 @@
 import { LocalNurserySchoolListSet } from './nursery-school-list'
 
+export const SUPPORTED_AGES = Object.freeze([0, 1, 2, 3, 4, 5]) as number[]
+
 export interface NurserySchool {
   name: string
   address: string
@@ -79,7 +81,7 @@ export const getAdmissionDifficulty = (
   // 0 〜 (最大値-11): 入りやすい
   // とする。実際に使ってみてまた調整する
   const age0Difficulty: AdmissionDifficulty | null = (() => {
-    const age0MinimuIndices: number[] = inSet.nurseryShoolList
+    const age0MinimuIndices: number[] = inSet.nurserySchoolList
       .map(it => it.classList?.age0?.minimumIndex ?? null)
       .map(it => convertMinimumIndexToNumber(it))
       .filter(it => it !== null) as number[]
@@ -89,7 +91,7 @@ export const getAdmissionDifficulty = (
   })()
 
   const age1Difficulty: AdmissionDifficulty | null = (() => {
-    const age1MinimuIndices: number[] = inSet.nurseryShoolList
+    const age1MinimuIndices: number[] = inSet.nurserySchoolList
       .map(it => it.classList?.age1?.minimumIndex ?? null)
       .map(it => convertMinimumIndexToNumber(it))
       .filter(it => it !== null) as number[]
@@ -99,7 +101,7 @@ export const getAdmissionDifficulty = (
   })()
 
   const age2Difficulty: AdmissionDifficulty | null = (() => {
-    const age2MinimuIndices: number[] = inSet.nurseryShoolList
+    const age2MinimuIndices: number[] = inSet.nurserySchoolList
       .map(it => it.classList?.age2?.minimumIndex ?? null)
       .map(it => convertMinimumIndexToNumber(it))
       .filter(it => it !== null) as number[]
@@ -109,7 +111,7 @@ export const getAdmissionDifficulty = (
   })()
 
   const age3Difficulty: AdmissionDifficulty | null = (() => {
-    const age3MinimuIndices: number[] = inSet.nurseryShoolList
+    const age3MinimuIndices: number[] = inSet.nurserySchoolList
       .map(it => it.classList?.age3?.minimumIndex ?? null)
       .map(it => convertMinimumIndexToNumber(it))
       .filter(it => it !== null) as number[]
@@ -119,7 +121,7 @@ export const getAdmissionDifficulty = (
   })()
 
   const age4Difficulty: AdmissionDifficulty | null = (() => {
-    const age4MinimuIndices: number[] = inSet.nurseryShoolList
+    const age4MinimuIndices: number[] = inSet.nurserySchoolList
       .map(it => it.classList?.age4?.minimumIndex ?? null)
       .map(it => convertMinimumIndexToNumber(it))
       .filter(it => it !== null) as number[]
@@ -129,7 +131,7 @@ export const getAdmissionDifficulty = (
   })()
 
   const age5Difficulty: AdmissionDifficulty | null = (() => {
-    const age5MinimuIndices: number[] = inSet.nurseryShoolList
+    const age5MinimuIndices: number[] = inSet.nurserySchoolList
       .map(it => it.classList?.age5?.minimumIndex ?? null)
       .map(it => convertMinimumIndexToNumber(it))
       .filter(it => it !== null) as number[]
