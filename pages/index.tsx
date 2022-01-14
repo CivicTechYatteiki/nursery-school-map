@@ -5,6 +5,7 @@ import { Box, getContrastRatio } from '@mui/system'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { useRef, useState } from 'react'
+import { use100vh } from 'react-div-100vh'
 import { BottomSheet } from 'react-spring-bottom-sheet'
 import { SpringEvent } from 'react-spring-bottom-sheet/dist/types'
 import { FilterDetail } from '../components/FilterDetail'
@@ -53,6 +54,8 @@ export default function Home({ nurserySets }: Props) {
   }
 
   const theme = useTheme()
+
+  const pageHeight = use100vh()
 
   const render = (status: Status) => {
     switch (status) {
@@ -123,7 +126,7 @@ export default function Home({ nurserySets }: Props) {
         <meta name="description" content="入所最低指数をもとに、保育園の入りやすさを色分けして地図に表示します。" />
       </Head>
 
-      <Stack sx={{ width: '100%', height: '100vh' }}>
+      <Stack sx={{ width: '100%', height: pageHeight }}>
         <AppBar color="inherit" elevation={0} position="static">
           <Toolbar variant="dense">
             <Stack direction="row" alignItems="center" justifyContent="space-between" flexGrow={1}>
