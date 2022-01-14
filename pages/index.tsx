@@ -112,9 +112,7 @@ export default function Home({ nurserySets }: Props) {
         <AppBar color="inherit" elevation={0} position="static">
           <Toolbar variant="dense">
             <Stack direction="row" alignItems="center" justifyContent="space-between" flexGrow={1}>
-              <Typography variant="subtitle1" component="h1">
-                入りやすい保育園マップ
-              </Typography>
+              <img src='/logo.svg' alt='入りやすい保育園マップ' />
               <Typography variant="body2" color="gray">
                 港区限定で公開中
               </Typography>
