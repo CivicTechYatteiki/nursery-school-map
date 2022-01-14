@@ -37,4 +37,15 @@ export const appTheme = createTheme({
   shape: {
     borderRadius: 12,
   },
+  components: {
+    MuiFormControlLabel: {
+      styleOverrides: {
+        label: {
+          '&:first-letter': {
+            fontSize: '1.5rem',
+          },
+        },
+      },
+    },
+  },
 })

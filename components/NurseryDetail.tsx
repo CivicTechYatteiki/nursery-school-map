@@ -1,21 +1,32 @@
-import { Chip, getContrastRatio, IconButton, Paper, Stack, styled, Typography, useTheme } from '@mui/material'
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded'
+import { Chip, Divider, getContrastRatio, IconButton, Paper, Stack, styled, Typography, useTheme } from '@mui/material'
 import { grey } from '@mui/material/colors'
-import { getAdmissionDifficulty, getMinimumIndexRange, NurserySchool } from '../lib/model/nursery-school'
+import { difference } from 'lodash'
+import {
+  getAdmissionDifficulty,
+  getMinimumIndexRange,
+  NurserySchool,
+  SUPPORTED_AGES,
+} from '../lib/model/nursery-school'
 import { LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
+import { FilterProps } from '../pages'
 import { blue } from '../styles/theme'
 import { difficultyToStyle } from './marker'
-import CloseRoundedIcon from '@mui/icons-material/CloseRounded'
 
 export function NurseryDetail({
   nursery,
   inNurserySet,
+  filter,
   onClose,
 }: {
   nursery: NurserySchool
   inNurserySet: LocalNurserySchoolListSet
+  filter: FilterProps
   onClose: () => void
 }) {
   const shortAddress = nursery.address.replace(/^.{1,3}?[都道府県]/, '')
+  const selectedAges = filter.ageList ?? SUPPORTED_AGES
+  const otherAges = difference(SUPPORTED_AGES, selectedAges)
 
   return (
     <Stack direction="column" spacing={3} sx={{ padding: 2, paddingTop: 0 }}>
@@ -51,8 +62,12 @@ export function NurseryDetail({
         </div>
 
         <Stack direction="row" spacing={2} sx={{ overflowX: 'auto' }}>
-          {new Array(6).fill(null).map((_, i) => (
-            <DifficultyCell key={i} nursery={nursery} inNurserySet={inNurserySet} age={i} />
+          {selectedAges.map(age => (
+            <DifficultyCell key={age} nursery={nursery} inNurserySet={inNurserySet} age={age} />
+          ))}
+          {otherAges.length > 0 && <Divider orientation="vertical" flexItem />}
+          {otherAges.map(age => (
+            <DifficultyCell key={age} nursery={nursery} inNurserySet={inNurserySet} age={age} dimmed />
           ))}
         </Stack>
 
@@ -75,10 +90,12 @@ function DifficultyCell({
   nursery,
   inNurserySet,
   age,
+  dimmed,
 }: {
   nursery: NurserySchool
   inNurserySet: LocalNurserySchoolListSet
   age: number
+  dimmed?: boolean
 }) {
   const difficulty = getAdmissionDifficulty(nursery, inNurserySet, age)
   const difficultyStyle = difficultyToStyle(difficulty)
@@ -99,10 +116,11 @@ function DifficultyCell({
         background: grey[50],
         height: 112,
         position: 'relative',
+        opacity: dimmed ? 0.5 : undefined,
       }}
     >
       <Stack direction="column" spacing={1} sx={{ paddingX: 1.5, paddingTop: 1 }}>
-        <Typography variant="body2" color="text.disabled" component="div">
+        <Typography variant="body2" color="text.secondary" component="div">
           {age}歳
         </Typography>
         {indexRange.type === 'na' ? (

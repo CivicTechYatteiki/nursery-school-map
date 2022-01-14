@@ -3,13 +3,13 @@ import minatoKuJson from '../data/minato-ku/translated.json'
 
 export interface LocalNurserySchoolListSet {
   localName: string // 自治体名
-  nurseryShoolList: NurserySchool[]
+  nurserySchoolList: NurserySchool[]
 }
 
 export const getAllNurserySchoolListSets = (): LocalNurserySchoolListSet[] => {
   const minatoKuNurserySchoolList: LocalNurserySchoolListSet = {
     localName: '港区',
-    nurseryShoolList: minatoKuJson as NurserySchool[],
+    nurserySchoolList: minatoKuJson as NurserySchool[],
   }
   return [minatoKuNurserySchoolList]
 }
@@ -25,5 +25,5 @@ export const filterLocalNurserySchoolList = (
   if (list.length === 1) {
     throw new Error('Multiple locals found')
   }
-  return list[0].nurseryShoolList
+  return list[0].nurserySchoolList
 }
