@@ -9,7 +9,7 @@ import { use100vh } from 'react-div-100vh'
 import { BottomSheet } from 'react-spring-bottom-sheet'
 import { SpringEvent } from 'react-spring-bottom-sheet/dist/types'
 import { FilterDetail } from '../components/FilterDetail'
-import { createMarkers, MarkerClickHandler, updateMarkerIcons } from '../components/marker'
+import { createMarkers, MarkerClickHandler, updateMarkersIconAndVisibility } from '../components/marker'
 import { NurseryDetail } from '../components/NurseryDetail'
 import { NurserySchool } from '../lib/model/nursery-school'
 import { getAllNurserySchoolListSets, LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
@@ -269,7 +269,7 @@ function MyMapComponent({
   }, [onClickMarker])
 
   useIsomorphicLayoutEffect(() => {
-    updateMarkerIcons(markersRef.current, nurserySets, filter)
+    updateMarkersIconAndVisibility(markersRef.current, nurserySets, filter)
   }, [nurserySets, filter.ageList])
 
   return <Box ref={ref} id="map" sx={{ width: '100%', height: '100%' }} />

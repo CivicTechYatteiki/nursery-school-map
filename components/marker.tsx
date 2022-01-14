@@ -1,5 +1,6 @@
 import {
   AdmissionDifficulty,
+  Class,
   getHigherAdmissionDifficulty,
   getModeAdmissionDifficulty,
   NurserySchool,
@@ -42,15 +43,25 @@ export function createMarkers(
   return markers
 }
 
-export function updateMarkerIcons(
+export function updateMarkersIconAndVisibility(
   markers: google.maps.Marker[],
   nurserySets: LocalNurserySchoolListSet[],
   filter: FilterProps
 ) {
-  let i = 0
+  let i = -1
 
   for (const nurserySet of nurserySets) {
     for (const nursery of nurserySet.nurserySchoolList) {
+      i++
+      if (
+        filter.ageList &&
+        filter.ageList.every(age => (nursery.classList as Record<string, Class | null> | null)?.[`age${age}`] == null)
+      ) {
+        markers[i].setVisible(false)
+        continue
+      }
+      markers[i].setVisible(true)
+
       const difficulty = (() => {
         if (filter.ageList !== null && filter.ageList.length > 0) {
           return getHigherAdmissionDifficulty(nursery, nurserySet, filter.ageList)
@@ -68,7 +79,6 @@ export function updateMarkerIcons(
         anchor: new google.maps.Point(...markerAnchor),
         labelOrigin: new google.maps.Point(...markerLabelOrigin),
       })
-      i++
     }
   }
 }
