@@ -68,6 +68,7 @@ export const enum AdmissionDifficulty {
   Easy = 1,
   Moderate = 2,
   Hard = 3,
+  Unknown = 4,
 }
 
 export const getAdmissionDifficulty = (
@@ -180,14 +181,16 @@ export const getModeAdmissionDifficulty = (
     [AdmissionDifficulty.Easy]: 0,
     [AdmissionDifficulty.Moderate]: 0,
     [AdmissionDifficulty.Hard]: 0,
+    [AdmissionDifficulty.Unknown]: 0,
   }
 
   difficulties.forEach(it => {
     count[it] += 1
   })
 
-  console.log(nurserySchool.name, difficulties, count)
+  //console.log(nurserySchool.name, difficulties, count)
 
+  // ここではUnknownは外して算出する
   if (
     count[AdmissionDifficulty.Easy] > count[AdmissionDifficulty.Moderate] &&
     count[AdmissionDifficulty.Easy] > count[AdmissionDifficulty.Hard]
@@ -204,6 +207,53 @@ export const getModeAdmissionDifficulty = (
   ) {
     return AdmissionDifficulty.Hard
   }
+  throw Error('Unexpected error')
+}
+
+// 複数の年齢を指定して、AND条件で入りやすさを返す
+// 0歳と2歳を指定した場合、片方が入りやすくても、もう片方が入りにくかったら「入りにくい」と扱う
+export const getHigherAdmissionDifficulty = (
+  nurserySchool: NurserySchool,
+  inSet: LocalNurserySchoolListSet,
+  ageList: number[]
+): AdmissionDifficulty | null => {
+  const difficulties: AdmissionDifficulty[] = ageList
+    .map(age => {
+      if (age === null) return null
+      return getAdmissionDifficulty(nurserySchool, inSet, age)
+    })
+    .filter(it => it !== null) as AdmissionDifficulty[]
+
+  if (difficulties.length === 0) {
+    return null
+  }
+
+  var count = {
+    [AdmissionDifficulty.Easy]: 0,
+    [AdmissionDifficulty.Moderate]: 0,
+    [AdmissionDifficulty.Hard]: 0,
+    [AdmissionDifficulty.Unknown]: 0,
+  }
+
+  difficulties.forEach(it => {
+    count[it] += 1
+  })
+
+  //console.log(nurserySchool.name, count)
+
+  if (count[AdmissionDifficulty.Unknown] > 0) {
+    return AdmissionDifficulty.Unknown
+  }
+  if (count[AdmissionDifficulty.Hard] > 0) {
+    return AdmissionDifficulty.Hard
+  }
+  if (count[AdmissionDifficulty.Moderate] > 0) {
+    return AdmissionDifficulty.Moderate
+  }
+  if (count[AdmissionDifficulty.Easy] > 0) {
+    return AdmissionDifficulty.Easy
+  }
+
   throw Error('Unexpected error')
 }
 
@@ -240,7 +290,7 @@ const estimateAdmissionDifficulty = (
   const max = Math.max(...minimumIndices)
 
   if (target === null || target === '非公開') {
-    return null
+    return AdmissionDifficulty.Unknown
   } // 判定不能
   if (typeof target === 'number') {
     return value(target, max)
