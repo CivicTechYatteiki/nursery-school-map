@@ -1,5 +1,5 @@
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded'
-import { Chip, Divider, getContrastRatio, IconButton, Paper, Stack, styled, Typography, useTheme } from '@mui/material'
+import { Chip, Divider, getContrastRatio, IconButton, Paper, Stack, styled, Typography, Link, useTheme } from '@mui/material'
 import { grey } from '@mui/material/colors'
 import { difference } from 'lodash'
 import {
@@ -29,8 +29,8 @@ export function NurseryDetail({
   const otherAges = difference(SUPPORTED_AGES, selectedAges)
 
   return (
-    <Stack direction="column" spacing={3} sx={{ padding: 2, paddingTop: 0 }}>
-      <div>
+    <Stack direction="column" spacing={3} sx={{ paddingTop: 0, paddingBottom: 2 }}>
+      <Stack direction="column" sx={{ paddingLeft: 2, paddingRight: 2 }}>
         <Stack direction="row" spacing={2} justifyContent="space-between" alignItems="center">
           <Typography variant="h6" sx={{ marginLeft: '-1px' /* Optical Adjustment */ }}>
             {nursery.name}
@@ -49,19 +49,19 @@ export function NurseryDetail({
             現在地から800m
           </Typography> */}
         </Stack>
-      </div>
+      </Stack>
 
       <Stack spacing={2}>
-        <div>
+        <Stack direction="column" sx={{ paddingLeft: 2, paddingRight: 2 }}>
           <Typography variant="subtitle1" component="div" sx={{ lineHeight: 1.1 }}>
             最低指数
           </Typography>
           <Typography variant="caption" color="text.secondary">
-            R3年4月入所1次利用調整
+            令和3年4月入所1次利用調整のボーダーライン
           </Typography>
-        </div>
+        </Stack>
 
-        <Stack direction="row" spacing={2} sx={{ overflowX: 'auto' }}>
+        <Stack direction="row" spacing={2} sx={{ overflowX: 'auto', paddingLeft: 2, paddingRight: 2 }}>
           {selectedAges.map(age => (
             <DifficultyCell key={age} nursery={nursery} inNurserySet={inNurserySet} age={age} />
           ))}
@@ -71,9 +71,9 @@ export function NurseryDetail({
           ))}
         </Stack>
 
-        <Typography variant="caption" color="text.secondary" component="div">
+        <Typography variant="caption" color="text.secondary" component="div" sx={{ paddingLeft: 2, paddingRight: 2 }}>
           <div>
-            {nursery.localName}の保育園全体では、最大で41・最小で22以下の指数の人が保育園に入ることができています。
+            目安として、両親が共にフルタイムで働いていると40点になります。計算方法は<Link color='text.secondary' href='https://www.city.minato.tokyo.jp/kodomo/kodomo/hoikuen/nyuen/r04-index.html'>入園案内</Link>をご覧ください。
           </div>
         </Typography>
       </Stack>
@@ -134,6 +134,11 @@ function DifficultyCell({
         ) : (
           <Typography variant="h4" component="div" sx={{ lineHeight: '32px' }}>
             {indexRange.value}
+            {indexRange.type !== 'le' && (
+              <Typography variant="subtitle2" component="span">
+                点
+              </Typography>
+            )}
             {indexRange.type === 'le' && (
               <Typography variant="subtitle2" component="span">
                 以下
