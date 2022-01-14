@@ -156,7 +156,9 @@ function DifficultyCell({
           </Typography>
         ) : indexRange.type === 'na' ? (
           <Typography variant="caption" color="text.disabled" sx={{ lineHeight: 1.25 }}>
-            空き or 希望者なし
+            空き or
+            <br />
+            希望者なし
           </Typography>
         ) : indexRange.type === 'other' ? (
           <Typography variant="caption" color="text.disabled" sx={{ lineHeight: 1.25 }}>
