@@ -3,6 +3,7 @@ import { red } from '@mui/material/colors'
 
 export const blue = {
   90: '#066EA9',
+  60: '#0E96F8',
   50: '#31A8FF',
   20: '#B5E7F7',
   10: '#EDF9FF',
@@ -26,6 +27,7 @@ export const appTheme = createTheme({
   palette: {
     primary: {
       main: blue[50],
+      contrastText: blue[60],
     },
     secondary: {
       main: '#19857b',

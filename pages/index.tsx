@@ -208,7 +208,7 @@ function FilterButton({ filter, onClickFilter }: { filter: FilterProps; onClickF
         }
       >
         {/* <Button color="primary">2022年4月入園</Button> */}
-        <Button color="primary" onClick={onClickFilter}>
+        <Button sx={{ color: theme.palette.primary.contrastText }} onClick={onClickFilter}>
           {buttonText(filter)}
         </Button>
       </Stack>
