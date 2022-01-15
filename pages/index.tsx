@@ -139,7 +139,6 @@ export default function Home({ nurserySets }: Props) {
           }}
         />
 
-        {/* FIXME: filterの更新が反映されない */}
         <div
           className="no-outline"
           style={{
