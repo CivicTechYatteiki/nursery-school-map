@@ -124,11 +124,11 @@ function DifficultyCell({
           {age}歳
         </Typography>
         {indexRange.type === 'noClass' ? (
-          <Typography variant="subtitle1" component="div" sx={{ lineHeight: '32px' }}>
+          <Typography variant="h5" component="div" sx={{ lineHeight: '32px' }}>
             ×
           </Typography>
         ) : indexRange.type === 'na' ? (
-          <Typography variant="subtitle1" component="div" sx={{ lineHeight: '32px' }}>
+          <Typography variant="h5" component="div" sx={{ lineHeight: '32px' }}>
             {/* 全角ハイフン */}−
           </Typography>
         ) : indexRange.type === 'other' ? (
