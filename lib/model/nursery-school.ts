@@ -7,6 +7,7 @@ export interface NurserySchool {
   address: string
   area: string // 地区。赤坂、高輪など
   tel: string
+  url: string | null
   institutionType: string // 施設種別。認可保育園、小規模保育事業など
   ownerType: string // 種別。私立、区立など
   location: GeoLocation
