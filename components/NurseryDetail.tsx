@@ -1,6 +1,17 @@
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded'
 import LinkIcon from '@mui/icons-material/Link'
-import { Chip, Divider, getContrastRatio, IconButton, Paper, Stack, styled, Typography, Link, useTheme } from '@mui/material'
+import {
+  Chip,
+  Divider,
+  getContrastRatio,
+  IconButton,
+  Link,
+  Paper,
+  Stack,
+  styled,
+  Typography,
+  useTheme,
+} from '@mui/material'
 import { grey } from '@mui/material/colors'
 import { difference } from 'lodash'
 import {
@@ -54,9 +65,7 @@ export function NurseryDetail({
           <Link color="primary" underline="none" href={nursery.url} target="_blank">
             <Stack direction="row" spacing="3px">
               <LinkIcon fontSize="small" />
-              <Typography variant="caption">
-                {(new URL(nursery.url)).hostname}
-              </Typography>
+              <Typography variant="caption">{new URL(nursery.url).hostname}</Typography>
             </Stack>
           </Link>
         )}
@@ -84,7 +93,14 @@ export function NurseryDetail({
 
         <Typography variant="caption" color="text.secondary" component="div" sx={{ paddingLeft: 2, paddingRight: 2 }}>
           <div>
-            目安として、両親が共にフルタイムで働いていると40点になります。計算方法は<Link color='text.secondary' href='https://www.city.minato.tokyo.jp/kodomo/kodomo/hoikuen/nyuen/r04-index.html'>入園案内</Link>をご覧ください。
+            目安として、両親が共にフルタイムで働いていると40点になります。計算方法は
+            <Link
+              color="text.secondary"
+              href="https://www.city.minato.tokyo.jp/kodomo/kodomo/hoikuen/nyuen/r04-index.html"
+            >
+              入園案内
+            </Link>
+            をご覧ください。
           </div>
         </Typography>
       </Stack>
