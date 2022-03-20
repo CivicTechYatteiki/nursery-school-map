@@ -1,4 +1,5 @@
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded'
+import LinkIcon from '@mui/icons-material/Link'
 import { Chip, Divider, getContrastRatio, IconButton, Paper, Stack, styled, Typography, Link, useTheme } from '@mui/material'
 import { grey } from '@mui/material/colors'
 import { difference } from 'lodash'
@@ -49,6 +50,16 @@ export function NurseryDetail({
             現在地から800m
           </Typography> */}
         </Stack>
+        {nursery.url && (
+          <Link color="primary" underline="none" href={nursery.url} target="_blank">
+            <Stack direction="row" spacing="3px">
+              <LinkIcon fontSize="small" />
+              <Typography variant="caption">
+                {(new URL(nursery.url)).hostname}
+              </Typography>
+            </Stack>
+          </Link>
+        )}
       </Stack>
 
       <Stack spacing={2}>
