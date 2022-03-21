@@ -71,12 +71,12 @@ export function updateMarkersIconAndVisibility(
       const markerStyle = difficultyToStyle(difficulty)
 
       const now = new Date()
-      const isNew = nursery.openYear >= now.getFullYear() && nursery.openMonth > now.getMonth() + 1
+      const notOpened = nursery.openYear >= now.getFullYear() && nursery.openMonth >= now.getMonth() + 1
 
       markers[i].setIcon({
-        fillColor: isNew ? yellow[50] : markerStyle.color,
+        fillColor: notOpened ? yellow[50] : markerStyle.color,
         fillOpacity: 1,
-        strokeColor: isNew ? yellow[90] : blue[90],
+        strokeColor: notOpened ? yellow[90] : blue[90],
         strokeWeight: 1.5,
         path: markerPath,
         anchor: new google.maps.Point(...markerAnchor),
