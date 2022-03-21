@@ -18,6 +18,7 @@ import { difference } from 'lodash'
 import {
   getAdmissionDifficulty,
   getMinimumIndexRange,
+  getIsOpened,
   NurserySchool,
   SUPPORTED_AGES,
 } from '../lib/model/nursery-school'
@@ -41,7 +42,7 @@ export function NurseryDetail({
   const selectedAges = filter.ageList ?? SUPPORTED_AGES
   const otherAges = difference(SUPPORTED_AGES, selectedAges)
   const now = new Date()
-  const notOpened = nursery.openYear >= now.getFullYear() && nursery.openMonth >= now.getMonth() + 1
+  const notOpened = !getIsOpened(nursery.openYear, nursery.openMonth)
 
   return (
     <Stack direction="column" spacing={3} sx={{ paddingTop: 0, paddingBottom: 2 }}>
@@ -86,7 +87,7 @@ export function NurseryDetail({
 
         {notOpened ? (
           <Box sx={{ paddingLeft: 2, paddingRight: 2 }}>
-            <NewNurseryCell nursery={nursery} />
+            <NewNurseryCell openYear={nursery.openYear!} openMonth={nursery.openMonth!} />
           </Box>
         ) : (
           <>
@@ -233,9 +234,11 @@ function DifficultyCell({
 }
 
 function NewNurseryCell({
-  nursery,
+  openYear,
+  openMonth
 }: {
-  nursery: NurserySchool
+  openYear: number,
+  openMonth: number
 }) {
   const theme = useTheme()
 
@@ -251,7 +254,7 @@ function NewNurseryCell({
     >
       <Stack direction="column" spacing={1} sx={{ paddingX: 2, paddingTop: 2 }}>
         <Typography variant="body2" component="div">
-          令和{nursery.openYear - 2018}年{nursery.openMonth}月に開設予定です。
+          令和{openYear - 2018}年{openMonth}月に開設予定です。
         </Typography>
         <Typography variant="body2" component="div">
           まだだれも入園していないため、他の園より入りやすい可能性が高いです。

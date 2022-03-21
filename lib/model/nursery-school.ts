@@ -8,8 +8,8 @@ export interface NurserySchool {
   area: string // 地区。赤坂、高輪など
   tel: string | null
   url: string | null
-  openYear: number
-  openMonth: number
+  openYear: number | null
+  openMonth: number | null
   institutionType: string // 施設種別。認可保育園、小規模保育事業など
   ownerType: string // 種別。私立、区立など
   location: GeoLocation
@@ -37,6 +37,19 @@ interface IndexRange {
     | 'other' // 希望者が少なく個人情報保護のため非公開、など
   value: number
   other?: string
+}
+
+export const getIsOpened = (openYear: number | null, openMonth: number | null): boolean => {
+  if (openYear === null) {
+    return true
+  }
+  if (openMonth === null) {
+    return true
+  }
+
+  const now = new Date()
+  const openDate = new Date(openYear, openMonth - 1, 1)
+  return now >= openDate
 }
 
 export const getMinimumIndexRange = (age: number, inNurserySchool: NurserySchool): IndexRange => {

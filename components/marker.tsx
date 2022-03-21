@@ -3,6 +3,7 @@ import {
   Class,
   getHigherAdmissionDifficulty,
   getModeAdmissionDifficulty,
+  getIsOpened,
   NurserySchool,
   SUPPORTED_AGES,
 } from '../lib/model/nursery-school'
@@ -71,7 +72,7 @@ export function updateMarkersIconAndVisibility(
       const markerStyle = difficultyToStyle(difficulty)
 
       const now = new Date()
-      const notOpened = nursery.openYear >= now.getFullYear() && nursery.openMonth >= now.getMonth() + 1
+      const notOpened = !getIsOpened(nursery.openYear, nursery.openMonth)
 
       markers[i].setIcon({
         fillColor: notOpened ? yellow[50] : markerStyle.color,
