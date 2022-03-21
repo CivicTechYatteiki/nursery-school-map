@@ -9,6 +9,11 @@ export const blue = {
   10: '#EDF9FF',
 }
 
+export const yellow = {
+  90: '#967709',
+  50: '#FFED4F',
+}
+
 // Create a theme instance.
 export const appTheme = createTheme({
   typography: {

@@ -8,7 +8,7 @@ import {
 } from '../lib/model/nursery-school'
 import { LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
 import { FilterProps } from '../pages'
-import { blue } from '../styles/theme'
+import { blue, yellow } from '../styles/theme'
 
 export type MarkerClickHandler = (params: {
   nursery: NurserySchool
@@ -70,10 +70,13 @@ export function updateMarkersIconAndVisibility(
       })()
       const markerStyle = difficultyToStyle(difficulty)
 
+      const now = new Date()
+      const isNew = nursery.openYear >= now.getFullYear() && nursery.openMonth > now.getMonth() + 1
+
       markers[i].setIcon({
-        fillColor: markerStyle.color,
+        fillColor: isNew ? yellow[50] : markerStyle.color,
         fillOpacity: 1,
-        strokeColor: blue[90],
+        strokeColor: isNew ? yellow[90] : blue[90],
         strokeWeight: 1.5,
         path: markerPath,
         anchor: new google.maps.Point(...markerAnchor),
