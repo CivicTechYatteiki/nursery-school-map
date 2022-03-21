@@ -1,13 +1,13 @@
 import { csv2json } from '../csv2json'
 import {
-  validateClass,
+  validateMinatoKuClass,
   validateNumber,
   validateOptionalNumber,
   validateString,
   validateOptionalString,
   validateSource,
 } from '../validator'
-import { ClassList, createClass, GeoLocation, NurserySchool, Source } from '../../model/nursery-school'
+import { ClassList, Class, GeoLocation, Source } from '../../model/nursery-school'
 import { MergedData } from '../../model/data'
 
 // 保育園のWebサイトのURLは、手動で入力したものを利用。将来的には、オープンデータのなかに追加される予定
@@ -31,19 +31,19 @@ const minatoKu: MergedData = {
   dataList: [
     {
       filePath: minatoKuHoikuen.filePath,
+      filter: (record: any): boolean => {
+        if (record['施設種別'].length === 0) return false
+        if (record['施設種別'] === '居宅訪問型保育事業') return false
+        if (record['保育園名'].length === 0) return false
+        return true
+      },
       mapping: [
-        {
-          tsModelKey: 'institutionType',
-          valueTranslator: (record: any): string => {
-            return validateString(record['施設種別'])
-          },
-        },
-        {
-          tsModelKey: 'area',
-          valueTranslator: (record: any): string => {
-            return validateString(record['地区'])
-          },
-        },
+        // {
+        //   tsModelKey: 'institutionType',
+        //   valueTranslator: (record: any): string => {
+        //     return validateString(record['施設種別'])
+        //   },
+        // },
         {
           tsModelKey: 'name',
           valueTranslator: (record: any): string => {
@@ -66,12 +66,12 @@ const minatoKu: MergedData = {
             return value
           },
         },
-        {
-          tsModelKey: 'ownerType',
-          valueTranslator: (record: any): string => {
-            return validateString(record['種別'])
-          },
-        },
+        // {
+        //   tsModelKey: 'ownerType',
+        //   valueTranslator: (record: any): string => {
+        //     return validateString(record['種別'])
+        //   },
+        // },
         {
           tsModelKey: 'tel',
           valueTranslator: (record: any): string | null => {
@@ -112,6 +112,10 @@ const minatoKu: MergedData = {
     },
     {
       filePath: minatoKuHoikuenSaiteiShisu.filePath,
+      filter: (record: any): boolean => {
+        if (record['保育園名'].length === 0) return false
+        return true
+      },
       mapping: [
         {
           tsModelKey: 'name',
@@ -123,12 +127,12 @@ const minatoKu: MergedData = {
           tsModelKey: 'classList',
           valueTranslator: (record: any): ClassList => {
             const value: ClassList = {
-              age0: validateClass(createClass(record['0歳'])),
-              age1: validateClass(createClass(record['1歳'])),
-              age2: validateClass(createClass(record['2歳'])),
-              age3: validateClass(createClass(record['3歳'])),
-              age4: validateClass(createClass(record['4歳'])),
-              age5: validateClass(createClass(record['5歳'])),
+              age0: validateMinatoKuClass(createClass(record['0歳'])),
+              age1: validateMinatoKuClass(createClass(record['1歳'])),
+              age2: validateMinatoKuClass(createClass(record['2歳'])),
+              age3: validateMinatoKuClass(createClass(record['3歳'])),
+              age4: validateMinatoKuClass(createClass(record['4歳'])),
+              age5: validateMinatoKuClass(createClass(record['5歳'])),
               minimumIndexSource: validateSource(minatoKuHoikuenSaiteiShisu),
             }
             return value
@@ -139,4 +143,30 @@ const minatoKu: MergedData = {
   ],
 }
 
-csv2json(minatoKu)
+const createClass = (minimumIndex: string): Class | null => {
+  if (minimumIndex.length == 0) {
+    // 定員がない（＝クラスがない）
+    return null
+  }
+  if (minimumIndex == '―') {
+    // クラスはあるが、空きがない・希望者がいないため最低指数がない
+    return { minimumIndex: null }
+  }
+  if (minimumIndex == '非公開') {
+    // 内定者が1人の場合など、個人情報となるため非公開
+    return { minimumIndex: minimumIndex }
+  }
+  if (minimumIndex.match(/(\d+)以下/)) {
+    const result = minimumIndex.match(/(\d+)以下/)
+    return {
+      minimumIndex: {
+        lessThanOrEqual: parseInt(result![1]),
+        text: minimumIndex,
+      },
+    }
+  }
+  return { minimumIndex: parseInt(minimumIndex) }
+}
+
+const minatoKuJsonFile = `${__dirname}/translated.json`
+csv2json(minatoKu, minatoKuJsonFile)

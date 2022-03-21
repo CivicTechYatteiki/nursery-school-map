@@ -1,5 +1,6 @@
 export interface Data {
   filePath: string
+  filter: Function
   mapping: Mapping[]
 }
 

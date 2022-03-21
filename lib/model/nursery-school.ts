@@ -5,13 +5,12 @@ export const SUPPORTED_AGES = Object.freeze([0, 1, 2, 3, 4, 5]) as number[]
 export interface NurserySchool {
   name: string
   address: string
-  area: string // 地区。赤坂、高輪など
   tel: string | null
   url: string | null
   openYear: number | null
   openMonth: number | null
-  institutionType: string // 施設種別。認可保育園、小規模保育事業など
-  ownerType: string // 種別。私立、区立など
+  // institutionType: string // 施設種別。認可保育園、小規模保育事業など。港区と台東区で形式が違うので一旦削る
+  // ownerType: string // 種別。私立、区立など。港区と台東区で形式が違うので一旦削る
   location: GeoLocation
   admissionAgeInMonth: string | null // 入園可能月齢。3ヶ月、57日など。データがない場合はnull
   classList: ClassList | null
@@ -285,6 +284,9 @@ const convertMinimumIndexToNumber = (minimumIndex: MinimumIndex | null): number 
   if (minimumIndex === '非公開') {
     return null
   }
+  if (minimumIndex === '空有') {
+    return null
+  }
   if (typeof minimumIndex === 'number') {
     return minimumIndex
   }
@@ -344,7 +346,7 @@ export interface Class {
   minimumIndex: MinimumIndex | null // 入所最低指数。空きがない、希望者がいない場合はnull
 }
 
-type MinimumIndex = number | Range | '非公開'
+type MinimumIndex = number | Range | '非公開' | '空有'
 
 export interface Range {
   lessThanOrEqual: number // 22
@@ -356,29 +358,4 @@ export interface Source {
   ver: string // Ver202104
   url: string
   filePath: string
-}
-
-export const createClass = (minimumIndex: string): Class | null => {
-  if (minimumIndex.length == 0) {
-    // 定員がない（＝クラスがない）
-    return null
-  }
-  if (minimumIndex == '―') {
-    // クラスはあるが、空きがない・希望者がいないため最低指数がない
-    return { minimumIndex: null }
-  }
-  if (minimumIndex == '非公開') {
-    // 内定者が1人の場合など、個人情報となるため非公開
-    return { minimumIndex: minimumIndex }
-  }
-  if (minimumIndex.match(/(\d+)以下/)) {
-    const result = minimumIndex.match(/(\d+)以下/)
-    return {
-      minimumIndex: {
-        lessThanOrEqual: parseInt(result![1]),
-        text: minimumIndex,
-      },
-    }
-  }
-  return { minimumIndex: parseInt(minimumIndex) }
 }
