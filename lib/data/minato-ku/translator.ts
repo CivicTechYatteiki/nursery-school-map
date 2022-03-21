@@ -67,8 +67,8 @@ const minatoKu: MergedData = {
         },
         {
           tsModelKey: 'tel',
-          valueTranslator: (record: any): string => {
-            return validateString(record['電話番号'])
+          valueTranslator: (record: any): string | null => {
+            return validateOptionalString(record['電話番号'])
           },
         },
         {
