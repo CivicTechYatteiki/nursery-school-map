@@ -7,6 +7,7 @@ import {
   IconButton,
   Link,
   Paper,
+  Box,
   Stack,
   styled,
   Typography,
@@ -17,12 +18,13 @@ import { difference } from 'lodash'
 import {
   getAdmissionDifficulty,
   getMinimumIndexRange,
+  getIsOpened,
   NurserySchool,
   SUPPORTED_AGES,
 } from '../lib/model/nursery-school'
 import { LocalNurserySchoolListSet } from '../lib/model/nursery-school-list'
 import { FilterProps } from '../pages'
-import { blue } from '../styles/theme'
+import { blue, yellow } from '../styles/theme'
 import { difficultyToStyle } from './marker'
 
 export function NurseryDetail({
@@ -39,6 +41,8 @@ export function NurseryDetail({
   const shortAddress = nursery.address.replace(/^.{1,3}?[都道府県]/, '')
   const selectedAges = filter.ageList ?? SUPPORTED_AGES
   const otherAges = difference(SUPPORTED_AGES, selectedAges)
+  const now = new Date()
+  const notOpened = !getIsOpened(nursery.openYear, nursery.openMonth)
 
   return (
     <Stack direction="column" spacing={3} sx={{ paddingTop: 0, paddingBottom: 2 }}>
@@ -81,28 +85,36 @@ export function NurseryDetail({
           </Typography>
         </Stack>
 
-        <Stack direction="row" spacing={2} sx={{ overflowX: 'auto', paddingLeft: 2, paddingRight: 2 }}>
-          {selectedAges.map(age => (
-            <DifficultyCell key={age} nursery={nursery} inNurserySet={inNurserySet} age={age} />
-          ))}
-          {otherAges.length > 0 && <Divider orientation="vertical" flexItem />}
-          {otherAges.map(age => (
-            <DifficultyCell key={age} nursery={nursery} inNurserySet={inNurserySet} age={age} dimmed />
-          ))}
-        </Stack>
+        {notOpened ? (
+          <Box sx={{ paddingLeft: 2, paddingRight: 2 }}>
+            <NewNurseryCell openYear={nursery.openYear!} openMonth={nursery.openMonth!} />
+          </Box>
+        ) : (
+          <>
+            <Stack direction="row" spacing={2} sx={{ overflowX: 'auto', paddingLeft: 2, paddingRight: 2 }}>
+              {selectedAges.map(age => (
+                <DifficultyCell key={age} nursery={nursery} inNurserySet={inNurserySet} age={age} />
+              ))}
+              {otherAges.length > 0 && <Divider orientation="vertical" flexItem />}
+              {otherAges.map(age => (
+                <DifficultyCell key={age} nursery={nursery} inNurserySet={inNurserySet} age={age} dimmed />
+              ))}
+            </Stack>
 
-        <Typography variant="caption" color="text.secondary" component="div" sx={{ paddingLeft: 2, paddingRight: 2 }}>
-          <div>
-            目安として、両親が共にフルタイムで働いていると40点になります。計算方法は
-            <Link
-              color="text.secondary"
-              href="https://www.city.minato.tokyo.jp/kodomo/kodomo/hoikuen/nyuen/r04-index.html"
-            >
-              入園案内
-            </Link>
-            をご覧ください。
-          </div>
-        </Typography>
+            <Typography variant="caption" color="text.secondary" component="div" sx={{ paddingLeft: 2, paddingRight: 2 }}>
+              <div>
+                目安として、両親が共にフルタイムで働いていると40点になります。計算方法は
+                <Link
+                  color="text.secondary"
+                  href="https://www.city.minato.tokyo.jp/kodomo/kodomo/hoikuen/nyuen/r04-index.html"
+                >
+                  入園案内
+                </Link>
+                をご覧ください。
+              </div>
+            </Typography>
+          </>
+        )}
       </Stack>
     </Stack>
   )
@@ -217,6 +229,57 @@ function DifficultyCell({
           }}
         />
       )}
+    </Paper>
+  )
+}
+
+function NewNurseryCell({
+  openYear,
+  openMonth
+}: {
+  openYear: number,
+  openMonth: number
+}) {
+  const theme = useTheme()
+
+  return (
+    <Paper
+      variant="outlined"
+      sx={{
+        background: grey[50],
+        maxWidth: 480,
+        height: 128,
+        position: 'relative',
+      }}
+    >
+      <Stack direction="column" spacing={1} sx={{ paddingX: 2, paddingTop: 2 }}>
+        <Typography variant="body2" component="div">
+          令和{openYear - 2018}年{openMonth}月に開設予定です。
+        </Typography>
+        <Typography variant="body2" component="div">
+          まだだれも入園していないため、他の園より入りやすい可能性が高いです。
+        </Typography>
+      </Stack>
+      <EmphasizeChip
+        size="small"
+        label="入りやすい"
+        sx={{
+          border: `1px solid ${yellow[90]}`,
+          color: yellow[90],
+          backgroundColor: yellow[50],
+          fontWeight: theme.typography.fontWeightMedium,
+
+          position: 'absolute',
+          inset: -1,
+          top: 'unset',
+          height: 32,
+
+          '.MuiChip-label': {
+            paddingX: 0,
+            marginBottom: '2px',
+          },
+        }}
+      />
     </Paper>
   )
 }

@@ -1,10 +1,17 @@
 import { csv2json } from '../csv2json'
-import { validateClass, validateNumber, validateString, validateOptionalString, validateSource } from '../validator'
+import {
+  validateClass,
+  validateNumber,
+  validateOptionalNumber,
+  validateString,
+  validateOptionalString,
+  validateSource,
+} from '../validator'
 import { ClassList, createClass, GeoLocation, NurserySchool, Source } from '../../model/nursery-school'
 import { MergedData } from '../../model/data'
 
-// 保育園のWebサイトのURLのみ、手動で入力したものを利用
-// 将来的には、オープンデータのなかに追加される予定
+// 保育園のWebサイトのURLは、手動で入力したものを利用。将来的には、オープンデータのなかに追加される予定
+// 2022年4月新設の保育園も手動で入力したものを利用
 const minatoKuHoikuen: Source = {
   name: '港区内認可保育園等一覧',
   ver: 'Ver202104',
@@ -67,14 +74,26 @@ const minatoKu: MergedData = {
         },
         {
           tsModelKey: 'tel',
-          valueTranslator: (record: any): string => {
-            return validateString(record['電話番号'])
+          valueTranslator: (record: any): string | null => {
+            return validateOptionalString(record['電話番号'])
           },
         },
         {
           tsModelKey: 'url',
           valueTranslator: (record: any): string | null => {
             return validateOptionalString(record['WebサイトURL'])
+          },
+        },
+        {
+          tsModelKey: 'openYear',
+          valueTranslator: (record: any): number | null => {
+            return validateOptionalNumber(parseInt(record['開設年']))
+          },
+        },
+        {
+          tsModelKey: 'openMonth',
+          valueTranslator: (record: any): number | null => {
+            return validateOptionalNumber(parseInt(record['開設月']))
           },
         },
         {
