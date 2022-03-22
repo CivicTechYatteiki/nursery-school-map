@@ -49,8 +49,8 @@ const taitoKu: MergedData = {
           tsModelKey: 'location',
           valueTranslator: (record: any): GeoLocation => {
             const value: GeoLocation = {
-              latitude: validateNumber(parseFloat(record['X座標'])),
-              longitude: validateNumber(parseFloat(record['Y座標'])),
+              latitude: validateNumber(parseFloat(record['Y座標'])),
+              longitude: validateNumber(parseFloat(record['X座標'])),
             }
             return value
           },
@@ -61,18 +61,18 @@ const taitoKu: MergedData = {
             return validateOptionalString(record['電話番号'])
           },
         },
-        // {
-        //   tsModelKey: 'openYear',
-        //   valueTranslator: (record: any): number | null => {
-        //     return validateOptionalNumber(parseInt(record['開設年']))
-        //   },
-        // },
-        // {
-        //   tsModelKey: 'openMonth',
-        //   valueTranslator: (record: any): number | null => {
-        //     return validateOptionalNumber(parseInt(record['開設月']))
-        //   },
-        // },
+        {
+          tsModelKey: 'openYear',
+          valueTranslator: (record: any): number | null => {
+            return null // TODO
+          },
+        },
+        {
+          tsModelKey: 'openMonth',
+          valueTranslator: (record: any): number | null => {
+            return null // TODO
+          },
+        },
         {
           tsModelKey: 'sources',
           valueTranslator: (record: any): Source[] => {
