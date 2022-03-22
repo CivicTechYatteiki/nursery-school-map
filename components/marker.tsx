@@ -71,7 +71,6 @@ export function updateMarkersIconAndVisibility(
       })()
       const markerStyle = difficultyToStyle(difficulty)
 
-      const now = new Date()
       const notOpened = !getIsOpened(nursery.openYear, nursery.openMonth)
 
       markers[i].setIcon({

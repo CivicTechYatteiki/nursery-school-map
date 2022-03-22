@@ -170,9 +170,9 @@ function DifficultyCell({
           <Typography variant="h5" component="div" sx={{ lineHeight: '32px' }}>
             {/* 全角ハイフン */}−
           </Typography>
-        ) : indexRange.type === 'other' ? (
+        ) : indexRange.type === 'other' || indexRange.type === 'hasVacancy' ? (
           <Typography variant="subtitle1" component="div" sx={{ lineHeight: '32px' }}>
-            {indexRange.other}
+            {indexRange.text}
           </Typography>
         ) : (
           <Typography variant="h4" component="div" sx={{ lineHeight: '32px' }}>

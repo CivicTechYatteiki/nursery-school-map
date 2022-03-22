@@ -33,9 +33,10 @@ interface IndexRange {
     | 'le' // 以下
     | 'noClass' // 枠なし
     | 'na' // 空きか希望者がなく選考なし
+    | 'hasVacancy' // 一次調整で応募者全員が入れてまだ空きがある場合（台東区では指数ではなく空有というデータになっている）
     | 'other' // 希望者が少なく個人情報保護のため非公開、など
   value: number
-  other?: string
+  text?: string
 }
 
 export const getIsOpened = (openYear: number | null, openMonth: number | null): boolean => {
@@ -78,10 +79,13 @@ export const getMinimumIndexRange = (age: number, inNurserySchool: NurserySchool
   if (index == null) {
     return { type: 'na', value: 0 }
   }
+  if (index === '空有') {
+    return { type: 'hasVacancy', value: 0, text: index }
+  }
   if (isRange(index)) {
     return { type: 'le', value: index.lessThanOrEqual }
   }
-  return typeof index === 'number' ? { type: 'eq', value: index } : { type: 'other', value: 0, other: index }
+  return typeof index === 'number' ? { type: 'eq', value: index } : { type: 'other', value: 0, text: index }
 }
 
 export const enum AdmissionDifficulty {
@@ -315,6 +319,9 @@ const estimateAdmissionDifficulty = (
   if (target === null || target === '非公開') {
     return AdmissionDifficulty.Unknown
   } // 判定不能
+  if (target === '空有') {
+    return AdmissionDifficulty.Easy
+  }
   if (typeof target === 'number') {
     return value(target, max)
   }
