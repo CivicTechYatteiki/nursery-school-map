@@ -1,5 +1,6 @@
 import { NurserySchool } from './nursery-school'
 import minatoKuJson from '../data/minato-ku/translated.json'
+import taitoKuJson from '../data/taito-ku/translated.json'
 
 export interface LocalNurserySchoolListSet {
   localName: string // 自治体名
@@ -11,7 +12,13 @@ export const getAllNurserySchoolListSets = (): LocalNurserySchoolListSet[] => {
     localName: '港区',
     nurserySchoolList: minatoKuJson as NurserySchool[],
   }
-  return [minatoKuNurserySchoolList]
+  const taitoKuNurserySchoolList: LocalNurserySchoolListSet = {
+    localName: '台東区',
+    nurserySchoolList: (taitoKuJson as NurserySchool[]).filter(it => {
+      return it.location !== undefined
+    }),
+  }
+  return [minatoKuNurserySchoolList, taitoKuNurserySchoolList]
 }
 
 export const filterLocalNurserySchoolList = (
