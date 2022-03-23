@@ -70,13 +70,13 @@ const taitoKu: MergedData = {
         {
           tsModelKey: 'openYear',
           valueTranslator: (record: any): number | null => {
-            return null // TODO
+            return validateOptionalNumber(parseInt(record['開設年']))
           },
         },
         {
           tsModelKey: 'openMonth',
           valueTranslator: (record: any): number | null => {
-            return null // TODO
+            return validateOptionalNumber(parseInt(record['開設月']))
           },
         },
         {
