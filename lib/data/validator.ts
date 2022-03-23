@@ -38,7 +38,7 @@ export const validateOptionalNumber = (value: number): number | null => {
 }
 
 // minimumIndexは、number | Range | '非公開' | null
-export const validateClass = (value: Class | null): Class | null => {
+export const validateMinatoKuClass = (value: Class | null): Class | null => {
   if (value == null) {
     return value
   }
@@ -57,9 +57,28 @@ export const validateClass = (value: Class | null): Class | null => {
   throw Error('Invalid type')
 }
 
+export const validateTaitoKuClass = (value: Class | null): Class | null => {
+  if (value == null) {
+    return value
+  }
+  if (value.minimumIndex == null) {
+    return value
+  }
+  if (typeof value.minimumIndex == 'number') {
+    return value
+  }
+  if (value.minimumIndex == '非公開') {
+    return value
+  }
+  if (value.minimumIndex == '空有') {
+    return value
+  }
+  throw Error('Invalid type')
+}
+
 export const validateSource = (value: Source): Source => {
   validateString(value.name)
-  validateString(value.ver)
+  validateOptionalString(value.ver)
   validateString(value.url)
   validateString(value.filePath)
   return value

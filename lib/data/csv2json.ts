@@ -8,14 +8,14 @@ interface TmpData {
   records: any
 }
 
-const minatoKuJsonFile = `${__dirname}/minato-ku/translated.json`
-
-export const csv2json = (mergedData: MergedData) => {
+export const csv2json = (mergedData: MergedData, outputFile: string) => {
   const tmpDataList: TmpData[] = mergedData.dataList.map(data => {
     const csv = fs.readFileSync(data.filePath)
     return {
       data: data,
-      records: parse(csv, { columns: true, skipEmptyLines: true }),
+      records: parse(csv, { columns: true, skipEmptyLines: true }).filter((record: any) => {
+        return data.filter(record)
+      }),
     }
   })
   const main: TmpData = tmpDataList[0]
@@ -29,12 +29,12 @@ export const csv2json = (mergedData: MergedData) => {
       main.data.mapping.forEach(rule => {
         try {
           nurserySchool[rule.tsModelKey] = rule.valueTranslator(record)
-          // console.log(rule.tsModelKey, nurserySchool[rule.tsModelKey])
+          console.log(rule.tsModelKey, nurserySchool[rule.tsModelKey])
         } catch (e) {
           hasError = true
-          // console.error(e)
-          // console.log('Process aborted.')
-          // process.exit(1)
+          console.error(e)
+          console.log('Process aborted.')
+          process.exit(1)
         }
       })
       if (hasError) {
@@ -59,14 +59,14 @@ export const csv2json = (mergedData: MergedData) => {
         additional.data.mapping.forEach(rule => {
           try {
             nurserySchool[rule.tsModelKey] = rule.valueTranslator(record)
-            //console.log(rule.tsModelKey, nurserySchool[rule.tsModelKey])
+            console.log(rule.tsModelKey, nurserySchool[rule.tsModelKey])
           } catch (e) {
             hasError = true
-            // console.error(e)
+            console.error(e)
             // console.log(record)
             // console.log(rule)
-            // console.log("Process aborted.")
-            // process.exit(1)
+            console.log('Process aborted.')
+            process.exit(1)
           }
         })
         if (hasError) {
@@ -83,18 +83,41 @@ export const csv2json = (mergedData: MergedData) => {
       return it != null
     })
 
-  const mergedList = nurserySchoolsMain.map(nurserySchool => {
-    var merged = nurserySchool
-    nurserySchoolsAdditionals
-      .filter(it => {
-        return it.name == nurserySchool.name
+  const larger =
+    nurserySchoolsMain.length >= nurserySchoolsAdditionals.length ? nurserySchoolsMain : nurserySchoolsAdditionals
+  const smaller =
+    nurserySchoolsMain.length < nurserySchoolsAdditionals.length ? nurserySchoolsMain : nurserySchoolsAdditionals
+  const nameForMerge = (name: string): string => {
+    var n = name
+    n = n.replace(/\（[^\）]*\）/g, '') // 全角のカッコ書きを削除
+    n = n.replace(/\([^\)]*\)/g, '') // 半角のカッコ書きを削除
+    n = n.replace(/\s+/g, '') // 空白文字を削除
+    return n
+  }
+  const mergedList = larger.map(record1 => {
+    var merged = record1
+    smaller
+      .filter(record2 => {
+        return nameForMerge(record2.name) === nameForMerge(record1.name)
       })
-      .forEach(it => {
-        Object.assign(merged, JSON.parse(JSON.stringify(it)))
+      .forEach(record2 => {
+        Object.assign(merged, JSON.parse(JSON.stringify(record2)))
       })
     return merged
   })
 
-  fs.writeFileSync(minatoKuJsonFile, JSON.stringify(mergedList))
-  console.log(`[Output Success] ${minatoKuJsonFile}`)
+  var hasError: boolean = false
+  mergedList.forEach(nurserySchool => {
+    if (!nurserySchool.location) {
+      hasError = true
+      console.log(`${nurserySchool.name}: location is required`)
+    }
+  })
+  if (hasError) {
+    console.log('Process aborted.')
+    process.exit(1)
+  }
+
+  fs.writeFileSync(outputFile, JSON.stringify(mergedList))
+  console.log(`[Output Success] ${outputFile}`)
 }

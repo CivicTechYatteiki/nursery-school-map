@@ -56,7 +56,10 @@ export function updateMarkersIconAndVisibility(
       i++
       if (
         filter.ageList &&
-        filter.ageList.every(age => (nursery.classList as Record<string, Class | null> | null)?.[`age${age}`] == null)
+        filter.ageList.every(age => {
+          return (nursery.classList as Record<string, Class | null> | null)?.[`age${age}`] == null
+           && getIsOpened(nursery.openYear, nursery.openMonth) // 新設の保育園は年齢のデータ現状もってないため、どの年齢が指定されてもマーカー表示する
+        })
       ) {
         markers[i].setVisible(false)
         continue
@@ -71,7 +74,6 @@ export function updateMarkersIconAndVisibility(
       })()
       const markerStyle = difficultyToStyle(difficulty)
 
-      const now = new Date()
       const notOpened = !getIsOpened(nursery.openYear, nursery.openMonth)
 
       markers[i].setIcon({

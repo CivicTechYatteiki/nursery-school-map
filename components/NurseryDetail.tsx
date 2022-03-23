@@ -41,7 +41,6 @@ export function NurseryDetail({
   const shortAddress = nursery.address.replace(/^.{1,3}?[都道府県]/, '')
   const selectedAges = filter.ageList ?? SUPPORTED_AGES
   const otherAges = difference(SUPPORTED_AGES, selectedAges)
-  const now = new Date()
   const notOpened = !getIsOpened(nursery.openYear, nursery.openMonth)
 
   return (
@@ -102,16 +101,31 @@ export function NurseryDetail({
             </Stack>
 
             <Typography variant="caption" color="text.secondary" component="div" sx={{ paddingLeft: 2, paddingRight: 2 }}>
-              <div>
-                目安として、両親が共にフルタイムで働いていると40点になります。計算方法は
-                <Link
-                  color="text.secondary"
-                  href="https://www.city.minato.tokyo.jp/kodomo/kodomo/hoikuen/nyuen/r04-index.html"
-                >
-                  入園案内
-                </Link>
-                をご覧ください。
-              </div>
+              { inNurserySet.localName === "港区" ? (
+                <div>
+                  目安として、両親が共にフルタイムで働いていると40点になります。計算方法は
+                  <Link
+                    color="text.secondary"
+                    href="https://www.city.minato.tokyo.jp/kodomo/kodomo/hoikuen/nyuen/r04-index.html"
+                    target="_blank"
+                  >
+                    入園案内
+                  </Link>
+                  をご覧ください。
+                </div>
+              ) : inNurserySet.localName === "台東区" ? (
+                <div>
+                  目安として、両親が共にフルタイムで働いていると40点になり、さらに家庭状況に応じて調整指数が加算されます。計算方法は
+                  <Link
+                    color="text.secondary"
+                    href="https://www.city.taito.lg.jp/kosodatekyouiku/kosodate/mokutei/hoiku_youjikyouiku/hoikutakuji/hoikuen/hoikuennogoannai/panflet.html"
+                    target="_blank"
+                  >
+                    入園案内
+                  </Link>
+                  をご覧ください。
+                </div>
+              ) : null} 
             </Typography>
           </>
         )}
@@ -170,9 +184,9 @@ function DifficultyCell({
           <Typography variant="h5" component="div" sx={{ lineHeight: '32px' }}>
             {/* 全角ハイフン */}−
           </Typography>
-        ) : indexRange.type === 'other' ? (
+        ) : indexRange.type === 'other' || indexRange.type === 'hasVacancy' ? (
           <Typography variant="subtitle1" component="div" sx={{ lineHeight: '32px' }}>
-            {indexRange.other}
+            {indexRange.text}
           </Typography>
         ) : (
           <Typography variant="h4" component="div" sx={{ lineHeight: '32px' }}>
