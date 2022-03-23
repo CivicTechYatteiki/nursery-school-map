@@ -62,6 +62,12 @@ const taitoKu: MergedData = {
           },
         },
         {
+          tsModelKey: 'url',
+          valueTranslator: (record: any): string | null => {
+            return validateOptionalString(record['WebサイトURL'])
+          },
+        },
+        {
           tsModelKey: 'openYear',
           valueTranslator: (record: any): number | null => {
             return null // TODO
