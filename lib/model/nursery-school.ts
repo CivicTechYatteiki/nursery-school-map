@@ -305,10 +305,10 @@ const estimateAdmissionDifficulty = (
   minimumIndices: number[]
 ): AdmissionDifficulty | null => {
   const value = (minimuIndexNumber: number, max: number): AdmissionDifficulty => {
-    if (minimuIndexNumber <= max - 10) {
+    if (minimuIndexNumber <= max * 0.8) {
       return AdmissionDifficulty.Easy
     }
-    if (minimuIndexNumber <= max - 3) {
+    if (minimuIndexNumber <= max * 0.925) {
       return AdmissionDifficulty.Moderate
     }
     return AdmissionDifficulty.Hard
