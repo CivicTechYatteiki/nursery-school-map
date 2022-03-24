@@ -112,11 +112,15 @@ export const csv2json = (mergedData: MergedData, outputFile: string) => {
       hasError = true
       console.log(`${nurserySchool.name}: location is required`)
     }
+    if (!nurserySchool.classList) {
+      hasError = true
+      console.log(`${nurserySchool.name}: classList is required`)
+    }
   })
-  if (hasError) {
-    console.log('Process aborted.')
-    process.exit(1)
-  }
+  // if (hasError) {
+  //   console.log('Process aborted.')
+  //   process.exit(1)
+  // }
 
   fs.writeFileSync(outputFile, JSON.stringify(mergedList))
   console.log(`[Output Success] ${outputFile}`)
