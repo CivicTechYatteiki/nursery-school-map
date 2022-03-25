@@ -1,5 +1,6 @@
 import { Status, Wrapper } from '@googlemaps/react-wrapper'
 import ErrorIcon from '@mui/icons-material/Error'
+import HelpOutlinedIcon from '@mui/icons-material/HelpOutlined'
 import {
   Alert,
   AlertProps,
@@ -7,6 +8,7 @@ import {
   Button,
   CircularProgress,
   Divider,
+  Link,
   Paper,
   Snackbar,
   SnackbarProps,
@@ -172,9 +174,14 @@ export default function Home({ nurserySets }: Props) {
           <Toolbar variant="dense">
             <Stack direction="row" alignItems="center" justifyContent="space-between" flexGrow={1}>
               <img src="/logo.svg" alt="入りやすい保育園マップ" />
-              <Typography variant="body2" color="gray">
-                港区・台東区に対応
-              </Typography>
+              <Stack direction="row" spacing={1}>
+                <Typography variant="caption" color="gray">
+                  港区・台東区に対応
+                </Typography>
+                <Link color="primary" underline="none" href="https://amenable-barber-8a3.notion.site/27727efccef7426a8f69d161089a3d28" target="_blank">
+                  <HelpOutlinedIcon fontSize="small" />
+                </Link>
+              </Stack>
             </Stack>
           </Toolbar>
           <Divider />
