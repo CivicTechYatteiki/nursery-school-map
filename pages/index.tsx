@@ -178,7 +178,12 @@ export default function Home({ nurserySets }: Props) {
                 <Typography variant="caption" color="gray">
                   港区・台東区に対応
                 </Typography>
-                <Link color="primary" underline="none" href="https://amenable-barber-8a3.notion.site/27727efccef7426a8f69d161089a3d28" target="_blank">
+                <Link
+                  color="primary"
+                  underline="none"
+                  href="https://amenable-barber-8a3.notion.site/27727efccef7426a8f69d161089a3d28"
+                  target="_blank"
+                >
                   <HelpOutlinedIcon fontSize="small" />
                 </Link>
               </Stack>
