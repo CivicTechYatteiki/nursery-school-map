@@ -32,6 +32,7 @@ export const appTheme = createTheme({
   palette: {
     primary: {
       main: blue[50],
+      // TODO: This should be black or white text color. Use different method to define button text color.
       contrastText: blue[60],
     },
     secondary: {

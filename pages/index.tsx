@@ -296,6 +296,7 @@ function FilterButton({
           {buttonText(filter)}
         </Button>
         <Button
+          sx={{ color: theme.palette.primary.contrastText }}
           startIcon={locationActive ? <CircularProgress size={16} sx={{ marginBottom: '2px' }} /> : undefined}
           onClick={onClickLocation}
         >
