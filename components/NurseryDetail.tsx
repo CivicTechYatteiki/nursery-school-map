@@ -100,10 +100,15 @@ export function NurseryDetail({
               ))}
             </Stack>
 
-            <Typography variant="caption" color="text.secondary" component="div" sx={{ paddingLeft: 2, paddingRight: 2 }}>
-              { inNurserySet.localName === "港区" ? (
+            <Typography
+              variant="caption"
+              color="text.secondary"
+              component="div"
+              sx={{ paddingLeft: 2, paddingRight: 2 }}
+            >
+              {inNurserySet.localName === '港区' ? (
                 <div>
-                  目安として、両親が共にフルタイムで働いていると40点になります。計算方法は
+                  目安として、両親が共にフルタイムで働いていると40点になり、さらに家庭状況に応じて調整指数が加算されます。計算方法は
                   <Link
                     color="text.secondary"
                     href="https://www.city.minato.tokyo.jp/kodomo/kodomo/hoikuen/nyuen/r04-index.html"
@@ -113,7 +118,7 @@ export function NurseryDetail({
                   </Link>
                   をご覧ください。
                 </div>
-              ) : inNurserySet.localName === "台東区" ? (
+              ) : inNurserySet.localName === '台東区' ? (
                 <div>
                   目安として、両親が共にフルタイムで働いていると40点になり、さらに家庭状況に応じて調整指数が加算されます。計算方法は
                   <Link
@@ -125,7 +130,19 @@ export function NurseryDetail({
                   </Link>
                   をご覧ください。
                 </div>
-              ) : null} 
+              ) : inNurserySet.localName === '中央区' ? (
+                <div>
+                  目安として、両親が共にフルタイムで働いていると40点になり、さらに家庭状況に応じて調整指数が加算されます。計算方法は
+                  <Link
+                    color="text.secondary"
+                    href="https://www.city.chuo.lg.jp/kosodate/hoiku/ninkahoiku/ninkahoikujo.html"
+                    target="_blank"
+                  >
+                    入園案内
+                  </Link>
+                  をご覧ください。
+                </div>
+              ) : null}
             </Typography>
           </>
         )}
@@ -173,9 +190,16 @@ function DifficultyCell({
       }}
     >
       <Stack direction="column" spacing={1} sx={{ paddingX: 1.5, paddingTop: 1 }}>
-        <Typography variant="body2" color="text.secondary" component="div">
-          {age}歳
-        </Typography>
+        <Stack direction="row" alignItems="baseline" spacing={0.5}>
+          <Typography variant="body2" color="text.secondary" component="div">
+            {age}歳
+          </Typography>
+          {inNurserySet.localName === '中央区' && age === 0 ? (
+            <Typography variant="caption" color="text.secondary" component="div">
+              7ヶ月
+            </Typography>
+          ) : null}
+        </Stack>
         {indexRange.type === 'noClass' ? (
           <Typography variant="h5" component="div" sx={{ lineHeight: '32px' }}>
             ×
@@ -191,7 +215,7 @@ function DifficultyCell({
         ) : (
           <Typography variant="h4" component="div" sx={{ lineHeight: '32px' }}>
             {indexRange.value}
-            {indexRange.type !== 'le' && (
+            {indexRange.type !== 'le' && indexRange.type !== 'ge' && (
               <Typography variant="subtitle2" component="span">
                 点
               </Typography>
@@ -199,6 +223,11 @@ function DifficultyCell({
             {indexRange.type === 'le' && (
               <Typography variant="subtitle2" component="span">
                 以下
+              </Typography>
+            )}
+            {indexRange.type === 'ge' && (
+              <Typography variant="subtitle2" component="span">
+                以上
               </Typography>
             )}
           </Typography>
@@ -247,13 +276,7 @@ function DifficultyCell({
   )
 }
 
-function NewNurseryCell({
-  openYear,
-  openMonth
-}: {
-  openYear: number,
-  openMonth: number
-}) {
+function NewNurseryCell({ openYear, openMonth }: { openYear: number; openMonth: number }) {
   const theme = useTheme()
 
   return (

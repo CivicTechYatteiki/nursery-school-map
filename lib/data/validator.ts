@@ -48,7 +48,7 @@ export const validateMinatoKuClass = (value: Class | null): Class | null => {
   if (typeof value.minimumIndex == 'number') {
     return value
   }
-  if (typeof (value.minimumIndex as Range).lessThanOrEqual == 'number') {
+  if (typeof (value.minimumIndex as Range).threshold == 'number') {
     return value
   }
   if (value.minimumIndex == '非公開') {
@@ -71,6 +71,22 @@ export const validateTaitoKuClass = (value: Class | null): Class | null => {
     return value
   }
   if (value.minimumIndex == '空有') {
+    return value
+  }
+  throw Error('Invalid type')
+}
+
+export const validateChuoKuClass = (value: Class | null): Class | null => {
+  if (value === null) {
+    return value
+  }
+  if (value.minimumIndex == null) {
+    return value
+  }
+  if (typeof value.minimumIndex == 'number') {
+    return value
+  }
+  if (typeof (value.minimumIndex as Range).threshold == 'number') {
     return value
   }
   throw Error('Invalid type')

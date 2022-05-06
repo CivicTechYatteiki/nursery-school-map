@@ -176,7 +176,7 @@ export default function Home({ nurserySets }: Props) {
               <img src="/logo.svg" alt="入りやすい保育園マップ" />
               <Stack direction="row" spacing={1}>
                 <Typography variant="caption" color="gray">
-                  港区・台東区に対応
+                  港,台東,中央区に対応
                 </Typography>
                 <Link
                   color="primary"
