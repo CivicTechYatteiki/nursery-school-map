@@ -20,10 +20,7 @@ export interface NurserySchool {
 
 const isRange = (value: any): value is Range => {
   return (
-    value !== null &&
-    typeof value === 'object' &&
-    typeof value.threshold === 'number' &&
-    typeof value.text === 'string'
+    value !== null && typeof value === 'object' && typeof value.threshold === 'number' && typeof value.text === 'string'
   )
 }
 
@@ -84,7 +81,7 @@ export const getMinimumIndexRange = (age: number, inNurserySchool: NurserySchool
     return { type: 'hasVacancy', value: 0, text: index }
   }
   if (isRange(index)) {
-    return { type: 'le', value: index.threshold }
+    return { type: index.type, value: index.threshold }
   }
   return typeof index === 'number' ? { type: 'eq', value: index } : { type: 'other', value: 0, text: index }
 }
