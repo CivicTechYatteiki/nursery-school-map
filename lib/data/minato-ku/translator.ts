@@ -160,7 +160,8 @@ const createClass = (minimumIndex: string): Class | null => {
     const result = minimumIndex.match(/(\d+)以下/)
     return {
       minimumIndex: {
-        lessThanOrEqual: parseInt(result![1]),
+        type: 'le',
+        threshold: parseInt(result![1]),
         text: minimumIndex,
       },
     }

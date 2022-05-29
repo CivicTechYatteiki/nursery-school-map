@@ -83,6 +83,12 @@ export const csv2json = (mergedData: MergedData, outputFile: string) => {
       return it != null
     })
 
+  const zenkaku2hankaku = (str: string): string => {
+    return str.replace(/[Ａ-Ｚａ-ｚ０-９]/g, s => {
+      return String.fromCharCode(s.charCodeAt(0) - 0xfee0)
+    })
+  }
+
   const larger =
     nurserySchoolsMain.length >= nurserySchoolsAdditionals.length ? nurserySchoolsMain : nurserySchoolsAdditionals
   const smaller =
@@ -92,12 +98,20 @@ export const csv2json = (mergedData: MergedData, outputFile: string) => {
     n = n.replace(/\（[^\）]*\）/g, '') // 全角のカッコ書きを削除
     n = n.replace(/\([^\)]*\)/g, '') // 半角のカッコ書きを削除
     n = n.replace(/\s+/g, '') // 空白文字を削除
+    n = zenkaku2hankaku(n) // 英数を半角に統一
+    n = n.normalize('NFC') // 結合文字（2文字）で濁点が表現されている場合に、正規化して1文字にする。https://qiita.com/jkr_2255/items/e0c039c438d3ebfd1a6a
     return n
   }
   const mergedList = larger.map(record1 => {
     var merged = record1
     smaller
       .filter(record2 => {
+        // if (
+        //   nameForMerge(record2.name) === 'TKチルドレンズファーム湊校' ||
+        //   nameForMerge(record1.name) === 'TKチルドレンズファーム湊校'
+        // ) {
+        //   console.log(record2.name, record1.name, nameForMerge(record2.name), nameForMerge(record1.name))
+        // }
         return nameForMerge(record2.name) === nameForMerge(record1.name)
       })
       .forEach(record2 => {

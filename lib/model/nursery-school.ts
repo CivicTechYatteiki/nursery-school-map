@@ -20,10 +20,7 @@ export interface NurserySchool {
 
 const isRange = (value: any): value is Range => {
   return (
-    value !== null &&
-    typeof value === 'object' &&
-    typeof value.lessThanOrEqual === 'number' &&
-    typeof value.text === 'string'
+    value !== null && typeof value === 'object' && typeof value.threshold === 'number' && typeof value.text === 'string'
   )
 }
 
@@ -31,6 +28,7 @@ interface IndexRange {
   type:
     | 'eq' // 即値
     | 'le' // 以下
+    | 'ge' // 以上
     | 'noClass' // 枠なし
     | 'na' // 空きか希望者がなく選考なし
     | 'hasVacancy' // 一次調整で応募者全員が入れてまだ空きがある場合（台東区では指数ではなく空有というデータになっている）
@@ -83,7 +81,7 @@ export const getMinimumIndexRange = (age: number, inNurserySchool: NurserySchool
     return { type: 'hasVacancy', value: 0, text: index }
   }
   if (isRange(index)) {
-    return { type: 'le', value: index.lessThanOrEqual }
+    return { type: index.type, value: index.threshold }
   }
   return typeof index === 'number' ? { type: 'eq', value: index } : { type: 'other', value: 0, text: index }
 }
@@ -294,8 +292,8 @@ const convertMinimumIndexToNumber = (minimumIndex: MinimumIndex | null): number 
   if (typeof minimumIndex === 'number') {
     return minimumIndex
   }
-  if (typeof (minimumIndex as Range).lessThanOrEqual === 'number') {
-    return minimumIndex.lessThanOrEqual
+  if (typeof (minimumIndex as Range).threshold === 'number') {
+    return minimumIndex.threshold
   }
   return null
 }
@@ -325,8 +323,8 @@ const estimateAdmissionDifficulty = (
   if (typeof target === 'number') {
     return value(target, max)
   }
-  if (typeof (target as Range).lessThanOrEqual === 'number') {
-    const number: number = (target as Range).lessThanOrEqual
+  if (typeof (target as Range).threshold === 'number') {
+    const number: number = (target as Range).threshold
     return value(number, max)
   }
   return null
@@ -356,7 +354,10 @@ export interface Class {
 type MinimumIndex = number | Range | '非公開' | '空有'
 
 export interface Range {
-  lessThanOrEqual: number // 22
+  type:
+    | 'le' // 以下
+    | 'ge' // 以上
+  threshold: number // 22
   text: string // 22以下
 }
 
