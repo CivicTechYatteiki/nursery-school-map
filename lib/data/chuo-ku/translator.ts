@@ -147,6 +147,10 @@ const createClass = (minimumIndex: string): Class | null => {
       },
     }
   }
+  if (minimumIndex == '空有') {
+    // 一次調整の結果、全員入れてまだ空きがある場合
+    return { minimumIndex: minimumIndex }
+  }
   return { minimumIndex: parseInt(minimumIndex) }
 }
 

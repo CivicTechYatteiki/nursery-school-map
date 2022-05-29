@@ -80,13 +80,16 @@ export const validateChuoKuClass = (value: Class | null): Class | null => {
   if (value === null) {
     return value
   }
-  if (value.minimumIndex == null) {
+  if (value.minimumIndex === null) {
     return value
   }
-  if (typeof value.minimumIndex == 'number') {
+  if (typeof value.minimumIndex === 'number') {
     return value
   }
-  if (typeof (value.minimumIndex as Range).threshold == 'number') {
+  if (typeof (value.minimumIndex as Range).threshold === 'number') {
+    return value
+  }
+  if (value.minimumIndex === '空有') {
     return value
   }
   throw Error('Invalid type')

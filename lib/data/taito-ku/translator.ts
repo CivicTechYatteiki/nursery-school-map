@@ -134,7 +134,7 @@ const createClass = (minimumIndex: string): Class | null => {
     return { minimumIndex: minimumIndex }
   }
   if (minimumIndex == '空有') {
-    // 一時調整後、空き有り。なぜ指数がないのかは確認中
+    // 一次調整の結果、全員入れてまだ空きがある場合
     return { minimumIndex: minimumIndex }
   }
   return { minimumIndex: parseInt(minimumIndex) }
