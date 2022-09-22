@@ -1,305 +1,11 @@
 [
   {
     "localName": "台東区",
-    "name": "さくらさくみらい谷中(仮称)",
-    "address": "谷中二丁目1番",
+    "name": "AIAI NURSERY 浅草",
+    "address": "台東区駒形１丁目７番１１号東部浅草駒形１・２階",
     "location": {
-      "latitude": 35.721097,
-      "longitude": 139.766007
-    },
-    "tel": null,
-    "url": "https://www.city.taito.lg.jp/kosodatekyouiku/kosodate/mokutei/hoiku_youjikyouiku/hoikutakuji/hoikuen/hoikuennyuen/sinnkikaisetu.html",
-    "openYear": 2022,
-    "openMonth": 4,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ]
-  },
-  {
-    "localName": "台東区",
-    "name": "うれしい保育園上野駅前(仮称)",
-    "address": "上野七丁目59-1",
-    "location": {
-      "latitude": 35.7148561,
-      "longitude": 139.7792164
-    },
-    "tel": null,
-    "url": "https://www.city.taito.lg.jp/kosodatekyouiku/kosodate/mokutei/hoiku_youjikyouiku/hoikutakuji/hoikuen/hoikuennyuen/sinnkikaisetu.html",
-    "openYear": 2022,
-    "openMonth": 4,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ]
-  },
-  {
-    "localName": "台東区",
-    "name": "北上野クローバー保育園(仮称)",
-    "address": "北上野2-18-8",
-    "location": {
-      "latitude": 35.71802,
-      "longitude": 139.784001
-    },
-    "tel": null,
-    "url": "https://www.city.taito.lg.jp/kosodatekyouiku/kosodate/mokutei/hoiku_youjikyouiku/hoikutakuji/hoikuen/hoikuennyuen/sinnkikaisetu.html",
-    "openYear": 2022,
-    "openMonth": 4,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ]
-  },
-  {
-    "localName": "台東区",
-    "name": "石浜橋場こども園",
-    "address": "橋場1丁目35-6",
-    "location": {
-      "latitude": 35.7255205,
-      "longitude": 139.8071274
-    },
-    "tel": null,
-    "url": "https://taito.ed.jp/swas/index.php?id=1380019",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": null,
-      "age1": {
-        "minimumIndex": "空有"
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": {
-        "minimumIndex": null
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "ことぶきこども園",
-    "address": "寿1丁目10-9",
-    "location": {
-      "latitude": 35.7068859,
-      "longitude": 139.7889808
-    },
-    "tel": null,
-    "url": "https://www.ans.co.jp/n/kotobuki/shoukai.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 50
-      },
-      "age1": {
-        "minimumIndex": 51
-      },
-      "age2": {
-        "minimumIndex": "非公開"
-      },
-      "age3": {
-        "minimumIndex": "非公開"
-      },
-      "age4": {
-        "minimumIndex": 51
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "たいとうこども園",
-    "address": "下谷3丁目1-12",
-    "location": {
-      "latitude": 35.7237035,
-      "longitude": 139.7857674
-    },
-    "tel": null,
-    "url": "https://tokyojidokyokai.com/contents/Facility/taito/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 50
-      },
-      "age1": {
-        "minimumIndex": 55
-      },
-      "age2": {
-        "minimumIndex": 51
-      },
-      "age3": {
-        "minimumIndex": null
-      },
-      "age4": {
-        "minimumIndex": "非公開"
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "北上野保育室",
-    "address": "北上野2丁目24-13",
-    "location": {
-      "latitude": 35.718959,
-      "longitude": 139.7841296
-    },
-    "tel": null,
-    "url": "https://www.kidslife-nursery.com/facility/tokyo/taitou/kitaueno/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": null,
-      "age1": {
-        "minimumIndex": 48
-      },
-      "age2": {
-        "minimumIndex": "非公開"
-      },
-      "age3": {
-        "minimumIndex": "空有"
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "あい・あい保育園入谷園",
-    "address": "竜泉1丁目19-7",
-    "location": {
-      "latitude": 35.7237102,
-      "longitude": 139.7895425
-    },
-    "tel": "03-3871-7192",
-    "url": "https://nursery.aiai-cc.co.jp/facility/iriya/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": 50
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": {
-        "minimumIndex": null
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "あい・あい保育園浅草園",
-    "address": "駒形1丁目7-11",
-    "location": {
-      "latitude": 35.7058293,
-      "longitude": 139.7937411
+      "latitude": 35.70775882,
+      "longitude": 139.7951276
     },
     "tel": "03-6231-7690",
     "url": "https://nursery.aiai-cc.co.jp/facility/asakusa/",
@@ -309,7 +15,7 @@
       {
         "name": "台東区の保育施設の施設一覧",
         "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
         "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
       }
     ],
@@ -317,376 +23,6 @@
       "age0": {
         "minimumIndex": 48
       },
-      "age1": {
-        "minimumIndex": 51
-      },
-      "age2": {
-        "minimumIndex": "非公開"
-      },
-      "age3": {
-        "minimumIndex": null
-      },
-      "age4": {
-        "minimumIndex": "空有"
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "忍岡こども園",
-    "address": "池之端2丁目1-22",
-    "location": {
-      "latitude": 35.7136556,
-      "longitude": 139.7668752
-    },
-    "tel": null,
-    "url": "https://tokyojidokyokai.com/contents/Facility/shinobu/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 50
-      },
-      "age1": {
-        "minimumIndex": 53
-      },
-      "age2": {
-        "minimumIndex": "非公開"
-      },
-      "age3": {
-        "minimumIndex": "非公開"
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "ミアヘルサ保育園ひびき浅草",
-    "address": "西浅草3丁目19-3",
-    "location": {
-      "latitude": 35.7160212,
-      "longitude": 139.791158
-    },
-    "tel": null,
-    "url": "https://www.merhalsa.jp/hoikuen/nursery/asakusa/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": 50
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": {
-        "minimumIndex": "空有"
-      },
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "クオリスキッズ浅草橋保育園",
-    "address": "柳橋2丁目5-7マルギン",
-    "location": {
-      "latitude": 35.6984525,
-      "longitude": 139.7880444
-    },
-    "tel": null,
-    "url": "https://quolis-kids.com/101_asakusabashi/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": 50
-      },
-      "age2": {
-        "minimumIndex": "非公開"
-      },
-      "age3": {
-        "minimumIndex": "非公開"
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "さくらさくみらい入谷",
-    "address": "入谷2丁目12-2",
-    "location": {
-      "latitude": 35.719718,
-      "longitude": 139.789133
-    },
-    "tel": null,
-    "url": "https://www.sakura-39.jp/hoiku/iriya/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 50
-      },
-      "age1": {
-        "minimumIndex": "非公開"
-      },
-      "age2": {
-        "minimumIndex": "非公開"
-      },
-      "age3": {
-        "minimumIndex": "非公開"
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "えがおの森保育園・あさくさ",
-    "address": "寿3丁目15-12",
-    "location": {
-      "latitude": 35.7075406,
-      "longitude": 139.7936068
-    },
-    "tel": null,
-    "url": "https://www.senshukai-childcare.jp/hoikuen/facilities/asakusa.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": 53
-      },
-      "age2": {
-        "minimumIndex": "非公開"
-      },
-      "age3": {
-        "minimumIndex": "非公開"
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "こどもヶ丘保育園根岸園",
-    "address": "根岸3丁目1-10",
-    "location": {
-      "latitude": 35.7217385,
-      "longitude": 139.78161
-    },
-    "tel": null,
-    "url": "https://childvision.jp/school/negishi/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": 50
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": {
-        "minimumIndex": null
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "あさくさあおぞらナーサリースクール",
-    "address": "清川1丁目5-10",
-    "location": {
-      "latitude": 35.7233111,
-      "longitude": 139.8022056
-    },
-    "tel": null,
-    "url": "https://asakusaaozora.codmon.net/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": 50
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": {
-        "minimumIndex": "空有"
-      },
-      "age4": {
-        "minimumIndex": "空有"
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "チェリッシュおひさま保育園",
-    "address": "浅草橋3丁目19-3",
-    "location": {
-      "latitude": 35.7007043,
-      "longitude": 139.787446
-    },
-    "tel": null,
-    "url": "https://child-stage.co.jp/cherish-authorization-ohisama",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": null,
       "age1": {
         "minimumIndex": 50
       },
@@ -697,36 +33,36 @@
         "minimumIndex": "非公開"
       },
       "age4": {
-        "minimumIndex": null
+        "minimumIndex": "空有"
       },
       "age5": {
         "minimumIndex": "空有"
       },
       "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
         "ver": "",
         "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
       }
     }
   },
   {
     "localName": "台東区",
-    "name": "ポピンズナーサリースクール蔵前",
-    "address": "三筋1丁目7-9",
+    "name": "AIAI NURSERY 入谷",
+    "address": "台東区竜泉１丁目１９番７号K・Kビル１・２階",
     "location": {
-      "latitude": 35.7033648,
-      "longitude": 139.7851213
+      "latitude": 35.72362314,
+      "longitude": 139.78958
     },
-    "tel": null,
-    "url": "https://www.poppins.co.jp/nursery/room/detail/12464/",
+    "tel": "03-3871-7192",
+    "url": "https://nursery.aiai-cc.co.jp/facility/iriya/",
     "openYear": null,
     "openMonth": null,
     "sources": [
       {
         "name": "台東区の保育施設の施設一覧",
         "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
         "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
       }
     ],
@@ -735,324 +71,25 @@
         "minimumIndex": 48
       },
       "age1": {
-        "minimumIndex": 50
-      },
-      "age2": {
-        "minimumIndex": null
-      },
-      "age3": {
-        "minimumIndex": 54
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "ミアヘルサ保育園ひびき御徒町",
-    "address": "東上野1丁目11-11",
-    "location": {
-      "latitude": 35.7077729,
-      "longitude": 139.7783875
-    },
-    "tel": null,
-    "url": "https://www.merhalsa.jp/hoikuen/nursery/okachimachi/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": 52
-      },
-      "age2": {
-        "minimumIndex": null
-      },
-      "age3": {
-        "minimumIndex": 51
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "さくらさくみらい下谷",
-    "address": "下谷3丁目9-2",
-    "location": {
-      "latitude": 35.7244609,
-      "longitude": 139.7865164
-    },
-    "tel": null,
-    "url": "https://www.sakura-39.jp/hoiku/shitaya/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": 50
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": {
-        "minimumIndex": 39
-      },
-      "age4": {
-        "minimumIndex": "空有"
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "さくらさくみらい蔵前",
-    "address": "蔵前1丁目7-10",
-    "location": {
-      "latitude": 35.7012187,
-      "longitude": 139.7896025
-    },
-    "tel": null,
-    "url": "https://www.sakura-39.jp/hoiku/kuramae/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": null,
-      "age1": {
-        "minimumIndex": 50
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": {
-        "minimumIndex": 47
-      },
-      "age4": {
-        "minimumIndex": "空有"
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "フレンドキッズランド三ノ輪園",
-    "address": "三ノ輪1丁目22-10 岩出ビル",
-    "location": {
-      "latitude": 35.7287757,
-      "longitude": 139.791462
-    },
-    "tel": null,
-    "url": "https://fk-land.com/nurseries/minowa.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 30
-      },
-      "age1": {
-        "minimumIndex": 48
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "みつな保育園",
-    "address": "雷門2丁目1-10 若山ビル 1階",
-    "location": {
-      "latitude": 35.7099478,
-      "longitude": 139.7977129
-    },
-    "tel": null,
-    "url": "https://www.mitsunahoikuen.com/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": null,
-      "age1": {
-        "minimumIndex": 48
+        "minimumIndex": 49
       },
       "age2": {
         "minimumIndex": "非公開"
       },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "ベベ・ア・パリ保育園未来",
-    "address": "台東3丁目34-5 島田ビル",
-    "location": {
-      "latitude": 35.7054695,
-      "longitude": 139.779486
-    },
-    "tel": null,
-    "url": "https://fes-nsy.com/bebe/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": null,
-      "age1": {
-        "minimumIndex": 32
-      },
-      "age2": {
+      "age3": {
         "minimumIndex": "空有"
       },
-      "age3": null,
-      "age4": null,
-      "age5": null,
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
       "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
         "ver": "",
         "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "ふたみ家庭保育室",
-    "address": "元浅草3丁目10-5 冨川ビル 1階",
-    "location": {
-      "latitude": 35.7073478,
-      "longitude": 139.7862295
-    },
-    "tel": null,
-    "url": "http://momlist.laxic.me/map/store/%E3%81%B5%E3%81%9F%E3%81%BF%E5%AE%B6%E5%BA%AD%E4%BF%9D%E8%82%B2%E5%AE%A4/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 30
-      },
-      "age1": {
-        "minimumIndex": 30
-      },
-      "age2": {
-        "minimumIndex": 30
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
       }
     }
   },
@@ -1072,7 +109,7 @@
       {
         "name": "台東区の保育施設の施設一覧",
         "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
         "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
       }
     ],
@@ -1080,977 +117,83 @@
       "age0": {
         "minimumIndex": "空有"
       },
-      "age1": {
-        "minimumIndex": "空有"
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "渡部家庭保育室",
-    "address": "浅草4丁目25-5 タウンハウスワタベ 1f",
-    "location": {
-      "latitude": 35.7187862,
-      "longitude": 139.7930283
-    },
-    "tel": null,
-    "url": "https://www.sukusuku-taito.jp/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": "空有"
-      },
-      "age1": {
-        "minimumIndex": "空有"
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "家庭保育室Ｍｉｍｉ",
-    "address": "浅草4丁目",
-    "location": {
-      "latitude": 35.7187447,
-      "longitude": 139.7955653
-    },
-    "tel": null,
-    "url": "http://momlist.laxic.me/map/store/%E5%AE%B6%E5%BA%AD%E4%BF%9D%E8%82%B2%E5%AE%A4-mimi/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": "空有"
-      },
-      "age1": {
-        "minimumIndex": "空有"
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "つぼみ保育室",
-    "address": "台東1丁目5-25 藤井ビル 1F",
-    "location": {
-      "latitude": 35.7008155,
-      "longitude": 139.7786968
-    },
-    "tel": null,
-    "url": "http://tsubomi-hoiku-taito.com/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": "空有"
-      },
-      "age1": {
-        "minimumIndex": "空有"
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "家庭保育室ふわふわ",
-    "address": "千束3丁目17-5 ミハルビル1階",
-    "location": {
-      "latitude": 35.7221416,
-      "longitude": 139.7914002
-    },
-    "tel": null,
-    "url": "https://www.homery-fuwafuwa.com/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": "空有"
-      },
-      "age1": {
-        "minimumIndex": "空有"
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "谷中保育園",
-    "address": "上野桜木2丁目16番10号",
-    "location": {
-      "latitude": 35.72254338,
-      "longitude": 139.7714448
-    },
-    "tel": "03-3828-3223",
-    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/yanaka.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 53
-      },
-      "age1": {
-        "minimumIndex": 50
-      },
-      "age2": {
-        "minimumIndex": 41
-      },
-      "age3": {
-        "minimumIndex": "非公開"
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "待乳保育園",
-    "address": "今戸2丁目26番12号",
-    "location": {
-      "latitude": 35.72192514,
-      "longitude": 139.8075529
-    },
-    "tel": "03-3873-4150",
-    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/matsuchi.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": "空有"
-      },
-      "age1": {
-        "minimumIndex": "非公開"
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": {
-        "minimumIndex": "空有"
-      },
-      "age4": {
-        "minimumIndex": "空有"
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "三筋保育園",
-    "address": "三筋2丁目16番4号",
-    "location": {
-      "latitude": 35.70597524,
-      "longitude": 139.7870846
-    },
-    "tel": "03-3832-6743",
-    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/misuji.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": null,
-      "age1": {
-        "minimumIndex": 50
-      },
-      "age2": {
-        "minimumIndex": 50
-      },
-      "age3": {
-        "minimumIndex": "非公開"
-      },
-      "age4": {
-        "minimumIndex": "非公開"
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "台東保育園",
-    "address": "台東1丁目11番10号",
-    "location": {
-      "latitude": 35.7012655,
-      "longitude": 139.7765454
-    },
-    "tel": "03-3832-6743",
-    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/taito.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": "空有"
-      },
-      "age1": {
-        "minimumIndex": "非公開"
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": {
-        "minimumIndex": 51
-      },
-      "age4": {
-        "minimumIndex": "空有"
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "松が谷保育園",
-    "address": "松が谷4丁目15番11号",
-    "location": {
-      "latitude": 35.71851406,
-      "longitude": 139.7863338
-    },
-    "tel": "03-3843-0853",
-    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/matsugaya.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": null,
-      "age1": {
-        "minimumIndex": 51
-      },
-      "age2": {
-        "minimumIndex": 51
-      },
-      "age3": {
-        "minimumIndex": "非公開"
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "東上野保育園",
-    "address": "東上野2丁目25番12号",
-    "location": {
-      "latitude": 35.70947479,
-      "longitude": 139.7814947
-    },
-    "tel": "03-3833-9810",
-    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/higashiueno.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 50
-      },
-      "age1": {
-        "minimumIndex": 51
-      },
-      "age2": {
-        "minimumIndex": "非公開"
-      },
-      "age3": {
-        "minimumIndex": 52
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "浅草橋保育園",
-    "address": "浅草橋2丁目23番5号",
-    "location": {
-      "latitude": 35.70019583,
-      "longitude": 139.7847452
-    },
-    "tel": "03-3866-0321",
-    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/asakusabashi.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": 52
-      },
-      "age2": {
-        "minimumIndex": 47
-      },
-      "age3": {
-        "minimumIndex": 47
-      },
-      "age4": {
-        "minimumIndex": "空有"
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "千束保育園",
-    "address": "千束3丁目20番6号",
-    "location": {
-      "latitude": 35.7223237,
-      "longitude": 139.7928029
-    },
-    "tel": "03-3874-1713",
-    "url": "https://www.city.ota.tokyo.jp/shisetsu/hoikuen/kuritsu/senzokuhoikuen.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 50
-      },
-      "age1": {
-        "minimumIndex": 50
-      },
-      "age2": {
-        "minimumIndex": 32
-      },
-      "age3": {
-        "minimumIndex": 51
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": "非公開"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "玉姫保育園",
-    "address": "清川2丁目22番16号",
-    "location": {
-      "latitude": 35.72752406,
-      "longitude": 139.8039028
-    },
-    "tel": "03-3872-5364",
-    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/tamahime.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": null,
-      "age1": {
-        "minimumIndex": "空有"
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": {
-        "minimumIndex": "非公開"
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "坂本保育園",
-    "address": "下谷3丁目11番2号",
-    "location": {
-      "latitude": 35.72502352,
-      "longitude": 139.7872334
-    },
-    "tel": "03-3873-4287",
-    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/sakamoto.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": 51
-      },
-      "age2": {
-        "minimumIndex": 49
-      },
-      "age3": {
-        "minimumIndex": 51
-      },
-      "age4": {
-        "minimumIndex": "非公開"
-      },
-      "age5": {
-        "minimumIndex": "非公開"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "康保会乳児保育所",
-    "address": "日本堤2丁目7番1号",
-    "location": {
-      "latitude": 35.72704308,
-      "longitude": 139.797582
-    },
-    "tel": "03-3875-0058",
-    "url": "https://www.kouhokai.or.jp/nyuji/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": "空有"
-      },
-      "age1": {
-        "minimumIndex": "非公開"
-      },
-      "age2": {
-        "minimumIndex": "非公開"
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "花川戸保育園",
-    "address": "花川戸2丁目11番13号",
-    "location": {
-      "latitude": 35.7148447,
-      "longitude": 139.8004427
-    },
-    "tel": "03-3844-8366",
-    "url": "http://www.hanakawado.jp/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": null,
-      "age1": {
-        "minimumIndex": 50
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": {
-        "minimumIndex": null
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "共生保育園",
-    "address": "橋場1丁目10番11号",
-    "location": {
-      "latitude": 35.72382468,
-      "longitude": 139.8054629
-    },
-    "tel": "03-3873-1369",
-    "url": "https://www.tomoiki-n.net/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": "空有"
-      },
-      "age1": {
-        "minimumIndex": 33
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": {
-        "minimumIndex": "非公開"
-      },
-      "age4": {
-        "minimumIndex": "空有"
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "上野保育園",
-    "address": "東上野6丁目20番7号",
-    "location": {
-      "latitude": 35.71477435,
-      "longitude": 139.7838742
-    },
-    "tel": "03-3841-7545",
-    "url": "http://ueno-hoikuen.tokyo/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": null,
-      "age1": {
-        "minimumIndex": 51
-      },
-      "age2": {
-        "minimumIndex": "非公開"
-      },
-      "age3": {
-        "minimumIndex": null
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "立華学苑",
-    "address": "谷中5丁目4番19号",
-    "location": {
-      "latitude": 35.72492291,
-      "longitude": 139.766185
-    },
-    "tel": "03-3828-9255",
-    "url": "https://www.tachibana-gakuen.com/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": null,
-      "age1": {
-        "minimumIndex": 50
-      },
-      "age2": {
-        "minimumIndex": 46
-      },
-      "age3": {
-        "minimumIndex": "非公開"
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "清川保育園",
-    "address": "清川1丁目15番11号",
-    "location": {
-      "latitude": 35.72495418,
-      "longitude": 139.8028527
-    },
-    "tel": "03-3872-0116",
-    "url": "https://kosodate-web.com/kiyokawa/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": null,
-      "age1": {
-        "minimumIndex": "空有"
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": {
-        "minimumIndex": 37
-      },
-      "age4": {
-        "minimumIndex": "空有"
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "康保会保育園",
-    "address": "日本堤1丁目6番2号",
-    "location": {
-      "latitude": 35.72497344,
-      "longitude": 139.7979422
-    },
-    "tel": "03-3875-0514",
-    "url": "https://www.kouhokai.or.jp/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": null,
       "age1": null,
       "age2": null,
-      "age3": {
-        "minimumIndex": 50
-      },
-      "age4": {
-        "minimumIndex": "非公開"
-      },
-      "age5": {
-        "minimumIndex": null
-      },
+      "age3": null,
+      "age4": null,
+      "age5": null,
       "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
         "ver": "",
         "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
       }
     }
   },
   {
     "localName": "台東区",
-    "name": "愛隣保育園",
-    "address": "根岸5丁目15番3号",
+    "name": "LIFE SCHOOL 根岸 こどものいえ",
+    "address": "台東区根岸4丁目15番13号",
     "location": {
-      "latitude": 35.72761326,
-      "longitude": 139.7881832
+      "latitude": 35.72646527,
+      "longitude": 139.7846123
     },
-    "tel": "03-3872-4547",
-    "url": "https://www.airindan.or.jp/preschool.html",
+    "tel": "03-6458-1451",
+    "url": "https://lifeschool.jp/publics/index/53/",
     "openYear": null,
     "openMonth": null,
     "sources": [
       {
         "name": "台東区の保育施設の施設一覧",
         "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": "空有"
+      },
+      "age1": {
+        "minimumIndex": 48
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "あさくさあおぞらナーサリースクール",
+    "address": "台東区清川1丁目5番10号",
+    "location": {
+      "latitude": 35.72323101,
+      "longitude": 139.8021283
+    },
+    "tel": "03-3873-4191",
+    "url": "https://asakusaaozora.codmon.net/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
         "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
       }
     ],
@@ -2059,13 +202,13 @@
         "minimumIndex": 48
       },
       "age1": {
-        "minimumIndex": "非公開"
+        "minimumIndex": "空有"
       },
       "age2": {
-        "minimumIndex": 46
+        "minimumIndex": 50
       },
       "age3": {
-        "minimumIndex": 51
+        "minimumIndex": "空有"
       },
       "age4": {
         "minimumIndex": "空有"
@@ -2074,51 +217,10 @@
         "minimumIndex": "空有"
       },
       "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
         "ver": "",
         "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "東上野乳児保育園",
-    "address": "東上野4丁目22番3号",
-    "location": {
-      "latitude": 35.71438433,
-      "longitude": 139.7814944
-    },
-    "tel": "03-3844-3577",
-    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/higashiuenonyuji.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": "空有"
-      },
-      "age1": {
-        "minimumIndex": 50
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
       }
     }
   },
@@ -2138,7 +240,7 @@
       {
         "name": "台東区の保育施設の施設一覧",
         "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
         "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
       }
     ],
@@ -2150,351 +252,7 @@
         "minimumIndex": 50
       },
       "age2": {
-        "minimumIndex": null
-      },
-      "age3": {
-        "minimumIndex": 53
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "チェリッシュ浅草保育園",
-    "address": "浅草3丁目11番7号　ウィスタリア1階・2階",
-    "location": {
-      "latitude": 35.71727253,
-      "longitude": 139.7935376
-    },
-    "tel": "03-5808-7817",
-    "url": "https://child-stage.co.jp/cherish/authorization/asakusa",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 53
-      },
-      "age1": {
-        "minimumIndex": 52
-      },
-      "age2": {
-        "minimumIndex": null
-      },
-      "age3": {
-        "minimumIndex": 52
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "はぐはぐキッズ浅草橋アネックス",
-    "address": "浅草橋2丁目6番4号",
-    "location": {
-      "latitude": 35.69913522,
-      "longitude": 139.7842879
-    },
-    "tel": "03-5823-4556",
-    "url": "https://hoikuen.hughugkids.jp/school/asakusabashi-annex/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": null,
-      "age1": {
-        "minimumIndex": 47
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "ウィズブック保育園入谷",
-    "address": "松が谷4丁目1番3号",
-    "location": {
-      "latitude": 35.71698022,
-      "longitude": 139.7885749
-    },
-    "tel": "03-6231-6719",
-    "url": "https://wb-hoikuen.jp/tokyo/iriya",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": 48
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "おうち保育園新おかちまち",
-    "address": "三筋2丁目17番10号",
-    "location": {
-      "latitude": 35.70587553,
-      "longitude": 139.7866231
-    },
-    "tel": "03-5823-4928",
-    "url": "https://mirai.florence.or.jp/ouchi/shin-okachimachi/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": "空有"
-      },
-      "age1": {
         "minimumIndex": "非公開"
-      },
-      "age2": {
-        "minimumIndex": null
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "はぐはぐキッズ浅草橋",
-    "address": "浅草橋2丁目7番1号山口ビル1階",
-    "location": {
-      "latitude": 35.6989857,
-      "longitude": 139.7840247
-    },
-    "tel": "03-5829-8024",
-    "url": "https://hoikuen.hughugkids.jp/school/asakusabashi/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": "空有"
-      },
-      "age1": {
-        "minimumIndex": "非公開"
-      },
-      "age2": {
-        "minimumIndex": "非公開"
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "シンシア保育園",
-    "address": "東上野5丁目14番7号アムフラット2　1階",
-    "location": {
-      "latitude": 35.71388138,
-      "longitude": 139.7816785
-    },
-    "tel": "03-5827-3533",
-    "url": "https://unimat-mk.co.jp/rooms/area3/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": "空有"
-      },
-      "age1": {
-        "minimumIndex": "空有"
-      },
-      "age2": {
-        "minimumIndex": "非公開"
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "ゆらりん竹町保育園",
-    "address": "台東4丁目16番18号",
-    "location": {
-      "latitude": 35.70626173,
-      "longitude": 139.7797353
-    },
-    "tel": "03-5812-4028",
-    "url": "https://hoiku.lifesupport.co.jp/yurarin-takecho/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": "空有"
-      },
-      "age1": {
-        "minimumIndex": null
-      },
-      "age2": {
-        "minimumIndex": "非公開"
-      },
-      "age3": {
-        "minimumIndex": "非公開"
-      },
-      "age4": {
-        "minimumIndex": "非公開"
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "ぽけっとランド浅草橋保育園",
-    "address": "浅草橋5丁目25番10号",
-    "location": {
-      "latitude": 35.70157712,
-      "longitude": 139.782972
-    },
-    "tel": "03-5833-4511",
-    "url": "https://www.pocket-land.jp/asakusabashi/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": "空有"
-      },
-      "age1": {
-        "minimumIndex": 52
-      },
-      "age2": {
-        "minimumIndex": null
       },
       "age3": {
         "minimumIndex": 51
@@ -2506,104 +264,10 @@
         "minimumIndex": "空有"
       },
       "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
         "ver": "",
         "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "チェリッシュ上野の森保育園",
-    "address": "上野桜木2丁目1番3号",
-    "location": {
-      "latitude": 35.72343206,
-      "longitude": 139.7751166
-    },
-    "tel": "03-5809-0667",
-    "url": "https://child-stage.co.jp/cherish/authorization/ueno",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": 50
-      },
-      "age2": {
-        "minimumIndex": null
-      },
-      "age3": {
-        "minimumIndex": 52
-      },
-      "age4": {
-        "minimumIndex": "非公開"
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "はぐはぐキッズこども園東上野",
-    "address": "東上野2丁目13番12号M&Mビル3階",
-    "location": {
-      "latitude": 35.70936061,
-      "longitude": 139.7781591
-    },
-    "tel": "03-6884-8803",
-    "url": "https://hoikuen.hughugkids.jp/school/ueno/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": 53
-      },
-      "age2": {
-        "minimumIndex": "非公開"
-      },
-      "age3": {
-        "minimumIndex": "非公開"
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
       }
     }
   },
@@ -2623,7 +287,7 @@
       {
         "name": "台東区の保育施設の施設一覧",
         "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
         "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
       }
     ],
@@ -2641,43 +305,88 @@
         "minimumIndex": "非公開"
       },
       "age4": {
-        "minimumIndex": null
+        "minimumIndex": "空有"
       },
       "age5": {
         "minimumIndex": "空有"
       },
       "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
         "ver": "",
         "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
       }
     }
   },
   {
     "localName": "台東区",
-    "name": "スターキッズ保育園",
-    "address": "上野桜木2丁目1番8号　フラッツ上野桜木1階",
+    "name": "ウィズブック保育園入谷",
+    "address": "台東区松が谷４丁目１番３号高松ハイム１階",
     "location": {
-      "latitude": 35.72310513,
-      "longitude": 139.7747577
+      "latitude": 35.71698022,
+      "longitude": 139.7885749
     },
-    "tel": "03-5842-1746",
-    "url": "http://www.starkids-hoiku.com/",
+    "tel": "03-6231-6719",
+    "url": "https://wb-hoikuen.jp/tokyo/iriya",
     "openYear": null,
     "openMonth": null,
     "sources": [
       {
         "name": "台東区の保育施設の施設一覧",
         "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 36
+      },
+      "age1": {
+        "minimumIndex": 49
+      },
+      "age2": {
+        "minimumIndex": null
+      },
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "うれしい保育園上野駅前",
+    "address": "台東区上野７丁目８番１３号",
+    "location": {
+      "latitude": 35.71477395,
+      "longitude": 139.7792016
+    },
+    "tel": "03-5830-1321",
+    "url": "https://www.city.taito.lg.jp/kosodatekyouiku/kosodate/mokutei/hoiku_youjikyouiku/hoikutakuji/hoikuen/hoikuennyuen/sinnkikaisetu.html",
+    "openYear": 2022,
+    "openMonth": 4,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
         "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
       }
     ],
     "classList": {
       "age0": null,
-      "age1": null,
-      "age2": null,
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
       "age3": {
         "minimumIndex": "空有"
       },
@@ -2688,61 +397,20 @@
         "minimumIndex": "空有"
       },
       "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
         "ver": "",
         "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "ベベ・ア・パリ保育園東上野",
-    "address": "東上野3丁目8番7号矢口ビル1階",
-    "location": {
-      "latitude": 35.71052222,
-      "longitude": 139.7806036
-    },
-    "tel": "03-5826-4421",
-    "url": "https://fes-nsy.com/ueno/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": "空有"
-      },
-      "age1": {
-        "minimumIndex": 50
-      },
-      "age2": {
-        "minimumIndex": "非公開"
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
       }
     }
   },
   {
     "localName": "台東区",
     "name": "うれしい保育園谷中",
-    "address": "谷中7丁目13番4号",
+    "address": "台東区谷中７丁目１３番２号",
     "location": {
-      "latitude": 35.72611208,
-      "longitude": 139.7719022
+      "latitude": 35.7261639,
+      "longitude": 139.7723919
     },
     "tel": "03-5815-3451",
     "url": "https://www.care21.co.jp/ureshii_hoiku/uh-yanaka/",
@@ -2752,48 +420,7 @@
       {
         "name": "台東区の保育施設の施設一覧",
         "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": 47
-      },
-      "age2": {
-        "minimumIndex": "空有"
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "ビーフェア上野御徒町保育園",
-    "address": "台東2丁目21番11号高田屋ビル1階",
-    "location": {
-      "latitude": 35.70378434,
-      "longitude": 139.780325
-    },
-    "tel": "03-6240-1771",
-    "url": "https://bflove.com/hoikuen/uenookachimachi.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
         "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
       }
     ],
@@ -2805,157 +432,36 @@
         "minimumIndex": "空有"
       },
       "age2": {
-        "minimumIndex": null
+        "minimumIndex": "空有"
       },
       "age3": null,
       "age4": null,
       "age5": null,
       "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
         "ver": "",
         "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
       }
     }
   },
   {
     "localName": "台東区",
-    "name": "蔵前らる小規模保育園",
-    "address": "蔵前4丁目32番7号グレイス蔵前1階",
+    "name": "えがおの森保育園・あさくさ",
+    "address": "台東区寿3丁目15番12号",
     "location": {
-      "latitude": 35.70599657,
-      "longitude": 139.7902491
+      "latitude": 35.70754073,
+      "longitude": 139.7936064
     },
-    "tel": "03-5825-4388",
-    "url": "https://ndc-lull.com/nursery-school-list/kuramae/",
+    "tel": "03-5811-1200",
+    "url": "https://www.senshukai-childcare.jp/hoikuen/facilities/asakusa.html",
     "openYear": null,
     "openMonth": null,
     "sources": [
       {
         "name": "台東区の保育施設の施設一覧",
         "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": 48
-      },
-      "age2": {
-        "minimumIndex": null
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "ヤクルト浅草松が谷保育園",
-    "address": "松が谷2丁目16番3号ユーコート松が谷1階",
-    "location": {
-      "latitude": 35.71362319,
-      "longitude": 139.7867148
-    },
-    "tel": "03-3845-8960",
-    "url": "https://www.city.taito.lg.jp/kosodatekyouiku/kosodate/mokutei/hoiku_youjikyouiku/hoikutakuji/tiikigata/jigyousyonai.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": null,
-      "age1": {
-        "minimumIndex": 40
-      },
-      "age2": {
-        "minimumIndex": "非公開"
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "ことぶきクローバーズ保育園",
-    "address": "寿2丁目3番6号松本ビル1階",
-    "location": {
-      "latitude": 35.70885826,
-      "longitude": 139.789757
-    },
-    "tel": "03-5830-3300",
-    "url": "https://kotobuki-clovers.wixsite.com/preschool",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 46
-      },
-      "age1": {
-        "minimumIndex": "非公開"
-      },
-      "age2": {
-        "minimumIndex": null
-      },
-      "age3": null,
-      "age4": null,
-      "age5": null,
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "LIFE　SCHOOL根岸 こどものいえ",
-    "address": "台東区根岸4丁目15番13号",
-    "location": {
-      "latitude": 35.72646527,
-      "longitude": 139.7846123
-    },
-    "tel": "03-6458-1451",
-    "url": "https://lifeschool.jp/publics/index/53/",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
         "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
       }
     ],
@@ -2967,10 +473,10 @@
         "minimumIndex": 50
       },
       "age2": {
-        "minimumIndex": 30
+        "minimumIndex": "非公開"
       },
       "age3": {
-        "minimumIndex": "非公開"
+        "minimumIndex": null
       },
       "age4": {
         "minimumIndex": "空有"
@@ -2979,124 +485,30 @@
         "minimumIndex": "空有"
       },
       "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
         "ver": "",
         "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
       }
     }
   },
   {
     "localName": "台東区",
-    "name": "レイモンド鳥越保育園",
-    "address": "台東区鳥越2丁目6番2号",
+    "name": "おうち保育園新おかちまち",
+    "address": "台東区三筋２丁目１７番１０号バムタイガー２階",
     "location": {
-      "latitude": 35.70202259,
-      "longitude": 139.7845203
+      "latitude": 35.70587553,
+      "longitude": 139.7866231
     },
-    "tel": "03-5829-8431",
-    "url": "https://www.lemonkai.or.jp/school/nursary/leimond-torigoe-hoikuen/",
+    "tel": "03-5823-4928",
+    "url": "https://mirai.florence.or.jp/ouchi/shin-okachimachi/",
     "openYear": null,
     "openMonth": null,
     "sources": [
       {
         "name": "台東区の保育施設の施設一覧",
         "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": 55
-      },
-      "age2": {
-        "minimumIndex": null
-      },
-      "age3": {
-        "minimumIndex": 52
-      },
-      "age4": {
-        "minimumIndex": "非公開"
-      },
-      "age5": {
-        "minimumIndex": null
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "ソラスト竜泉保育園",
-    "address": "台東区竜泉3丁目13番4号",
-    "location": {
-      "latitude": 35.72434452,
-      "longitude": 139.7912308
-    },
-    "tel": "03-5808-2050",
-    "url": "https://solasto-hoiku.com/area/tokyo/ryusen.html",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
-      }
-    ],
-    "classList": {
-      "age0": {
-        "minimumIndex": 48
-      },
-      "age1": {
-        "minimumIndex": "非公開"
-      },
-      "age2": {
-        "minimumIndex": null
-      },
-      "age3": {
-        "minimumIndex": "非公開"
-      },
-      "age4": {
-        "minimumIndex": null
-      },
-      "age5": {
-        "minimumIndex": "空有"
-      },
-      "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
-      }
-    }
-  },
-  {
-    "localName": "台東区",
-    "name": "ふくろう保育園",
-    "address": "台東区蔵前1丁目3番33号ライオンズフォーシア蔵前1階",
-    "location": {
-      "latitude": 35.70092356,
-      "longitude": 139.7913135
-    },
-    "tel": "03-5846-9768",
-    "url": "https://www.alps2015.com/post/%E3%81%B5%E3%81%8F%E3%82%8D%E3%81%86%E4%BF%9D%E8%82%B2%E5%9C%92",
-    "openYear": null,
-    "openMonth": null,
-    "sources": [
-      {
-        "name": "台東区の保育施設の施設一覧",
-        "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
         "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
       }
     ],
@@ -3105,19 +517,19 @@
         "minimumIndex": "空有"
       },
       "age1": {
-        "minimumIndex": 48
+        "minimumIndex": null
       },
       "age2": {
-        "minimumIndex": "非公開"
+        "minimumIndex": "空有"
       },
       "age3": null,
       "age4": null,
       "age5": null,
       "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
         "ver": "",
         "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
       }
     }
   },
@@ -3137,13 +549,1067 @@
       {
         "name": "台東区の保育施設の施設一覧",
         "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
         "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
       }
     ],
     "classList": {
       "age0": {
         "minimumIndex": "空有"
+      },
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "クオリスキッズ浅草橋保育園",
+    "address": "台東区柳橋2丁目5番3号",
+    "location": {
+      "latitude": 35.69847587,
+      "longitude": 139.7879772
+    },
+    "tel": "03-6240-9201",
+    "url": "https://quolis-kids.com/101_asakusabashi/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": 50
+      },
+      "age2": {
+        "minimumIndex": "非公開"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "ことぶきクローバーズ保育園",
+    "address": "寿2丁目3番6号松本ビル1階",
+    "location": {
+      "latitude": 35.70885826,
+      "longitude": 139.789757
+    },
+    "tel": "03-5830-3300",
+    "url": "https://kotobuki-clovers.wixsite.com/preschool",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 30
+      },
+      "age1": {
+        "minimumIndex": null
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "ことぶきこども園",
+    "address": "寿1丁目10-9",
+    "location": {
+      "latitude": 35.7068859,
+      "longitude": 139.7889808
+    },
+    "tel": null,
+    "url": "https://www.ans.co.jp/n/kotobuki/shoukai.html",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 50
+      },
+      "age1": {
+        "minimumIndex": 51
+      },
+      "age2": {
+        "minimumIndex": "非公開"
+      },
+      "age3": {
+        "minimumIndex": null
+      },
+      "age4": {
+        "minimumIndex": null
+      },
+      "age5": {
+        "minimumIndex": null
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "こどもヶ丘保育園根岸園",
+    "address": "台東区根岸3丁目1番10号アルス鶯谷1階",
+    "location": {
+      "latitude": 35.7217385,
+      "longitude": 139.78161
+    },
+    "tel": "03-5808-9152",
+    "url": "https://childvision.jp/school/negishi/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 30
+      },
+      "age1": {
+        "minimumIndex": 51
+      },
+      "age2": {
+        "minimumIndex": "非公開"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "さくらさくみらい下谷",
+    "address": "台東区下谷３丁目９番２号",
+    "location": {
+      "latitude": 35.72446622,
+      "longitude": 139.7864978
+    },
+    "tel": "03-5808-9739",
+    "url": "https://www.sakura-39.jp/hoiku/shitaya/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": "空有"
+      },
+      "age1": {
+        "minimumIndex": 48
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": null
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "さくらさくみらい蔵前",
+    "address": "台東区蔵前１丁目７番１０号",
+    "location": {
+      "latitude": 35.70124682,
+      "longitude": 139.7896369
+    },
+    "tel": "03-5829-8739",
+    "url": "https://www.sakura-39.jp/hoiku/kuramae/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": null,
+      "age1": {
+        "minimumIndex": 31
+      },
+      "age2": {
+        "minimumIndex": "非公開"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "さくらさくみらい谷中",
+    "address": "台東区谷中２丁目１番１２号",
+    "location": {
+      "latitude": 35.72098931,
+      "longitude": 139.7655097
+    },
+    "tel": "03-5834-7939",
+    "url": "https://www.city.taito.lg.jp/kosodatekyouiku/kosodate/mokutei/hoiku_youjikyouiku/hoikutakuji/hoikuen/hoikuennyuen/sinnkikaisetu.html",
+    "openYear": 2022,
+    "openMonth": 4,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "さくらさくみらい入谷",
+    "address": "台東区入谷2丁目12番2号",
+    "location": {
+      "latitude": 35.71966519,
+      "longitude": 139.7890823
+    },
+    "tel": "03-6458-1939",
+    "url": "https://www.sakura-39.jp/hoiku/iriya/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": "非公開"
+      },
+      "age2": {
+        "minimumIndex": "非公開"
+      },
+      "age3": {
+        "minimumIndex": "非公開"
+      },
+      "age4": {
+        "minimumIndex": null
+      },
+      "age5": {
+        "minimumIndex": null
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "シンシア保育園",
+    "address": "台東区台東４丁目１７番２号偕楽ビル１階",
+    "location": {
+      "latitude": 35.70646746,
+      "longitude": 139.7795992
+    },
+    "tel": "03-5817-8169",
+    "url": "https://unimat-mk.co.jp/rooms/area3/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": "空有"
+      },
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": null
+      },
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "スターキッズ保育園",
+    "address": "上野桜木2丁目1番8号　フラッツ上野桜木1階",
+    "location": {
+      "latitude": 35.72310513,
+      "longitude": 139.7747577
+    },
+    "tel": "03-5842-1746",
+    "url": "http://www.starkids-hoiku.com/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": "空有"
+      },
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "ソラスト竜泉保育園",
+    "address": "台東区竜泉3丁目13番4号",
+    "location": {
+      "latitude": 35.72434452,
+      "longitude": 139.7912308
+    },
+    "tel": "03-5808-2050",
+    "url": "https://solasto-hoiku.com/area/tokyo/ryusen.html",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": "非公開"
+      },
+      "age2": {
+        "minimumIndex": null
+      },
+      "age3": {
+        "minimumIndex": "非公開"
+      },
+      "age4": {
+        "minimumIndex": "非公開"
+      },
+      "age5": {
+        "minimumIndex": null
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "たいとうこども園",
+    "address": "下谷3丁目1-12",
+    "location": {
+      "latitude": 35.7237035,
+      "longitude": 139.7857674
+    },
+    "tel": null,
+    "url": "https://tokyojidokyokai.com/contents/Facility/taito/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 50
+      },
+      "age1": {
+        "minimumIndex": 55
+      },
+      "age2": {
+        "minimumIndex": 53
+      },
+      "age3": {
+        "minimumIndex": null
+      },
+      "age4": {
+        "minimumIndex": null
+      },
+      "age5": {
+        "minimumIndex": null
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "チェリッシュおひさま保育園",
+    "address": "台東区浅草橋3丁目19番4号",
+    "location": {
+      "latitude": 35.70074014,
+      "longitude": 139.7871861
+    },
+    "tel": "03-5829-5263",
+    "url": "https://child-stage.co.jp/cherish-authorization-ohisama",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": null,
+      "age1": {
+        "minimumIndex": 50
+      },
+      "age2": {
+        "minimumIndex": 52
+      },
+      "age3": {
+        "minimumIndex": "非公開"
+      },
+      "age4": {
+        "minimumIndex": "非公開"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "チェリッシュ上野の森保育園",
+    "address": "上野桜木2丁目1番3号",
+    "location": {
+      "latitude": 35.72343206,
+      "longitude": 139.7751166
+    },
+    "tel": "03-5809-0667",
+    "url": "https://child-stage.co.jp/cherish/authorization/ueno",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": 50
+      },
+      "age2": {
+        "minimumIndex": null
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": null
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "チェリッシュ浅草保育園",
+    "address": "浅草3丁目11番7号　ウィスタリア1階・2階",
+    "location": {
+      "latitude": 35.71727253,
+      "longitude": 139.7935376
+    },
+    "tel": "03-5808-7817",
+    "url": "https://child-stage.co.jp/cherish/authorization/asakusa",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 50
+      },
+      "age1": {
+        "minimumIndex": 50
+      },
+      "age2": {
+        "minimumIndex": null
+      },
+      "age3": {
+        "minimumIndex": 51
+      },
+      "age4": {
+        "minimumIndex": null
+      },
+      "age5": {
+        "minimumIndex": null
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "つぼみ保育室",
+    "address": "台東1丁目5-25 藤井ビル 1F",
+    "location": {
+      "latitude": 35.7008155,
+      "longitude": 139.7786968
+    },
+    "tel": null,
+    "url": "http://tsubomi-hoiku-taito.com/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": "空有"
+      },
+      "age1": null,
+      "age2": null,
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "はぐはぐキッズこども園東上野",
+    "address": "東上野2丁目13番12号M&Mビル3階",
+    "location": {
+      "latitude": 35.70936061,
+      "longitude": 139.7781591
+    },
+    "tel": "03-6884-8803",
+    "url": "https://hoikuen.hughugkids.jp/school/ueno/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": 50
+      },
+      "age2": {
+        "minimumIndex": "非公開"
+      },
+      "age3": {
+        "minimumIndex": "非公開"
+      },
+      "age4": {
+        "minimumIndex": null
+      },
+      "age5": {
+        "minimumIndex": null
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "はぐはぐキッズ浅草橋",
+    "address": "浅草橋2丁目7番1号山口ビル1階",
+    "location": {
+      "latitude": 35.6989857,
+      "longitude": 139.7840247
+    },
+    "tel": "03-5829-8024",
+    "url": "https://hoikuen.hughugkids.jp/school/asakusabashi/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": "非公開"
+      },
+      "age1": {
+        "minimumIndex": "非公開"
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "はぐはぐキッズ浅草橋アネックス",
+    "address": "台東区浅草橋２丁目６番４号サンブリヤ浅草橋１階",
+    "location": {
+      "latitude": 35.69913522,
+      "longitude": 139.7842879
+    },
+    "tel": "03-5823-4556",
+    "url": "https://hoikuen.hughugkids.jp/school/asakusabashi-annex/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": null,
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "ビーフェア上野御徒町保育園",
+    "address": "台東区台東２丁目２１番１１号レ・ベント御徒町１階",
+    "location": {
+      "latitude": 35.70378434,
+      "longitude": 139.780325
+    },
+    "tel": "03-6240-1771",
+    "url": "https://bflove.com/hoikuen/uenookachimachi.html",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": "空有"
+      },
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": null
+      },
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "ふくろう保育園",
+    "address": "台東区蔵前１丁目３番３３号ＢＬＥＳＳ蔵前１階",
+    "location": {
+      "latitude": 35.70092356,
+      "longitude": 139.7913135
+    },
+    "tel": "03-5846-9768",
+    "url": "https://www.alps2015.com/post/%E3%81%B5%E3%81%8F%E3%82%8D%E3%81%86%E4%BF%9D%E8%82%B2%E5%9C%92",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 30
+      },
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "ふたみ家庭保育室",
+    "address": "元浅草3丁目10-5 冨川ビル 1階",
+    "location": {
+      "latitude": 35.7073478,
+      "longitude": 139.7862295
+    },
+    "tel": null,
+    "url": "http://momlist.laxic.me/map/store/%E3%81%B5%E3%81%9F%E3%81%BF%E5%AE%B6%E5%BA%AD%E4%BF%9D%E8%82%B2%E5%AE%A4/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": "空有"
+      },
+      "age1": null,
+      "age2": null,
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "フレンドキッズランド三ノ輪園",
+    "address": "台東区三ノ輪1丁目22番10号岩出ビル1階",
+    "location": {
+      "latitude": 35.72880703,
+      "longitude": 139.7914468
+    },
+    "tel": "03-5808-9127",
+    "url": "https://fk-land.com/nurseries/minowa.html",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": "空有"
+      },
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "ベベ・ア・パリ保育園東上野",
+    "address": "東上野3丁目8番7号矢口ビル1階",
+    "location": {
+      "latitude": 35.71052222,
+      "longitude": 139.7806036
+    },
+    "tel": "03-5826-4421",
+    "url": "https://fes-nsy.com/ueno/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 38
       },
       "age1": {
         "minimumIndex": 30
@@ -3155,10 +1621,663 @@
       "age4": null,
       "age5": null,
       "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
         "ver": "",
         "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "ベベ・ア・パリ保育園未来",
+    "address": "台東区台東３丁目３４番５号島田ビル１階",
+    "location": {
+      "latitude": 35.70546604,
+      "longitude": 139.7794972
+    },
+    "tel": "03-6803-2210",
+    "url": "https://fes-nsy.com/bebe/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": null,
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": null
+      },
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "ぽけっとランド浅草橋保育園",
+    "address": "台東区浅草橋５丁目２５番１０号浅草橋１stビル１～３階",
+    "location": {
+      "latitude": 35.70157712,
+      "longitude": 139.782972
+    },
+    "tel": "03-5833-4511",
+    "url": "https://www.pocket-land.jp/asakusabashi/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": 50
+      },
+      "age2": {
+        "minimumIndex": null
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "非公開"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "ポピンズナーサリースクール蔵前",
+    "address": "台東区三筋1丁目7番9号",
+    "location": {
+      "latitude": 35.70335918,
+      "longitude": 139.7851785
+    },
+    "tel": "03-5829-3920",
+    "url": "https://www.poppins.co.jp/nursery/room/detail/12464/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": 50
+      },
+      "age2": {
+        "minimumIndex": null
+      },
+      "age3": {
+        "minimumIndex": "非公開"
+      },
+      "age4": {
+        "minimumIndex": null
+      },
+      "age5": {
+        "minimumIndex": null
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "ミアヘルサ保育園ひびき御徒町",
+    "address": "台東区東上野１丁目１１番１１号",
+    "location": {
+      "latitude": 35.70805364,
+      "longitude": 139.7785205
+    },
+    "tel": "03-6240-1919",
+    "url": "https://www.merhalsa.jp/hoikuen/nursery/okachimachi/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": 50
+      },
+      "age2": {
+        "minimumIndex": null
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": null
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "ミアヘルサ保育園ひびき浅草",
+    "address": "台東区西浅草3丁目19番3号",
+    "location": {
+      "latitude": 35.71604466,
+      "longitude": 139.7910083
+    },
+    "tel": "03-6231-7607",
+    "url": "https://www.merhalsa.jp/hoikuen/nursery/asakusa/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 47
+      },
+      "age1": {
+        "minimumIndex": 48
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "みつな保育園",
+    "address": "台東区雷門2丁目1番10号若山ビル1階",
+    "location": {
+      "latitude": 35.70995373,
+      "longitude": 139.7977193
+    },
+    "tel": "03-3841-7707",
+    "url": "https://www.mitsunahoikuen.com/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": null,
+      "age1": {
+        "minimumIndex": 44
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "ヤクルト浅草松が谷保育園",
+    "address": "松が谷2丁目16番3号ユーコート松が谷1階",
+    "location": {
+      "latitude": 35.71362319,
+      "longitude": 139.7867148
+    },
+    "tel": "03-3845-8960",
+    "url": "https://www.city.taito.lg.jp/kosodatekyouiku/kosodate/mokutei/hoiku_youjikyouiku/hoikutakuji/tiikigata/jigyousyonai.html",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": null,
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "ゆらりん竹町保育園",
+    "address": "台東区台東４丁目１６番８号偕楽ビル新御徒町１・２階",
+    "location": {
+      "latitude": 35.70626173,
+      "longitude": 139.7797353
+    },
+    "tel": "03-5812-4028",
+    "url": "https://hoiku.lifesupport.co.jp/yurarin-takecho/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": null
+      },
+      "age2": {
+        "minimumIndex": "非公開"
+      },
+      "age3": {
+        "minimumIndex": 51
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": null
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "レイモンド鳥越保育園",
+    "address": "台東区鳥越2丁目6番2号",
+    "location": {
+      "latitude": 35.70202259,
+      "longitude": 139.7845203
+    },
+    "tel": "03-5829-8431",
+    "url": "https://www.lemonkai.or.jp/school/nursary/leimond-torigoe-hoikuen/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": 52
+      },
+      "age2": {
+        "minimumIndex": "非公開"
+      },
+      "age3": {
+        "minimumIndex": 51
+      },
+      "age4": {
+        "minimumIndex": "非公開"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "愛隣保育園",
+    "address": "根岸5丁目15番3号",
+    "location": {
+      "latitude": 35.72761326,
+      "longitude": 139.7881832
+    },
+    "tel": "03-3872-4547",
+    "url": "https://www.airindan.or.jp/preschool.html",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 39
+      },
+      "age1": {
+        "minimumIndex": "非公開"
+      },
+      "age2": {
+        "minimumIndex": "非公開"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "家庭保育室Ｍｉｍｉ",
+    "address": "浅草4丁目",
+    "location": {
+      "latitude": 35.7187447,
+      "longitude": 139.7955653
+    },
+    "tel": null,
+    "url": "http://momlist.laxic.me/map/store/%E5%AE%B6%E5%BA%AD%E4%BF%9D%E8%82%B2%E5%AE%A4-mimi/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": null
+      },
+      "age1": null,
+      "age2": null,
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "家庭保育室ふわふわ",
+    "address": "千束3丁目17-5 ミハルビル1階",
+    "location": {
+      "latitude": 35.7221416,
+      "longitude": 139.7914002
+    },
+    "tel": null,
+    "url": "https://www.homery-fuwafuwa.com/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": null
+      },
+      "age1": null,
+      "age2": null,
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "花川戸保育園",
+    "address": "花川戸2丁目11番13号",
+    "location": {
+      "latitude": 35.7148447,
+      "longitude": 139.8004427
+    },
+    "tel": "03-3844-8366",
+    "url": "http://www.hanakawado.jp/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": null,
+      "age1": {
+        "minimumIndex": 50
+      },
+      "age2": {
+        "minimumIndex": 48
+      },
+      "age3": {
+        "minimumIndex": "非公開"
+      },
+      "age4": {
+        "minimumIndex": null
+      },
+      "age5": {
+        "minimumIndex": null
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "共生保育園",
+    "address": "橋場1丁目10番11号",
+    "location": {
+      "latitude": 35.72382468,
+      "longitude": 139.8054629
+    },
+    "tel": "03-3873-1369",
+    "url": "https://www.tomoiki-n.net/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": "空有"
+      },
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": null
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "玉姫保育園",
+    "address": "清川2丁目22番16号",
+    "location": {
+      "latitude": 35.72752406,
+      "longitude": 139.8039028
+    },
+    "tel": "03-3872-5364",
+    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/tamahime.html",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": null,
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": null
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
       }
     }
   },
@@ -3178,7 +2297,7 @@
       {
         "name": "台東区の保育施設の施設一覧",
         "ver": "",
-        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
         "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
       }
     ],
@@ -3188,7 +2307,901 @@
         "minimumIndex": "空有"
       },
       "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "康保会乳児保育所",
+    "address": "日本堤2丁目7番1号",
+    "location": {
+      "latitude": 35.72704308,
+      "longitude": 139.797582
+    },
+    "tel": "03-3875-0058",
+    "url": "https://www.kouhokai.or.jp/nyuji/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": "空有"
+      },
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "康保会保育園",
+    "address": "日本堤1丁目6番2号",
+    "location": {
+      "latitude": 35.72497344,
+      "longitude": 139.7979422
+    },
+    "tel": "03-3875-0514",
+    "url": "https://www.kouhokai.or.jp/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": null,
+      "age1": null,
+      "age2": null,
+      "age3": {
+        "minimumIndex": 42
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "坂本保育園",
+    "address": "下谷3丁目11番2号",
+    "location": {
+      "latitude": 35.72502352,
+      "longitude": 139.7872334
+    },
+    "tel": "03-3873-4287",
+    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/sakamoto.html",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": "非公開"
+      },
+      "age2": {
+        "minimumIndex": 51
+      },
+      "age3": {
+        "minimumIndex": 44
+      },
+      "age4": {
+        "minimumIndex": "非公開"
+      },
+      "age5": {
         "minimumIndex": null
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "三筋保育園",
+    "address": "三筋2丁目16番4号",
+    "location": {
+      "latitude": 35.70597524,
+      "longitude": 139.7870846
+    },
+    "tel": "03-3866-2413",
+    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/misuji.html",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": null,
+      "age1": {
+        "minimumIndex": 48
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": {
+        "minimumIndex": "非公開"
+      },
+      "age4": {
+        "minimumIndex": "非公開"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "松が谷保育園",
+    "address": "松が谷4丁目15番11号",
+    "location": {
+      "latitude": 35.71851406,
+      "longitude": 139.7863338
+    },
+    "tel": "03-3843-0853",
+    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/matsugaya.html",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": null,
+      "age1": {
+        "minimumIndex": 50
+      },
+      "age2": {
+        "minimumIndex": "非公開"
+      },
+      "age3": {
+        "minimumIndex": "非公開"
+      },
+      "age4": {
+        "minimumIndex": "非公開"
+      },
+      "age5": {
+        "minimumIndex": null
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "上野保育園",
+    "address": "東上野6丁目20番7号",
+    "location": {
+      "latitude": 35.71477435,
+      "longitude": 139.7838742
+    },
+    "tel": "03-3841-7545",
+    "url": "http://ueno-hoikuen.tokyo/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": null,
+      "age1": {
+        "minimumIndex": 50
+      },
+      "age2": {
+        "minimumIndex": 47
+      },
+      "age3": {
+        "minimumIndex": "非公開"
+      },
+      "age4": {
+        "minimumIndex": null
+      },
+      "age5": {
+        "minimumIndex": null
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "清川保育園",
+    "address": "清川1丁目15番11号",
+    "location": {
+      "latitude": 35.72495418,
+      "longitude": 139.8028527
+    },
+    "tel": "03-3872-0116",
+    "url": "https://kosodate-web.com/kiyokawa/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": null,
+      "age1": {
+        "minimumIndex": 33
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "石浜橋場こども園",
+    "address": "橋場1丁目35-6",
+    "location": {
+      "latitude": 35.7255205,
+      "longitude": 139.8071274
+    },
+    "tel": null,
+    "url": "https://taito.ed.jp/swas/index.php?id=1380019",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": null,
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": "非公開"
+      },
+      "age3": {
+        "minimumIndex": null
+      },
+      "age4": {
+        "minimumIndex": "非公開"
+      },
+      "age5": {
+        "minimumIndex": null
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "千束保育園",
+    "address": "千束3丁目20番6号",
+    "location": {
+      "latitude": 35.7223237,
+      "longitude": 139.7928029
+    },
+    "tel": "03-3874-1713",
+    "url": "https://www.city.ota.tokyo.jp/shisetsu/hoikuen/kuritsu/senzokuhoikuen.html",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": 51
+      },
+      "age2": {
+        "minimumIndex": 39
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "浅草橋保育園",
+    "address": "浅草橋2丁目23番5号",
+    "location": {
+      "latitude": 35.70019583,
+      "longitude": 139.7847452
+    },
+    "tel": "03-3866-0321",
+    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/asakusabashi.html",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": 50
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "蔵前らる小規模保育園",
+    "address": "蔵前4丁目32番7号グレイス蔵前1階",
+    "location": {
+      "latitude": 35.70599657,
+      "longitude": 139.7902491
+    },
+    "tel": "03-5825-4388",
+    "url": "https://ndc-lull.com/nursery-school-list/kuramae/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": 48
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "待乳保育園",
+    "address": "今戸2丁目26番12号",
+    "location": {
+      "latitude": 35.72192514,
+      "longitude": 139.8075529
+    },
+    "tel": "03-3873-4150",
+    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/matsuchi.html",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": "非公開"
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "台東保育園",
+    "address": "台東1丁目11番10号",
+    "location": {
+      "latitude": 35.7012655,
+      "longitude": 139.7765454
+    },
+    "tel": "03-3832-6743",
+    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/taito.html",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": 48
+      },
+      "age2": {
+        "minimumIndex": "非公開"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "谷中保育園",
+    "address": "上野桜木2丁目16番10号",
+    "location": {
+      "latitude": 35.72254338,
+      "longitude": 139.7714448
+    },
+    "tel": "03-3828-3223",
+    "url": "https://www.city.taito.lg.jp/kusei/shisetsu/hoikusho/kuritsu/yanaka.html",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": 39
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": {
+        "minimumIndex": 47
+      },
+      "age4": {
+        "minimumIndex": null
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "渡部家庭保育室",
+    "address": "浅草4丁目25-5 タウンハウスワタベ 1f",
+    "location": {
+      "latitude": 35.7187862,
+      "longitude": 139.7930283
+    },
+    "tel": null,
+    "url": "https://www.sukusuku-taito.jp/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": "空有"
+      },
+      "age1": null,
+      "age2": null,
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "東上野乳児保育園",
+    "address": "東上野4丁目22番3号",
+    "location": {
+      "latitude": 35.71438433,
+      "longitude": 139.7814944
+    },
+    "tel": "03-3844-3577",
+    "url": null,
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": "空有"
+      },
+      "age1": {
+        "minimumIndex": 48
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": null,
+      "age4": null,
+      "age5": null,
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "東上野保育園",
+    "address": "東上野2丁目25番12号",
+    "location": {
+      "latitude": 35.70947479,
+      "longitude": 139.7814947
+    },
+    "tel": "03-3833-9810",
+    "url": null,
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": 50
+      },
+      "age2": {
+        "minimumIndex": "非公開"
+      },
+      "age3": {
+        "minimumIndex": 51
+      },
+      "age4": {
+        "minimumIndex": "非公開"
+      },
+      "age5": {
+        "minimumIndex": "非公開"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "忍岡こども園",
+    "address": "池之端2丁目1-22",
+    "location": {
+      "latitude": 35.7136556,
+      "longitude": 139.7668752
+    },
+    "tel": null,
+    "url": "https://tokyojidokyokai.com/contents/Facility/shinobu/",
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": 50
+      },
+      "age2": {
+        "minimumIndex": "非公開"
+      },
+      "age3": {
+        "minimumIndex": 51
+      },
+      "age4": {
+        "minimumIndex": 46
+      },
+      "age5": {
+        "minimumIndex": null
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "北上野クローバー保育園",
+    "address": "台東区北上野２丁目１８番８号",
+    "location": {
+      "latitude": 35.71802031,
+      "longitude": 139.7840014
+    },
+    "tel": "03-5830-7473",
+    "url": null,
+    "openYear": 2022,
+    "openMonth": 4,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": {
+        "minimumIndex": 48
+      },
+      "age1": {
+        "minimumIndex": 48
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "北上野保育室",
+    "address": "台東区北上野２丁目２４番１３号",
+    "location": {
+      "latitude": 35.71864526,
+      "longitude": 139.7845331
+    },
+    "tel": "03-5246-4002",
+    "url": null,
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": null,
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": "非公開"
       },
       "age3": {
         "minimumIndex": "非公開"
@@ -3197,13 +3210,58 @@
         "minimumIndex": "空有"
       },
       "age5": {
-        "minimumIndex": "非公開"
+        "minimumIndex": "空有"
       },
       "minimumIndexSource": {
-        "name": "令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
         "ver": "",
         "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
-        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0304_nyuendaiichijiriyouchoseikekka.csv"
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
+      }
+    }
+  },
+  {
+    "localName": "台東区",
+    "name": "立華学苑",
+    "address": "谷中5丁目4番19号",
+    "location": {
+      "latitude": 35.72492291,
+      "longitude": 139.766185
+    },
+    "tel": "03-3828-9255",
+    "url": null,
+    "openYear": null,
+    "openMonth": null,
+    "sources": [
+      {
+        "name": "台東区の保育施設の施設一覧",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/taito_childcare.csv"
+      }
+    ],
+    "classList": {
+      "age0": null,
+      "age1": {
+        "minimumIndex": "空有"
+      },
+      "age2": {
+        "minimumIndex": "空有"
+      },
+      "age3": {
+        "minimumIndex": "空有"
+      },
+      "age4": {
+        "minimumIndex": "空有"
+      },
+      "age5": {
+        "minimumIndex": "空有"
+      },
+      "minimumIndexSource": {
+        "name": "令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）",
+        "ver": "",
+        "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074",
+        "filePath": "/Users/shigeta/Develop/nursery-school-map/lib/data/taito-ku/R0404_nyuendaiichijiriyouchoseikekka.csv"
       }
     }
   }

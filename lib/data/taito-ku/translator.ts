@@ -13,15 +13,15 @@ import { MergedData } from '../../model/data'
 const hoikuen: Source = {
   name: '台東区の保育施設の施設一覧',
   ver: '', // 不明。入所者最低指数に比べると古そう
-  url: 'https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000037',
+  url: 'https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000081/resource/949dd4fc-01a0-4a45-bada-929176cc395b',
   filePath: __dirname + '/taito_childcare.csv',
 }
 
 const saiteiShisu: Source = {
-  name: '令和３年４月_入園の第一次利用調整結果（入所下限合計指数一覧）',
+  name: '令和4年４月_入園の第一次利用調整結果（入所下限合計指数一覧）',
   ver: '',
   url: 'https://catalog.data.metro.tokyo.lg.jp/dataset/t131067d0000000074',
-  filePath: __dirname + '/R0304_nyuendaiichijiriyouchoseikekka.csv',
+  filePath: __dirname + '/R0404_nyuendaiichijiriyouchoseikekka.csv',
 }
 
 const taitoKu: MergedData = {
