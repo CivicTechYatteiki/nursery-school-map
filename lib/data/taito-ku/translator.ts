@@ -141,4 +141,5 @@ const createClass = (minimumIndex: string): Class | null => {
 }
 
 const taitoKuJsonFile = `${__dirname}/translated.json`
-csv2json(taitoKu, taitoKuJsonFile)
+const taitoKuUnminifiedJsonFile = `${__dirname}/translated.unminified.json`
+csv2json(taitoKu, taitoKuJsonFile, taitoKuUnminifiedJsonFile)
