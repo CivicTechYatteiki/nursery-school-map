@@ -8,7 +8,7 @@ interface TmpData {
   records: any
 }
 
-export const csv2json = (mergedData: MergedData, outputFile: string) => {
+export const csv2json = (mergedData: MergedData, outputFile: string, unminifiedOutputFile: string | null = null) => {
   const tmpDataList: TmpData[] = mergedData.dataList.map(data => {
     const csv = fs.readFileSync(data.filePath)
     return {
@@ -137,5 +137,8 @@ export const csv2json = (mergedData: MergedData, outputFile: string) => {
   // }
 
   fs.writeFileSync(outputFile, JSON.stringify(mergedList))
+  if (unminifiedOutputFile != null) {
+    fs.writeFileSync(unminifiedOutputFile, JSON.stringify(mergedList, null, 2))
+  }
   console.log(`[Output Success] ${outputFile}`)
 }
