@@ -79,9 +79,19 @@ export function NurseryDetail({
           <Typography variant="subtitle1" component="div" sx={{ lineHeight: 1.1 }}>
             最低指数
           </Typography>
-          <Typography variant="caption" color="text.secondary">
-            令和3年4月入所1次利用調整のボーダーライン
-          </Typography>
+          {inNurserySet.localName === '港区' ? (
+            <Typography variant="caption" color="text.secondary">
+              令和3年4月入所1次利用調整のボーダーライン
+            </Typography>
+          ) : inNurserySet.localName === '台東区' ? (
+            <Typography variant="caption" color="text.secondary">
+              令和4年4月入所1次利用調整のボーダーライン
+            </Typography>
+          ) : inNurserySet.localName === '中央区' ? (
+            <Typography variant="caption" color="text.secondary">
+              令和4年4月入所1次利用調整のボーダーライン
+            </Typography>
+          ) : null}
         </Stack>
 
         {notOpened ? (
